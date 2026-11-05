@@ -1,0 +1,488 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/e4_trader_attribution.py",
+  "script_sha256": "17b29852462774f025e9148d5240f5bcb21ea752bd307381516314ed99c59713",
+  "closure_sha256": "792c690b5b774c4bc07f03a5ff0fe1798b85d309b26c27f740708ff29df5094c",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "primary weights": {
+    "path": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566/weights.parquet",
+    "sha256": "5b0578ae88d51429bdb5b2fec24a1f1583b415a2fbcc416a866b3764ea44a9e3"
+   },
+   "primary returns": {
+    "path": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566/daily_returns.parquet",
+    "sha256": "3f3be35c24db9662ff39a150914750f5306359f032a27a46c59cd523901a6b90"
+   },
+   "V-J0 weights": {
+    "path": "results/eval/5dce4cb827c3a283/W_clean__80d81f4a5566/weights.parquet",
+    "sha256": "2edd6c81d92a59d85e98030133970b735962f7344d3d10fcf33584c7d29588ea"
+   },
+   "V-J0 returns": {
+    "path": "results/eval/5dce4cb827c3a283/W_clean__80d81f4a5566/daily_returns.parquet",
+    "sha256": "326ba6e4cbdf918efcfe9a8e135d6f05e1ee227160c1191ef5021bf36cc74fc6"
+   },
+   "pd1": {
+    "path": "results/analysis/pd1.json",
+    "sha256": "61f2d179e52fba710c19b7b6c4a4e93de4a12fc62b859a74414d3288defeab65"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-29T00:20:12+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "layer attribution of the system book specified after the PD1 outcome"
+ },
+ "label": "exploratory (not pre-registered)",
+ "question": "the system as a trader: D-sized vs EW-U100 by layer; turnover and costs",
+ "books": {
+  "ew": {
+   "label": "EW-U100",
+   "turnover_one_way_per_rebalance": 0.031387309096646866,
+   "cost_drag_annualized": 0.00490095953477717,
+   "mean_weekly_net_bps": {
+    "mean": 42.36122140049593,
+    "ci": [
+     4.106561345549579,
+     80.61588145544228
+    ],
+    "n_weeks": 113
+   },
+   "mean_weekly_gross_bps": {
+    "mean": 43.18260757509268,
+    "ci": [
+     4.919898239236545,
+     81.44531691094882
+    ],
+    "n_weeks": 113
+   },
+   "ann_return_net": 0.22027835128257886,
+   "ann_vol_weekly": 0.1686048349805743,
+   "invested_share_mean": 1.0,
+   "n_names_mean": 100.0
+  },
+  "t_ew": {
+   "label": "trusted top-K, EW (V-J0 D-sel-EW)",
+   "turnover_one_way_per_rebalance": 0.34179131563488924,
+   "cost_drag_annualized": 0.05381344652914722,
+   "mean_weekly_net_bps": {
+    "mean": 42.65697691838727,
+    "ci": [
+     -20.016442722265346,
+     105.33039655903988
+    ],
+    "n_weeks": 113
+   },
+   "mean_weekly_gross_bps": {
+    "mean": 52.97267719271963,
+    "ci": [
+     -9.395611893584821,
+     115.34096627902409
+    ],
+    "n_weeks": 113
+   },
+   "ann_return_net": 0.2218162799756138,
+   "ann_vol_weekly": 0.2422796888673616,
+   "invested_share_mean": 1.0,
+   "n_names_mean": 20.0
+  },
+  "t_sized": {
+   "label": "trusted top-K, sized (V-J0 D-sized)",
+   "turnover_one_way_per_rebalance": 0.32965176670386964,
+   "cost_drag_annualized": 0.051878985962747,
+   "mean_weekly_net_bps": {
+    "mean": 21.531980979895685,
+    "ci": [
+     -21.698024253374506,
+     64.76198621316587
+    ],
+    "n_weeks": 113
+   },
+   "mean_weekly_gross_bps": {
+    "mean": 31.472716755902702,
+    "ci": [
+     -11.543489656485434,
+     74.48892316829084
+    ],
+    "n_weeks": 113
+   },
+   "ann_return_net": 0.11196630109545756,
+   "ann_vol_weekly": 0.16903157538069422,
+   "invested_share_mean": 0.8765704487441361,
+   "n_names_mean": 25.663716814159294
+  },
+  "s_ew": {
+   "label": "system selection, EW (primary D-sel-EW)",
+   "turnover_one_way_per_rebalance": 0.36843211966505457,
+   "cost_drag_annualized": 0.05799036190197457,
+   "mean_weekly_net_bps": {
+    "mean": 42.03903507682156,
+    "ci": [
+     -20.837343589325883,
+     104.91541374296901
+    ],
+    "n_weeks": 113
+   },
+   "mean_weekly_gross_bps": {
+    "mean": 53.16740412587234,
+    "ci": [
+     -9.507032845919305,
+     115.84184109766397
+    ],
+    "n_weeks": 113
+   },
+   "ann_return_net": 0.21860298239947207,
+   "ann_vol_weekly": 0.23208490485448013,
+   "invested_share_mean": 1.0,
+   "n_names_mean": 20.0
+  },
+  "s_sized": {
+   "label": "system book (primary D-sized)",
+   "turnover_one_way_per_rebalance": 0.2803438113533496,
+   "cost_drag_annualized": 0.04415234234108821,
+   "mean_weekly_net_bps": {
+    "mean": 22.092396379875993,
+    "ci": [
+     -19.92090021468276,
+     64.10569297443475
+    ],
+    "n_weeks": 113
+   },
+   "mean_weekly_gross_bps": {
+    "mean": 30.52547377313753,
+    "ci": [
+     -11.149356460159613,
+     72.20030400643468
+    ],
+    "n_weeks": 113
+   },
+   "ann_return_net": 0.11488046117535515,
+   "ann_vol_weekly": 0.1624370804009781,
+   "invested_share_mean": 0.8441698922235497,
+   "n_names_mean": 21.530973451327434
+  }
+ },
+ "active_total": {
+  "net_bps_per_week": {
+   "mean": -20.26882502061995,
+   "ci": [
+    -41.99746407940911,
+    1.4598140381692168
+   ],
+   "n_weeks": 113
+  },
+  "gross_bps_per_week": {
+   "mean": -12.657133801955148,
+   "ci": [
+    -34.01160506324559,
+    8.697337459335294
+   ],
+   "n_weeks": 113
+  },
+  "cost_bps_per_week": {
+   "mean": 7.611691218664795,
+   "ci": [
+    6.634336978837024,
+    8.589045458492565
+   ],
+   "n_weeks": 113
+  },
+  "net_annualized": -0.10539789010722372,
+  "tracking_error_annualized": 0.08891959113457187,
+  "information_ratio_weekly_annualized": -1.1853168549517215
+ },
+ "decomposition": {
+  "A_selection_overlay_text": {
+   "trusted_selection": {
+    "books": "t_ew - ew",
+    "net_bps_per_week": {
+     "mean": 0.2957555178913328,
+     "ci": [
+      -36.05004804200999,
+      36.64155907779265
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": 9.790069617626962,
+     "ci": [
+      -26.13238528225809,
+      45.712524517512016
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": 9.494314099735632,
+     "ci": [
+      8.5327121292899,
+      10.455916070181365
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": 0.0015379286930349437,
+    "gross_annualized": 0.05090836201166022,
+    "share_of_active_variance": 1.0879900344006248,
+    "hit_rate": 0.5132743362831859
+   },
+   "overlay": {
+    "books": "t_sized - t_ew",
+    "net_bps_per_week": {
+     "mean": -21.12499593849158,
+     "ci": [
+      -46.90307435603316,
+      4.653082479050003
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": -21.499960436816945,
+     "ci": [
+      -47.22691091766954,
+      4.226990044035649
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": -0.37496449832536205,
+     "ci": [
+      -0.8646519852757688,
+      0.11472298862504476
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": -0.10984997888015624,
+    "gross_annualized": -0.11179979427144811,
+    "share_of_active_variance": -0.23425146423757226,
+    "hit_rate": 0.37168141592920356
+   },
+   "text": {
+    "books": "s_sized - t_sized",
+    "net_bps_per_week": {
+     "mean": 0.5604153999803032,
+     "ci": [
+      -10.058713411135017,
+      11.179544211095624
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": -0.9472429827651683,
+     "ci": [
+      -11.61360488024459,
+      9.719118914714254
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": -1.5076583827454721,
+     "ci": [
+      -2.0407040273520574,
+      -0.9746127381388867
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": 0.002914160079897578,
+    "gross_annualized": -0.0049256635103788774,
+    "share_of_active_variance": 0.14626142983694748,
+    "hit_rate": 0.4778761061946903
+   },
+   "overlay_split": {
+    "uninvested_share_part_bps_per_week": {
+     "mean": -4.548842709760233,
+     "ci": [
+      -14.690499273798572,
+      5.592813854278106
+     ],
+     "n_weeks": 113
+    },
+    "reweighting_part_bps_per_week": {
+     "mean": -16.576153228731354,
+     "ci": [
+      -33.981625479002716,
+      0.8293190215400124
+     ],
+     "n_weeks": 113
+    },
+    "uninvested_share_mean": 0.12342955125586387,
+    "definition": "uninvested part = -(1 - sum of T-sized target weights) x (T-EW weekly return - cash); re-weighting part = overlay - uninvested part (inverse-risk sizing, caps, exclusions, incumbents); first-order split, drift within the week ignored"
+   }
+  },
+  "B_selection_text_overlay": {
+   "trusted_selection": {
+    "books": "t_ew - ew",
+    "net_bps_per_week": {
+     "mean": 0.2957555178913328,
+     "ci": [
+      -36.05004804200999,
+      36.64155907779265
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": 9.790069617626962,
+     "ci": [
+      -26.13238528225809,
+      45.712524517512016
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": 9.494314099735632,
+     "ci": [
+      8.5327121292899,
+      10.455916070181365
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": 0.0015379286930349437,
+    "gross_annualized": 0.05090836201166022,
+    "share_of_active_variance": 1.0879900344006248,
+    "hit_rate": 0.5132743362831859
+   },
+   "text": {
+    "books": "s_ew - t_ew",
+    "net_bps_per_week": {
+     "mean": -0.6179418415657152,
+     "ci": [
+      -10.67439818208779,
+      9.43851449895636
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": 0.1947269331526874,
+     "ci": [
+      -9.918239605147756,
+      10.30769347145313
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": 0.8126687747184023,
+     "ci": [
+      0.3713741759317494,
+      1.253963373505055
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": -0.0032132975761417167,
+    "gross_annualized": 0.0010125800523939745,
+    "share_of_active_variance": 0.07658055000530649,
+    "hit_rate": 0.5663716814159292
+   },
+   "overlay": {
+    "books": "s_sized - s_ew",
+    "net_bps_per_week": {
+     "mean": -19.946638696945566,
+     "ci": [
+      -46.00465371123752,
+      6.111376317346391
+     ],
+     "n_weeks": 113
+    },
+    "gross_bps_per_week": {
+     "mean": -22.641930352734803,
+     "ci": [
+      -48.914039270662414,
+      3.630178565192807
+     ],
+     "n_weeks": 113
+    },
+    "cost_bps_per_week": {
+     "mean": -2.695291655789237,
+     "ci": [
+      -3.1660899924773287,
+      -2.224493319101145
+     ],
+     "n_weeks": 113
+    },
+    "net_annualized": -0.10372252122411695,
+    "gross_annualized": -0.11773803783422097,
+    "share_of_active_variance": -0.1645705844059311,
+    "hit_rate": 0.40707964601769914
+   }
+  }
+ },
+ "text_names": {
+  "n_weeks": 113,
+  "weeks_with_swaps": 111,
+  "entrants_per_week_mean": 3.017699115044248,
+  "rel_entrants_bps": {
+   "mean": 22.944313908093573,
+   "ci": [
+    -33.18301174699447,
+    79.07163956318162
+   ],
+   "n_weeks": 111
+  },
+  "rel_displaced_bps": {
+   "mean": 27.266413889603943,
+   "ci": [
+    -28.258606110058384,
+    82.79143388926627
+   ],
+   "n_weeks": 111
+  },
+  "entrants_minus_displaced_bps": {
+   "mean": -4.322099981510356,
+   "ci": [
+    -78.95852666246813,
+    70.3143266994474
+   ],
+   "n_weeks": 111
+  },
+  "share_of_signal_book_replaced": 0.1508849557522124,
+  "implied_book_effect_bps": 0.34377761956473435,
+  "definition": "entrants = in the primary D-sel-EW and not in V-J0's; displaced = the reverse; r - m_t = the T1 label (open-to-open holding week, gross of costs)"
+ },
+ "registered_reference": {
+  "pd1_rows": {
+   "sized": {
+    "sharpe": 0.3763858035174208,
+    "turnover_one_way": 0.2803438113533496,
+    "ann_excess_return": 0.07330019087209272
+   },
+   "sel_ew": {
+    "sharpe": 0.653123168599792,
+    "turnover_one_way": 0.36843211966505457,
+    "ann_excess_return": 0.18221014001625307
+   },
+   "ew_u100": {
+    "sharpe": 0.9662344728402954,
+    "turnover_one_way": 0.031387309096646866,
+    "ann_excess_return": 0.17359242582093093
+   }
+  },
+  "source": "results/analysis/pd1.json (registered PD1; repeated)"
+ },
+ "figure_data": {
+  "weekly_layers_csv": "results/exploratory/figdata/e4_weekly_layers.csv"
+ },
+ "consistency": {
+  "books_equal_logged_returns_max_abs_diff": {
+   "s_sized_vs_sized": 0.0,
+   "s_ew_vs_sel_ew": 0.0,
+   "ew_vs_ew_u100": 0.0,
+   "t_sized_vs_sized": 0.0,
+   "t_ew_vs_sel_ew": 0.0
+  },
+  "n_learned_weeks": 113
+ },
+ "settings": {
+  "cost_bps": 15.0,
+  "nw_lags": 4,
+  "weeks": "learned weeks only",
+  "runs": {
+   "primary": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566",
+   "V-J0": "results/eval/5dce4cb827c3a283/W_clean__80d81f4a5566"
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "W_clean": {
+  "weeks": 115,
+  "items_per_stock_week": 6.679,
+  "share_with_item": 0.899,
+  "median_items_per_stock_week": 3.0,
+  "policy_prefilter_items_per_week": 113.4
+ },
+ "W_pre_slice": {
+  "weeks": 60,
+  "items_per_stock_week": 7.115,
+  "share_with_item": 0.935,
+  "median_items_per_stock_week": 4.0,
+  "policy_prefilter_items_per_week": 96.3
+ },
+ "full": {
+  "weeks": 376,
+  "items_per_stock_week": 5.913,
+  "share_with_item": 0.856,
+  "median_items_per_stock_week": 3.0,
+  "policy_prefilter_items_per_week": 95.4
+ }
+}

@@ -1,0 +1,14 @@
+# Box 1 paraphrases (author-written; outline_v2 §3 "Box 1"). EXPLORATORY (not pre-registered) illustration.
+# Keyed by the unit hash that e5_box1_examples.py `select` reports (sha256 of "<t>|<symbol>|<eid>", first 16 hex);
+# `render` refuses a key that differs from the rule's pick. "{firm}" is replaced by the focal firm's blinding
+# pseudonym. No digit may appear (no hand-typed number); no firm, person or product name; no date. The licensed
+# headline and summary are not reproduced.
+A:
+  unit_hash: e264810fb1798245
+  paraphrase: >-
+    {firm} reported first-quarter earnings per share and revenue that both beat the analysts' consensus estimates.
+B:
+  unit_hash: eedd36b07ada23cc
+  paraphrase: >-
+    {firm} is to become the first payments partner of a large social-media platform's new money account; the item
+    adds that the firm's shares were trading slightly higher at last check.

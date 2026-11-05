@@ -1,0 +1,67 @@
+# Decision-layer and protocol constants (design_v1 §2, §3.4, §9, §13). Frozen with the pre-registration; the
+# SHA-256 of this file is part of every Layer-B config hash (pipeline.registry).
+version: system_v1
+
+clock:
+  cutoff_local: "16:00"            # c_t on d_t, America/New_York
+  label_available_local: "09:30"   # available_at = open of e_{t+1}
+
+selection:                         # §3.4
+  K: 20
+  J: 10                            # sensitivity J in {0, 5, 10, 20, .inf} (S2 frontier)
+  tiebreak_salt: tiebreak-www27    # fixed symbol hash; the attacker cannot influence it
+  incumbent_buffer: 10             # D-sized: a held name stays if combined rank <= K + 10 and R^T <= K + J
+
+risk:                              # §9.1-9.2
+  name_cap: 0.10
+  industry_cap: 0.30               # FF12
+  turnover_cap: 0.40               # phi = min(1, 0.40 / TO)
+  earnings_mult: 0.75              # forecast release within the next 2 sessions (past releases only)
+  earnings_sessions: 2
+  sentinel_high: 0.8
+  sentinel_single_mult: 0.5        # single-cluster demotion cap
+  corroboration: 2                 # distinct provenance keys (author bylines, SAN-5) among kept, non-promotional
+                                   # items with P(serious_problem) >= .8 (design_v2_delta SAN-5)
+  exclusion_kinds: [accounting_or_disclosure, government_enforcement, financial_distress]
+  other_kind_mult: 0.5
+  sizing: reference                # BG-2 reference-anchored sizing; "v1" = registered variant V-size-v1
+  exclusion_rule: anchored         # BG-3: weight 0 needs a trusted anchor, else x0.5 ("bylines"/"items": BG-3c replays)
+  key_column: n_prob               # sensitivity: n_prob_collapsed (desk bylines collapsed into one key)
+  unanchored_mult: 0.5
+  s2_reduce_mult: 0.5
+
+anchors:                           # BG-3 trusted anchors (question bank code_constants.exclusion_anchor, QB-13)
+  price_k: 2.0                     # r_ex <= -2 sd_60 sqrt(n), d0 over every session of the news window (features/anchors.py)
+  sd_window_sessions: 60
+  sd_min_periods: 40
+  market: SPY
+  use_filing: true                 # removed before the freeze if 8-K item codes are unavailable (WS-C, 09-28)
+  filing_window_days: 7            # [c_t - 7 calendar days, c_t)
+  filing_forms: ["8-K", "8-K/A"]
+  filing_items: ["1.03", "2.04", "2.06", "3.01", "4.01", "4.02"]
+
+costs:
+  bps_per_side: 15
+  sensitivity_bps: [0, 5, 30]
+  cash_rate: DFF                   # FRED, point-in-time; Sharpe/IR/CER on excess returns
+
+books:
+  primary_signal: sel_ew           # D-sel-EW
+  system: sized                    # D-sized, g = 1
+
+windows:                           # §2.5; counts in results/plan/plan_v1.json
+  W_pre_slice: ["2023-04-07", "2024-05-31"]
+  W_buffer: ["2024-06-07", "2024-06-28"]
+  W_clean: ["2024-07-05", "2026-09-11"]
+  W_release: ["2025-04-18", "2026-09-11"]
+
+subsets:                           # §2.2 deterministic subsets of U_t
+  S50: {salt: S50-www27, n: 50}
+  S30: {salt: S30-www27, n: 30}
+
+lock:                              # §2.5 / §13.6 test lock
+  locked_window: ["2024-07-05", "2026-09-11"]
+  lock_file: results/locks/clean_unlocked
+  prereg: configs/prereg_v1.yaml
+
+registry: results/trials.jsonl

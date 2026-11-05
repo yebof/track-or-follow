@@ -1,0 +1,63 @@
+# Availability declaration (design_v2_delta AV-1): for every input source, the value-independent column that decides
+# when a record becomes usable, the point-in-time rule at decision t (d_t = decision session, c_t = 16:00 ET cutoff on
+# d_t) and the loader that enforces it. Generated from `jevtrader.programs.context.AVAILABILITY` (integration check,
+# 2026-09-27); tests/test_availability_declared.py asserts that this file equals the code declaration and that every
+# named loader filters on its declared column at the boundary. The appendix availability table is rendered from it.
+version: availability_v1
+sources:
+  prices_adjusted:
+    column: session date (close)
+    rule: session <= d_t
+    loader: features.technical.technical_snapshot (px.close.loc[:d])
+  prices_raw:
+    column: session date (close)
+    rule: session <= d_t
+    loader: data.prices.PricePanels.raw_close_asof
+  news:
+    column: created_at, updated_at
+    rule: created_at in [c_{t-1}, c_t) and updated_at < c_t
+    loader: data.news.NewsStore.window
+  xbrl_facts:
+    column: filed
+    rule: filed < d_t (usable the session after filing)
+    loader: data.fundamentals.FundamentalsPanel.snapshot_asof
+  form_8k:
+    column: acceptanceDateTime (UTC)
+    rule: accepted_utc < c_t
+    loader: data.earnings.EarningsCalendar.past
+  form_10k_item1:
+    column: filed
+    rule: filed < d_t; usable from the next session's open
+    loader: programs.context.TenKStore.latest
+  alfred_vintages:
+    column: realtime_start
+    rule: realtime_start <= d_t
+    loader: features.macro.MacroStore.vintage_series
+  fred_daily:
+    column: observation date
+    rule: 'date <= d_t - 1 day (DTWEXBGS, DCOILWTICO: 7 days)'
+    loader: features.macro.MacroStore.daily_asof
+  epu:
+    column: index date
+    rule: date <= d_t - 2 days
+    loader: features.macro.MacroStore.epu_asof
+  gpr:
+    column: index date
+    rule: date <= d_t - 7 days
+    loader: features.macro.MacroStore.gpr_asof
+  fomc_schedule:
+    column: announced
+    rule: announced < d_t
+    loader: features.macro.MacroStore.fed_decision_within
+  universe:
+    column: reconstitution date
+    rule: latest reconstitution date <= d_t (ranked before it)
+    loader: programs.context.universe_asof
+  memory_records:
+    column: available_at
+    rule: 'available_at < c_t (M-work: <= c_t, same week)'
+    loader: memory.store.MemoryStore.view
+  labels:
+    column: available_at
+    rule: available_at < c_t (Layer B)
+    loader: learn.labels.LabelStore.mature

@@ -1,0 +1,11 @@
+{
+ "rule": "seed fig3-www27: smallest sha256 among in-band cards with >= 3 kept items",
+ "t": "2024-11-01",
+ "code_name": "Company-9EA1D665",
+ "ledger_residual": 2.7755575615628914e-17,
+ "band": "eligible",
+ "rank_T": 20,
+ "n_kept": 14,
+ "source": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566/cards.jsonl",
+ "registered": true
+}

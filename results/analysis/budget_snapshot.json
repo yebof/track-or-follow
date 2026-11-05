@@ -1,0 +1,255 @@
+{
+ "meta": {
+  "script": "experiments/analysis/budget_snapshot.py",
+  "script_sha256": "ad54335734e637c79f2a54694cd0d9a3ca435810376ca3ab8cf3be270a2ee76f",
+  "closure_sha256": "d26de438a65e21c7753504f18763f87c6365557fbb14c2747f2fe7cf95e06818",
+  "window": "budget",
+  "registered_window": false,
+  "lock": {
+   "open": false,
+   "why": "results/locks/clean_unlocked missing",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "backends.yaml": {
+    "path": "configs/backends.yaml",
+    "sha256": "1d1c7524b3186656e4f33ad532656ef3fae0df27fdb0a45b8222383f0d45926d"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T09:30:38+00:00"
+ },
+ "ledger": {
+  "rows": 601615,
+  "total_usd": 185.142412,
+  "last_ts": 1790583990.9979866
+ },
+ "hard_cap_usd": 245.0,
+ "user_budget_usd": 250.0,
+ "remaining_of_user_budget_usd": 64.857588,
+ "remaining_below_hard_cap_usd": 59.857588,
+ "runs": {
+  "CF": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.15,
+   "headroom_usd": 0.15,
+   "status": "enabled"
+  },
+  "DEV": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "DEV0": {
+   "spent_usd": 0.471121,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "DEV1": {
+   "spent_usd": 5.560596,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "DEV2": {
+   "spent_usd": 6.88635,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "DEV2FIX": {
+   "spent_usd": 3.718765,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  },
+  "DEV2OPS": {
+   "spent_usd": 0.032721,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "FAITH": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 3.0,
+   "headroom_usd": 3.0,
+   "status": "enabled"
+  },
+  "FID": {
+   "spent_usd": 0.602096,
+   "sub_cap_usd": 2.5,
+   "headroom_usd": 1.897904,
+   "status": "enabled"
+  },
+  "FIDX": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 3.3,
+   "headroom_usd": 3.3,
+   "status": "enabled"
+  },
+  "H": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 1.5,
+   "headroom_usd": 1.5,
+   "status": "enabled"
+  },
+  "HGUARD": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 2.0,
+   "headroom_usd": 2.0,
+   "status": "enabled"
+  },
+  "HS": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "HSPOT": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 2.0,
+   "headroom_usd": 2.0,
+   "status": "enabled"
+  },
+  "LAP": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "LIVE": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 6.5,
+   "headroom_usd": 6.5,
+   "status": "enabled"
+  },
+  "MAIN": {
+   "spent_usd": 119.058064,
+   "sub_cap_usd": 132.0,
+   "headroom_usd": 12.941936,
+   "status": "enabled"
+  },
+  "MCOT": {
+   "spent_usd": 4.34239,
+   "sub_cap_usd": 4.5,
+   "headroom_usd": 0.15761,
+   "status": "enabled"
+  },
+  "MCOT-RT": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "MEM": {
+   "spent_usd": 2.35431,
+   "sub_cap_usd": 2.5,
+   "headroom_usd": 0.14569,
+   "status": "enabled"
+  },
+  "NODEF": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 3.0,
+   "headroom_usd": 3.0,
+   "status": "enabled"
+  },
+  "PRE": {
+   "spent_usd": 31.192772,
+   "sub_cap_usd": 31.5,
+   "headroom_usd": 0.307228,
+   "status": "enabled"
+  },
+  "PROBE": {
+   "spent_usd": 0.165826,
+   "sub_cap_usd": 1.5,
+   "headroom_usd": 1.334174,
+   "status": "enabled"
+  },
+  "RT-A": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "RT-S": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 12.0,
+   "headroom_usd": 12.0,
+   "status": "enabled"
+  },
+  "S2": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "SMOKE": {
+   "spent_usd": 0.005364,
+   "sub_cap_usd": 0.3,
+   "headroom_usd": 0.294636,
+   "status": "enabled"
+  },
+  "TAL": {
+   "spent_usd": 6.725413,
+   "sub_cap_usd": 12.0,
+   "headroom_usd": 5.274587,
+   "status": "enabled"
+  },
+  "VERB": {
+   "spent_usd": 3.725217,
+   "sub_cap_usd": 4.0,
+   "headroom_usd": 0.274783,
+   "status": "enabled"
+  },
+  "VERB-C1I": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "XWEB": {
+   "spent_usd": 0.0,
+   "sub_cap_usd": 0.0,
+   "headroom_usd": null,
+   "status": "disabled (sub-cap 0)"
+  },
+  "audit_ratelimit": {
+   "spent_usd": 8e-06,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  },
+  "design_smoke_n0": {
+   "spent_usd": 0.002534,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  },
+  "design_smoke_n1": {
+   "spent_usd": 0.015358,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  },
+  "pilot_news": {
+   "spent_usd": 0.283129,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  },
+  "smoke": {
+   "spent_usd": 0.000378,
+   "sub_cap_usd": null,
+   "headroom_usd": null,
+   "status": "no sub-cap entry"
+  }
+ },
+ "sum_enabled_headroom_usd": 56.078548,
+ "worst_case_ledger_if_every_enabled_run_spends_its_headroom_usd": 241.22096,
+ "worst_case_within_hard_cap": true
+}

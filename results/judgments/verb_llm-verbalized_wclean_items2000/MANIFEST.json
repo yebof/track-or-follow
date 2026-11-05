@@ -1,0 +1,85 @@
+{
+ "gen_id": "verb_llm-verbalized_wclean_items2000",
+ "shards": [
+  "b00",
+  "b01",
+  "b02",
+  "b03",
+  "b04",
+  "b05",
+  "b06",
+  "b07",
+  "b08",
+  "b09",
+  "b10",
+  "b11",
+  "b12",
+  "b13",
+  "b14",
+  "b15",
+  "b16",
+  "b17",
+  "b18",
+  "b19",
+  "s00",
+  "s01",
+  "s02",
+  "s03",
+  "s04",
+  "s05",
+  "s06",
+  "s07",
+  "s08",
+  "s09",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s14",
+  "s15",
+  "s16",
+  "s17",
+  "s18",
+  "s19"
+ ],
+ "rows": {
+  "answers": 34000,
+  "requests": 10000,
+  "evidence": 10000,
+  "jobs": 10000
+ },
+ "sha256": {
+  "answers": "92048746aead9cb9e2332609f2601196deaf1d0efbc304e4102818655463f437",
+  "requests": "3d4e17d2243f286acbe683dff1696ced7ebc821be95189235042e7f7482c1ddc",
+  "evidence": "306b1a2832b57af9e5b6d212397bce7cf5cbcdd0bedb03642bec3ca6a6bd9bed",
+  "jobs": "0d75d4d5ab4d3477c4f31aa70ee56451f9b26e608c7b3934b5e9ce477ecdaa70"
+ },
+ "validity_rate": 1.0,
+ "paid_requests": 9975,
+ "paid_usd_rows": 3.7252172000000003,
+ "bank_sha256": "d4f4e44cb7e03d4f1a6d1cb6e3e86cab2627eb302dd81ceee0e27bbe81012ccb",
+ "created_utc": "2026-09-28T05:36:42.453262+00:00",
+ "run": "VERB",
+ "backend": {
+  "backend": "llm-verbalized",
+  "model_pinned": "gpt-4.1-mini-2025-04-14",
+  "prompt_version": "verb-v1",
+  "cfg_hash": "3439578683939242",
+  "bank_hash": "d4f4e44cb7e03d4f1a6d1cb6e3e86cab2627eb302dd81ceee0e27bbe81012ccb",
+  "identity": {
+   "response_model": "gpt-4.1-mini-2025-04-14"
+  }
+ },
+ "groups": [
+  "about_focal",
+  "instructs_reader",
+  "promotional",
+  "new_development",
+  "attributes"
+ ],
+ "sample_sha256": "708e34519fb9957a1be36d86f22c70761b0b6364850c93976a8a3217fe3a3608",
+ "tags": [
+  "VERB/N1"
+ ],
+ "dry": false
+}

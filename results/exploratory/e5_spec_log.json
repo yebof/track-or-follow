@@ -1,0 +1,23 @@
+{
+ "label": "exploratory (not pre-registered)",
+ "history": [
+  {
+   "sha256": "aee520dd5c3719f985a7173e1fdad5c00ce2f5327f326f26ddbd034e327bb12c",
+   "logged_utc": "2026-09-29T02:48:30+00:00",
+   "file": "experiments/exploratory/e5_spec.yaml",
+   "before_outputs": true
+  },
+  {
+   "sha256": "514925e27b85292c4e375296a19ba70e1b89a071c299d3a42764b1bdebb467e7",
+   "logged_utc": "2026-09-29T02:53:36+00:00",
+   "file": "experiments/exploratory/e5_spec.yaml",
+   "before_outputs": false
+  }
+ ],
+ "current": {
+  "sha256": "514925e27b85292c4e375296a19ba70e1b89a071c299d3a42764b1bdebb467e7",
+  "logged_utc": "2026-09-29T02:53:36+00:00",
+  "file": "experiments/exploratory/e5_spec.yaml",
+  "before_outputs": false
+ }
+}

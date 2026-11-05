@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/e5_box1_examples.py",
+  "script_sha256": "9fe47314f3cb8c40176fe536cdd3adc32801f670183c9ae2abe48c45f7c7cec5",
+  "closure_sha256": "2614ee1d65ed1dc7052171876e03c6e274c95c6cceb96b2385c4537f7e2a3ef7",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "work.jsonl": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "spec": {
+    "path": "experiments/exploratory/e5_spec.yaml",
+    "sha256": "514925e27b85292c4e375296a19ba70e1b89a071c299d3a42764b1bdebb467e7"
+   }
+  },
+  "argv": [
+   "select"
+  ],
+  "created_utc": "2026-09-29T02:55:14+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "Box 1 illustration rule specified in e5_spec.yaml after the unlock"
+ },
+ "label": "exploratory (not pre-registered)",
+ "note": "Illustrative items chosen by a fixed rule; not evidence.",
+ "rule": "item A = the unit with the smallest sha256(\"BOX1-A|<unit>\") among units whose top event type is earnings_results, whose top effect level is 0 (\"clearly harmful\") or 4 (\"clearly helpful\") and whose text does not match the classifier; item B = the unit with the smallest sha256(\"BOX1-B|<unit>\") among units whose text matches; unit = \"<t>|<symbol>|<eid>\"; no redraw",
+ "spec": {
+  "sha256": "514925e27b85292c4e375296a19ba70e1b89a071c299d3a42764b1bdebb467e7",
+  "logged_utc": "2026-09-29T02:53:36+00:00"
+ },
+ "candidates": {
+  "A": 1096,
+  "B": 1963
+ },
+ "items": {
+  "A": {
+   "unit_hash": "e264810fb1798245",
+   "pseudonym": "Company-5551FBB9",
+   "rule": "earnings_results, top effect level 0 or 4, no price report",
+   "hours_before_cutoff": 32.94111111111111,
+   "top_event_type": "earnings_results",
+   "p_top_event_type": 0.9999999978775886,
+   "effect_probs": [
+    0.0,
+    0.0,
+    0.0,
+    0.002185764935648899,
+    0.9978142350643511
+   ],
+   "E_effect": 3.997814235064351,
+   "top_effect_level": 4,
+   "vs_expectations_top": "above",
+   "p_vs_expectations_top": 0.999999998530946,
+   "ar_0_1": -0.06193648421682604,
+   "ar_m5_m1": -0.008134450647918295,
+   "price_report": false,
+   "created_before_open_et": true
+  },
+  "B": {
+   "unit_hash": "eedd36b07ada23cc",
+   "pseudonym": "Company-C9C3DFFC",
+   "rule": "text reports the price move",
+   "hours_before_cutoff": 76.4011111111111,
+   "top_event_type": "product_or_contract",
+   "p_top_event_type": 0.9999999999797606,
+   "effect_probs": [
+    4.0586470014086724e-10,
+    3.1608774629074837e-10,
+    1.3709573552041308e-06,
+    0.9999986283206923,
+    0.0
+   ],
+   "E_effect": 2.999998627192875,
+   "top_effect_level": 3,
+   "vs_expectations_top": "not_stated",
+   "p_vs_expectations_top": 0.9999994917560705,
+   "ar_0_1": 0.00152322515979936,
+   "ar_m5_m1": 0.04396564963497,
+   "price_report": true,
+   "created_before_open_et": false
+  }
+ },
+ "private_keys": {
+  "A": {
+   "unit": "2026-04-24|AXP|news:c1e7dce1eedbd697"
+  },
+  "B": {
+   "unit": "2025-01-31|V|news:0244f4e4dad93de7"
+  }
+ }
+}

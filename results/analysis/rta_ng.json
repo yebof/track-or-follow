@@ -1,0 +1,63 @@
+{
+ "meta": {
+  "script": "experiments/analysis/rta_ng_summary.py",
+  "script_sha256": "1cf8129e6daa122be0fb70448ed94c97a8c7d3744caa26b9c65d07ecd8b3c3c8",
+  "closure_sha256": "753550937064d4a379100a6ef765843c76b85de195f1827860211119d2a624f3",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "asr_budget.json": {
+    "path": "results/redteam/rta/ng/asr_budget.json",
+    "sha256": "1a72a87d7ccff19f929a581d6e0d6d7fa8d4d49f92bf5726fa051f57c0df7e66"
+   },
+   "items.parquet": {
+    "path": "results/redteam/rta/ng/items.parquet",
+    "sha256": "99b59c1b508c79eebebad81f20151ea5a9f409babce3eeed6f4bf7a366c4df34"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T12:16:00+00:00"
+ },
+ "spec_sha256": "e5a1d85998d3907a2b4885e85149f61dd8f520a841c38dbf0480dc91e36458b6",
+ "n_items": 30,
+ "budgets": {
+  "1": {
+   "n": 30,
+   "survival_rate": 0.43333333333333335,
+   "mean_delta_expected_survivors": 1.0240762054083334,
+   "mean_delta_expected_all": 0.6187625253696878,
+   "share_survivor_effect_up_1_level": 0.23333333333333334
+  },
+  "4": {
+   "n": 30,
+   "survival_rate": 0.8666666666666667,
+   "mean_delta_expected_survivors": 1.171336966862138,
+   "mean_delta_expected_all": 1.1750874654865857,
+   "share_survivor_effect_up_1_level": 0.5333333333333333
+  },
+  "16": {
+   "n": 30,
+   "survival_rate": 0.9333333333333333,
+   "mean_delta_expected_survivors": 1.27070860468218,
+   "mean_delta_expected_all": 1.27070860468218,
+   "share_survivor_effect_up_1_level": 0.6
+  },
+  "64": {
+   "n": 30,
+   "survival_rate": 1.0,
+   "mean_delta_expected_survivors": 1.3586709137394286,
+   "mean_delta_expected_all": 1.3586709137394286,
+   "share_survivor_effect_up_1_level": 0.7
+  }
+ },
+ "kind": "RT-A-NG registered run",
+ "scope": "item level on NG (typed-local): survival of N0 and the guards, E[effect] shift; no portfolio replay, no transfer claim to emu"
+}

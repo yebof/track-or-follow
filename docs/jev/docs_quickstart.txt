@@ -1,0 +1,574 @@
+Quick start - TypeSafe AI
+Documentation Index
+Fetch the complete documentation index at:
+
+/llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+TypeSafe AI
+ home page
+Search...
+⌘
+K
+TypeSafe console
+Documentation
+Cookbooks
+Reference
+TypeSafe AI
+ home page
+Search...
+Navigation
+Get started
+Quick start
+Get started
+Quick start
+Copy page
+Copy page
+Prefer to just dive in? Here’s everything you need to get started immediately.
+Copy page
+Copy page
+​
+Try it: the Playground
+
+Open the 
+Playground
+ and log in.
+
+Paste any text
+ as the state.
+
+Sample state
+Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.
+
+Add a question.
+ Try a Noul question: 
+"Does this message express urgency?"
+
+{
+
+  "urgency"
+: {
+
+    "type"
+: 
+"noul"
+,
+
+    "instructions"
+: 
+"Does this message express urgency?"
+
+  }
+
+}
+
+Add more questions.
+ Mix Noul, Choice, and Score in one call and see all results at once.
+
+​
+Call it: the API
+
+Get your API key
+ from the 
+dashboard
+
+Make a POST request
+ to the API endpoint
+
+Review the 
+API Reference
+ for all the details.
+
+POST
+ https://api.typesafe.ai/v1/systemone
+
+Authorization
+:
+ Bearer <API_KEY>
+
+Content-Type
+:
+ application/json
+
+​
+Sample cURL command
+
+curl
+ -X
+ POST
+ https://api.typesafe.ai/v1/systemone
+ \
+
+  -H
+ "Authorization: Bearer 
+$TYPESAFE_API_KEY
+"
+ \
+
+  -H
+ "Content-Type: application/json"
+ \
+
+  -d
+ @-
+ <<
+'EOF'
+
+  {
+
+    "state": "Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.",
+
+    "model": "jev-latest",
+
+    "questions": {
+
+      "urgency": {
+
+        "type": "noul",
+
+        "instructions": "Does this message express urgency?"
+
+      }
+
+    }
+
+  }
+
+EOF
+
+​
+Request body
+
+{
+
+  "state"
+: 
+"Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP."
+,
+
+  "model"
+: 
+"jev-latest"
+,
+
+  "questions"
+: {
+
+    "department"
+: {
+
+      "type"
+: 
+"choice"
+,
+
+      "instructions"
+: 
+"Which team should handle this"
+,
+
+      "criteria"
+: {
+
+        "billing"
+: 
+"Payment or subscription issues"
+,
+
+        "technical"
+: 
+"Bugs or integration problems"
+,
+
+        "sales"
+: 
+"Pricing or account questions"
+
+      }
+
+    },
+
+    "frustration"
+: {
+
+      "type"
+: 
+"score"
+,
+
+      "instructions"
+: 
+"How frustrated the customer appears"
+,
+
+      "criteria"
+: [
+
+        "Calm, just stating facts"
+,
+
+        "Frustrated but civil"
+,
+
+        "Very angry, strong language"
+
+      ]
+
+    },
+
+    "is_urgent"
+: {
+
+      "type"
+: 
+"noul"
+,
+
+      "instructions"
+: 
+"The message conveys urgency or time-sensitivity"
+
+    }
+
+  }
+
+}
+
+​
+Response body
+
+{
+
+  "model"
+: 
+"jev-1.13.0"
+,
+
+  "answers"
+: {
+
+    "department"
+: {
+
+      "type"
+: 
+"choice"
+,
+
+      "choice"
+: 
+"technical"
+,
+
+      "confidence"
+: 
+0.78
+,
+
+      "probabilities"
+: {
+
+        "technical"
+: 
+0.85
+,
+
+        "sales"
+: 
+0.0
+,
+
+        "billing"
+: 
+0.15
+
+      }
+
+    },
+
+    "frustration"
+: {
+
+      "type"
+: 
+"score"
+,
+
+      "score"
+: 
+1.0
+,
+
+      "confidence"
+: 
+1.0
+,
+
+      "legend"
+: {
+
+        "0"
+: 
+"Calm, just stating facts"
+,
+
+        "1"
+: 
+"Frustrated but civil"
+,
+
+        "2"
+: 
+"Very angry, strong language"
+
+      },
+
+      "probabilities"
+: {
+
+        "0"
+: 
+0.0
+,
+
+        "1"
+: 
+1.0
+,
+
+        "2"
+: 
+0.0
+
+      }
+
+    },
+
+    "is_urgent"
+: {
+
+      "type"
+: 
+"noul"
+,
+
+      "noul"
+: 
+1.0
+
+    }
+
+  },
+
+  "usage"
+: {
+
+    "input_tokens"
+: 
+392
+,
+
+    "output_tokens"
+: 
+65
+
+  }
+
+}
+
+See the 
+API Reference
+ for all the details.
+
+​
+Code it: the Python SDK
+
+Install the SDK
+ (requires Python >= 3.10).
+
+With pip
+pip
+ install
+ typesafe-sdk
+
+With uv
+uv
+ add
+ typesafe-sdk
+
+Use the SDK.
+ The client reads 
+TYPESAFE_API_KEY
+ from the environment and calls 
+jev-latest
+ by default.
+
+from
+ typesafe_sdk 
+import
+ Choice, Noul, Score, TypeSafeClient
+
+client 
+=
+ TypeSafeClient()
+
+ticket 
+=
+ "Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP."
+
+response 
+=
+ client.system_one(
+
+    state
+=
+ticket,
+
+    questions
+=
+{
+
+        "department"
+: Choice(
+
+            instructions
+=
+"Which team should handle this"
+,
+
+            criteria
+=
+{
+
+                "billing"
+: 
+"Payment or subscription issues"
+,
+
+                "technical"
+: 
+"Bugs or integration problems"
+,
+
+                "sales"
+: 
+"Pricing or account questions"
+,
+
+            },
+
+        ),
+
+        "frustration"
+: Score(
+
+            instructions
+=
+"How frustrated the customer appears"
+,
+
+            criteria
+=
+[
+
+                "Calm, just stating facts"
+,
+
+                "Frustrated but civil"
+,
+
+                "Very angry, strong language"
+,
+
+            ],
+
+        ),
+
+        "is_urgent"
+: Noul(
+
+            instructions
+=
+"The message conveys urgency or time-sensitivity"
+,
+
+        ),
+
+    },
+
+)
+
+print
+(response.answers[
+"department"
+].choice)  
+# "technical"
+
+print
+(response.answers[
+"frustration"
+].score)  
+# 1.0
+
+print
+(response.answers[
+"is_urgent"
+].noul)     
+# 1.0
+
+See 
+client SDKs
+ for installation options and detailed usage.
+
+​
+Vibe it: the agent skill
+
+Install the TypeSafe skill
+ using the Claude Code plugin or 
+npx skills add typesafe-ai/skills --skill typesafe-ai
+. You can also 
+read SKILL.md on GitHub
+.
+
+Claude Code
+
+Other agents
+
+Copy to your agent
+Run these two commands in your terminal:
+claude
+ plugin
+ marketplace
+ add
+ typesafe-ai/skills
+
+claude
+ plugin
+ install
+ typesafe@typesafe-ai
+
+npx
+ skills
+ add
+ typesafe-ai/skills
+ --skill
+ typesafe-ai
+
+Choose your agent when prompted. Installation is project-local by default; add 
+-g
+ to install globally.
+Paste this prompt into your coding agent:
+Install the TypeSafe skill. If you're in Claude Code, run `claude plugin marketplace add typesafe-ai/skills`, then `claude plugin install typesafe@typesafe-ai`. If you're in another agent, run `npx skills add typesafe-ai/skills --skill typesafe-ai` and select your agent. Use one installation method. You can read the skill directly at https://github.com/typesafe-ai/skills/blob/main/skills/typesafe-ai/SKILL.md (raw: https://raw.githubusercontent.com/typesafe-ai/skills/main/skills/typesafe-ai/SKILL.md). Then use the TypeSafe skill when working on this project.
+
+Tell your coding agent
+ to use the TypeSafe skill as you build!
+
+Coding agent prompt
+Let's build a simple CLI that uses the TypeSafe API to evaluate a set of supplied documents on multiple dimensions. Use the TypeSafe skill to understand how to use the TypeSafe API and how to structure the system. Ask me questions about what kinds of documents I want to evaluate and on what dimensions.
+
+See the 
+Agent Skill
+ page for more details.
+Was this page helpful?
+Yes
+No

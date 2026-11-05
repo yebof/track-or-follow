@@ -1,0 +1,37 @@
+{
+ "eval_dir": "results/eval/663e17898112b00d/W_pre_slice__2e40a2872ce7",
+ "weeks": 58,
+ "sd_ic_primary": 0.24179173071581217,
+ "contrasts": {
+  "V-codeonly": {
+   "weeks": 58,
+   "sd_ic_variant": 0.2564232328067272,
+   "rho": 0.9892989228908248,
+   "sd_delta": 0.0392560337584647,
+   "mde_115_weeks_holm": 0.0108706484913578
+  },
+  "V-joint": {
+   "weeks": 58,
+   "sd_ic_variant": 0.24150900928871702,
+   "rho": 0.999812800439922,
+   "sd_delta": 0.004684327443763381,
+   "mde_115_weeks_holm": 0.001297168159495792
+  },
+  "V-nocap": {
+   "weeks": 58,
+   "sd_ic_variant": 0.24123900995633324,
+   "rho": 0.9999506107696906,
+   "sd_delta": 0.0024631703372955333,
+   "mde_115_weeks_holm": 0.0006820928236364494
+  }
+ },
+ "caveat": "S30 slice: 70 of 100 names have no S1 judgment, so rho is inflated relative to U100",
+ "single_system_ic_mde_115_weeks": 0.06316822192810541,
+ "plan_v1_assumptions": {
+  "sigma_ic": 0.12,
+  "rho": [
+   0.5,
+   0.8
+  ]
+ }
+}

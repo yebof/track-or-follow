@@ -1,0 +1,94 @@
+# E9 "does the information survive at the source?": specification, fixed and committed before any E9 outcome.
+# EXPLORATORY (not pre-registered). The SHA-256 of this file and the commit that added it are written into the meta
+# of every E9 output (results/exploratory/e9_source_timing.json); the script refuses to run if this file differs from
+# its committed version.
+id: E9
+label: exploratory (not pre-registered)
+written_utc: "2026-10-08T00:00:00Z"
+why_exploratory: >-
+  Specified on 2026-10-08, after the W_clean unlock, after the registered H2 outcome and after E6/E8 had printed the
+  publication-timing results (72% of earnings items appear after the 8-K acceptance; the item-level association with
+  the publication-aligned return is near zero). Nothing here decides a registered claim: every output is a
+  descriptive estimate with a two-sided 95% interval, no p-value is computed, and no configuration, threshold or
+  reader is chosen from it. No model is called: the reader's judgments already exist.
+question: >-
+  If the system read the issuer's 8-K at its SEC acceptance time instead of the later Web news item, how much of the
+  event-window abnormal return AR[0,+1] would still be ahead, and is the reader's existing E[effect] associated with
+  the return from the first trade after acceptance (versus after news publication) on the same items?
+
+frame:
+  rule: >-
+    the registered H2 frame rebuilt read-only by e6_publication_timing.build (results/judgments/main_emu_wclean_u100
+    on W_clean from the D1 start; its weekly statistic must equal results/analysis/h2.json confirmatory.mean to 1e-12;
+    registered labels AR[0,+1] from learn.labels.abnormal_returns). Unit = (t, focal symbol, evidence id).
+  reader: emu's E[effect] (the registered H2 item answer); no new judgment
+
+filings:
+  source: data/raw/sec/submissions via jevtrader.data.earnings.load_8k_items (acceptanceDateTime, true UTC; item codes)
+  concept_map: >-
+    h2_validity.SEC_CONCEPTS: unit top event type earnings_results -> Item 2.02; deal_or_investment -> 1.01 or 2.01;
+    management_or_labor -> 5.02. Units of other types are not in E9.
+  match: >-
+    the focal firm's 8-K reporting one of the concept's items accepted in [created_at - 2 days, created_at + 1 day]
+    (the registered 8-K label window) nearest to created_at; units without one are "unmatched" (counted)
+  groups: {earnings: "Item 2.02", other: "1.01/2.01 or 5.02 (pooled)", all: "both"}
+
+returns:
+  definition: >-
+    every criterion ends at the close of session d0+1 of the unit's registered label (d0 from created_at) and uses the
+    label's trailing beta (252 sessions, at least 60, ending the session before d0)
+  ar_0_1: the registered label AR[0,+1] (daily close-to-close, starts at the close of session d0-1)
+  ar_acc: >-
+    E6's publication-aligned criterion (e6_publication_timing.publication_aligned, unchanged) with the 8-K acceptance
+    time in place of created_at: from the OPEN of the first SIP one-minute bar (04:00-20:00 ET, unadjusted) at or
+    after the acceptance minute rounded up, to the close of d0+1, minus beta times SPY over the same span; both legs
+    on the adjusted scale by the daily factor adjusted / unadjusted close
+  ar_pub: E6's publication-aligned criterion (first bar at or after created_at)
+  ar_src: the same with the earlier of acceptance and created_at (the first source a system reading both would see)
+  regular_entry: sensitivity with the first regular-session (09:30-16:00 ET) bar instead (E6's ar_pub_regular rule)
+  minute_bars: >-
+    data/cache/minute_sip (E6's cache). Session dates and symbols the E9 entries need and the cache lacks are fetched
+    by `e9_source_timing.py fetch` with E6's fetch code (read-only market-data client, ALPACA_DATA_* keys; acceptance
+    times and symbols only, no outcome read)
+
+populations:
+  matched: frame units with a matched 8-K
+  filing_first: matched units with acceptance <= created_at
+  decomposition: >-
+    filing_first units whose acceptance is at or after the start of the AR[0,+1] window (16:00 ET of session d0-1),
+    with finite ar_0_1, ar_acc and ar_pub. Other matched units are counted by reason (news first; filing before the
+    window; no bar)
+  event_level: >-
+    sensitivity: one row per (focal symbol, accession) in the decomposition population, the unit with the earliest
+    created_at (ties: smallest eid), with its own E[effect]
+
+decomposition:
+  components: >-
+    pre = ar_0_1 - ar_acc (before the first trade after acceptance); between = ar_acc - ar_pub (acceptance to the
+    first trade after publication); after = ar_pub. The three sum to ar_0_1 for each unit.
+  shares:
+    sign_aligned: sum_i sign(ar_0_1_i) * component_i / sum_i |ar_0_1_i| (the three shares sum to 1)
+    slope: OLS slope (with intercept) of the component on ar_0_1 (the three slopes sum to 1)
+  interval: week-block bootstrap (weeks = t, 2,000 draws, seed 0), percentile 95%
+  also: >-
+    acceptance clock groups (ET): pre_open (session day, before 09:30), intraday (09:30-16:00), after_close
+    (session day, 16:00-20:00), other (after 20:00 or non-session day); shares of the decomposition population and the
+    shares per group; median minutes acceptance -> news publication and acceptance -> entry bar
+  rows: "[all, earnings, other] x [unit level, event level]"
+
+association:
+  statistic: >-
+    h2_validity.weekly_test's statistic (mean over weeks of the Spearman correlation of E[effect] with the criterion,
+    at least 4 units per week) with the two-sided Newey-West(4) 95% interval of stats.nw_test; p-values dropped
+  criteria_on_decomposition: [ar_0_1, ar_acc, ar_pub, ar_acc_regular]
+  paired: >-
+    mean over weeks of rho(E, ar_acc) - rho(E, ar_pub) on the same units, NW(4) two-sided 95%
+  matched_all: on all matched units, rho(E, ar_src) vs rho(E, ar_pub) and their paired difference
+  rows: "[all, earnings, other]; event level as sensitivity"
+
+reported: >-
+  counts per population and reason; minute-bar cache coverage (session dates, whether extended hours are present,
+  units without a bar); the shares with intervals; the weekly statistics with intervals; caveats: extended-hours
+  entries (after-close filings enter on thin after-hours bars), daily AR is a sum of daily simple ARs while the
+  minute criteria compound within the span (components are differences of the two and so absorb that mismatch),
+  EDGAR acceptance is taken as the public time.

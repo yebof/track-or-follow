@@ -1,0 +1,1336 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/e9_source_timing.py",
+  "script_sha256": "ec2075589e486824a3f0aa22773d520f308d2397534d2b63f4c435041ef773b9",
+  "closure_sha256": "90669fd10fe898f04efd84acf0c6ffe231f9ca829c42a7d160d3227f2a41f98f",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "work.jsonl": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "h2": {
+    "path": "results/analysis/h2.json",
+    "sha256": "6d378f7053f6358a648363faaddb46c557c1ad06faf3ad2e19553621034c802a"
+   },
+   "spec": {
+    "path": "experiments/exploratory/e9_spec.yaml",
+    "sha256": "2a49c46122f5df8f5517df2470a2116322e2c44b3fc8cbe5b347a00bfd8d8f9e"
+   },
+   "submissions": {
+    "path": "data/raw/sec/submissions",
+    "dir": true
+   },
+   "minute cache": {
+    "path": "data/cache/minute_sip",
+    "dir": true
+   }
+  },
+  "argv": [
+   "run"
+  ],
+  "created_utc": "2026-10-08T09:20:28+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "source-timing decomposition specified after the H2 outcome and E6/E8 (experiments/exploratory/e9_spec.yaml, committed before any E9 outcome)",
+  "spec": {
+   "file": "experiments/exploratory/e9_spec.yaml",
+   "sha256": "2a49c46122f5df8f5517df2470a2116322e2c44b3fc8cbe5b347a00bfd8d8f9e",
+   "commit": "01d4365ddc086ca27d357c90ad8b1956e01634d3",
+   "added_in": "0cfdfccc16805529d3ec233e7bf23de458134868"
+  }
+ },
+ "label": "exploratory (not pre-registered)",
+ "question": "how much of AR[0,+1] is still ahead at the first trade after the issuer's 8-K acceptance, and does the reader's E[effect] track the return from that trade",
+ "spec": {
+  "file": "experiments/exploratory/e9_spec.yaml",
+  "sha256": "2a49c46122f5df8f5517df2470a2116322e2c44b3fc8cbe5b347a00bfd8d8f9e",
+  "commit": "01d4365ddc086ca27d357c90ad8b1956e01634d3",
+  "added_in": "0cfdfccc16805529d3ec233e7bf23de458134868",
+  "added_utc": "2026-10-08T09:15:22+00:00",
+  "id": "E9"
+ },
+ "frame": {
+  "n_units": 27556,
+  "n_weeks": 115,
+  "h2_mean_recomputed": 0.11921180713578919,
+  "h2_mean_registered": 0.11921180713578919,
+  "units_of_mapped_types": 6859
+ },
+ "minute_bars": {
+  "dir": "data/cache/minute_sip",
+  "session_dates": 554,
+  "first": "2024-06-28",
+  "last": "2026-09-14",
+  "window_et": [
+   [
+    "04:00",
+    "20:00"
+   ]
+  ],
+  "feed": "sip",
+  "adjustment": "raw",
+  "status_acc": {
+   "ok": 3086
+  },
+  "status_src": {
+   "ok": 3086
+  }
+ },
+ "groups": {
+  "earnings": {
+   "frame_units_of_type": 2975,
+   "counts": {
+    "matched": 2709,
+    "decomposition": 1749,
+    "news_first": 748,
+    "filing_before_window": 212,
+    "decomposition_events": 786
+   },
+   "share_filing_first_among_matched": 0.7238833517903286,
+   "minutes_acceptance_to_publication": {
+    "median": 124.81666666666666,
+    "p25": 17.633333333333333,
+    "p75": 819.9333333333333
+   },
+   "minutes_acceptance_to_entry_bar": {
+    "median": 0.5666666666666667,
+    "share_le_5": 0.9668381932532876
+   },
+   "acceptance_clock": {
+    "pre_open": {
+     "share": 0.36649514008004574,
+     "shares": {
+      "n_units": 641,
+      "n_weeks": 72,
+      "mean_abs_ar_0_1": 0.04565033481074516,
+      "pre": {
+       "sign_aligned": 0.20636320886759252,
+       "sign_aligned_ci": [
+        0.1350307649299987,
+        0.2895775637033808
+       ],
+       "slope": 0.249155929028125,
+       "slope_ci": [
+        0.17527784056594703,
+        0.3273098554262007
+       ],
+       "mean": 0.005165716874714636,
+       "median_signed_by_ar": 0.006099612600691806
+      },
+      "between": {
+       "sign_aligned": 0.35790119600931775,
+       "sign_aligned_ci": [
+        0.3109028264616904,
+        0.4079956083294933
+       ],
+       "slope": 0.3417134869501429,
+       "slope_ci": [
+        0.29054031378453615,
+        0.39498454922004494
+       ],
+       "mean": -0.006109061173203097,
+       "median_signed_by_ar": 0.010680616943413136
+      },
+      "after": {
+       "sign_aligned": 0.43573559512308974,
+       "sign_aligned_ci": [
+        0.36434783190802694,
+        0.4999756704411148
+       ],
+       "slope": 0.40913058402173247,
+       "slope_ci": [
+        0.34748958831734683,
+        0.4671924115332259
+       ],
+       "mean": -0.0008186099237037097,
+       "median_signed_by_ar": 0.016970044691308143
+      }
+     }
+    },
+    "intraday": {
+     "share": 0.002858776443682104,
+     "shares": {
+      "n_units": 5
+     }
+    },
+    "after_close": {
+     "share": 0.6306460834762722,
+     "shares": {
+      "n_units": 1103,
+      "n_weeks": 97,
+      "mean_abs_ar_0_1": 0.07931157614490059,
+      "pre": {
+       "sign_aligned": 0.26088628531771946,
+       "sign_aligned_ci": [
+        0.19186417391025987,
+        0.33357086349330767
+       ],
+       "slope": 0.30989935004959557,
+       "slope_ci": [
+        0.253828927761544,
+        0.36583829713912436
+       ],
+       "mean": 0.005972032272137532,
+       "median_signed_by_ar": 0.013431951250786861
+      },
+      "between": {
+       "sign_aligned": 0.33576742947228155,
+       "sign_aligned_ci": [
+        0.28640572454182694,
+        0.3883546533288268
+       ],
+       "slope": 0.3237249655921721,
+       "slope_ci": [
+        0.2797712987663194,
+        0.37788230958001046
+       ],
+       "mean": -0.0028718409549819144,
+       "median_signed_by_ar": 0.01669305562222309
+      },
+      "after": {
+       "sign_aligned": 0.4033462852099991,
+       "sign_aligned_ci": [
+        0.35106985946978436,
+        0.4559499711080557
+       ],
+       "slope": 0.36637568435823215,
+       "slope_ci": [
+        0.31338303798877787,
+        0.4163913858267609
+       ],
+       "mean": -0.004385866091009647,
+       "median_signed_by_ar": 0.023407220320494734
+      }
+     }
+    },
+    "other": {
+     "share": 0.0,
+     "shares": {
+      "n_units": 0
+     }
+    }
+   },
+   "decomposition": {
+    "unit_level": {
+     "n_units": 1749,
+     "n_weeks": 103,
+     "mean_abs_ar_0_1": 0.06680937319510911,
+     "pre": {
+      "sign_aligned": 0.24733933577600117,
+      "sign_aligned_ci": [
+       0.18972208433988855,
+       0.30615734082424567
+      ],
+      "slope": 0.29990187581993666,
+      "slope_ci": [
+       0.2476721960908225,
+       0.34986808172000083
+      ],
+      "mean": 0.005692386467192317,
+      "median_signed_by_ar": 0.010145431542246973
+     },
+     "between": {
+      "sign_aligned": 0.3409527225526,
+      "sign_aligned_ci": [
+       0.30283079943660857,
+       0.38144667287960377
+      ],
+      "slope": 0.32661888537058537,
+      "slope_ci": [
+       0.28585204680692167,
+       0.3725959071076837
+      ],
+      "mean": -0.004047270850139811,
+      "median_signed_by_ar": 0.013319575524411747
+     },
+     "after": {
+      "sign_aligned": 0.41170794167139874,
+      "sign_aligned_ci": [
+       0.36731750514921935,
+       0.45399954019426025
+      ],
+      "slope": 0.3734792388094776,
+      "slope_ci": [
+       0.32864886870474114,
+       0.41626730168039056
+      ],
+      "mean": -0.003098551085650417,
+      "median_signed_by_ar": 0.02037634253737086
+     }
+    },
+    "event_level": {
+     "n_units": 786,
+     "n_weeks": 103,
+     "mean_abs_ar_0_1": 0.06039140722054476,
+     "pre": {
+      "sign_aligned": 0.27025819516494026,
+      "sign_aligned_ci": [
+       0.2216841418183189,
+       0.32346850595641446
+      ],
+      "slope": 0.3126756600195245,
+      "slope_ci": [
+       0.26490851646812086,
+       0.36445064109630554
+      ],
+      "mean": 0.0032276382317776714,
+      "median_signed_by_ar": 0.01111705234560367
+     },
+     "between": {
+      "sign_aligned": 0.20206311752557596,
+      "sign_aligned_ci": [
+       0.1676077748522839,
+       0.2386589476420684
+      ],
+      "slope": 0.1852931037932726,
+      "slope_ci": [
+       0.14453642906396255,
+       0.2320531452091004
+      ],
+      "mean": -0.003079355078369083,
+      "median_signed_by_ar": 0.0047933067676606935
+     },
+     "after": {
+      "sign_aligned": 0.527678687309484,
+      "sign_aligned_ci": [
+       0.47641808217281933,
+       0.5763174517654952
+      ],
+      "slope": 0.5020312361872026,
+      "slope_ci": [
+       0.44621263711888,
+       0.5524691803903995
+      ],
+      "mean": -0.00410888246647849,
+      "median_signed_by_ar": 0.023605337211877075
+     }
+    }
+   },
+   "association": {
+    "unit_level": {
+     "ar_0_1": {
+      "mean": 0.29292512620978584,
+      "ci": [
+       0.22592728830492226,
+       0.3599229641146494
+      ],
+      "se": 0.033723610250287896,
+      "n_weeks": 91,
+      "n_weeks_undefined": 12,
+      "n_units": 1725,
+      "distinct_focal_d0": 786
+     },
+     "ar_acc": {
+      "mean": 0.15348212920196816,
+      "ci": [
+       0.0865277747105443,
+       0.22043648369339203
+      ],
+      "se": 0.033701722712823234,
+      "n_weeks": 91,
+      "n_weeks_undefined": 12,
+      "n_units": 1725,
+      "distinct_focal_d0": 786
+     },
+     "ar_pub": {
+      "mean": -0.040544302793078996,
+      "ci": [
+       -0.11120907344744349,
+       0.0301204678612855
+      ],
+      "se": 0.035574699647130704,
+      "n_weeks": 92,
+      "n_weeks_undefined": 11,
+      "n_units": 1729,
+      "distinct_focal_d0": 786
+     },
+     "ar_acc_regular": {
+      "mean": -0.020834102053354234,
+      "ci": [
+       -0.10861536005663001,
+       0.06694715594992155
+      ],
+      "se": 0.044185021856765615,
+      "n_weeks": 91,
+      "n_weeks_undefined": 12,
+      "n_units": 1725,
+      "distinct_focal_d0": 786
+     },
+     "acc_minus_pub": {
+      "mean": 0.19227417158617988,
+      "ci": [
+       0.1250465569466831,
+       0.25950178622567666
+      ],
+      "se": 0.033839269222064816,
+      "n_weeks": 91,
+      "n_units": 1749,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    },
+    "event_level": {
+     "ar_0_1": {
+      "mean": 0.2550087597926392,
+      "ci": [
+       0.17663710842037195,
+       0.33338041116490646
+      ],
+      "se": 0.03913757963146867,
+      "n_weeks": 58,
+      "n_weeks_undefined": 45,
+      "n_units": 687,
+      "distinct_focal_d0": 786
+     },
+     "ar_acc": {
+      "mean": 0.08759324249295,
+      "ci": [
+       0.0010152448588685442,
+       0.17417124012703145
+      ],
+      "se": 0.04323570088681343,
+      "n_weeks": 58,
+      "n_weeks_undefined": 45,
+      "n_units": 687,
+      "distinct_focal_d0": 786
+     },
+     "ar_pub": {
+      "mean": -0.012543290552308222,
+      "ci": [
+       -0.10428585152949284,
+       0.07919927042487639
+      ],
+      "se": 0.045814803222457075,
+      "n_weeks": 58,
+      "n_weeks_undefined": 45,
+      "n_units": 687,
+      "distinct_focal_d0": 786
+     },
+     "ar_acc_regular": {
+      "mean": -0.04519700054818032,
+      "ci": [
+       -0.1217560890707298,
+       0.03136208797436915
+      ],
+      "se": 0.038232414031079465,
+      "n_weeks": 58,
+      "n_weeks_undefined": 45,
+      "n_units": 687,
+      "distinct_focal_d0": 786
+     },
+     "acc_minus_pub": {
+      "mean": 0.10013653304525826,
+      "ci": [
+       0.03851748059961898,
+       0.16175558549089752
+      ],
+      "se": 0.030771593167682465,
+      "n_weeks": 58,
+      "n_units": 786,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    }
+   },
+   "earliest_source_on_matched": {
+    "ar_src": {
+     "mean": 0.09931674541481054,
+     "ci": [
+      0.037129736872554484,
+      0.16150375395706662
+     ],
+     "se": 0.0313287153864503,
+     "n_weeks": 97,
+     "n_weeks_undefined": 8,
+     "n_units": 2693,
+     "distinct_focal_d0": 1082
+    },
+    "ar_pub": {
+     "mean": -0.046183638634559786,
+     "ci": [
+      -0.10821238467900773,
+      0.01584510740988817
+     ],
+     "se": 0.03125309689610836,
+     "n_weeks": 98,
+     "n_weeks_undefined": 7,
+     "n_units": 2697,
+     "distinct_focal_d0": 1082
+    },
+    "ar_0_1": {
+     "mean": 0.21078674547634293,
+     "ci": [
+      0.14328617831169121,
+      0.27828731264099466
+     ],
+     "se": 0.03400559227235387,
+     "n_weeks": 97,
+     "n_weeks_undefined": 8,
+     "n_units": 2693,
+     "distinct_focal_d0": 1082
+    },
+    "src_minus_pub": {
+     "mean": 0.14391464836519055,
+     "ci": [
+      0.09998131553920567,
+      0.18784798119117543
+     ],
+     "se": 0.022132836300498816,
+     "n_weeks": 97,
+     "n_units": 2709,
+     "definition": "mean over weeks of rho(E[effect], ar_src) - rho(E[effect], ar_pub), same units; NW(4)"
+    }
+   }
+  },
+  "other": {
+   "frame_units_of_type": 3884,
+   "counts": {
+    "matched": 377,
+    "decomposition": 182,
+    "news_first": 160,
+    "filing_before_window": 35,
+    "decomposition_events": 129
+   },
+   "share_filing_first_among_matched": 0.5755968169761273,
+   "minutes_acceptance_to_publication": {
+    "median": 40.71666666666667,
+    "p25": 4.5375,
+    "p75": 466.3666666666667
+   },
+   "minutes_acceptance_to_entry_bar": {
+    "median": 0.85,
+    "share_le_5": 0.8131868131868132
+   },
+   "acceptance_clock": {
+    "pre_open": {
+     "share": 0.34615384615384615,
+     "shares": {
+      "n_units": 63,
+      "n_weeks": 35,
+      "mean_abs_ar_0_1": 0.02455316571480583,
+      "pre": {
+       "sign_aligned": 0.2325617859288728,
+       "sign_aligned_ci": [
+        0.07644043860492378,
+        0.40080952620560484
+       ],
+       "slope": 0.1794616070368036,
+       "slope_ci": [
+        0.09855597728471127,
+        0.2779404914319497
+       ],
+       "mean": -0.002164353817444607,
+       "median_signed_by_ar": 0.0035812731529353097
+      },
+      "between": {
+       "sign_aligned": 0.10908532867170809,
+       "sign_aligned_ci": [
+        -0.050270541321235956,
+        0.2635433321761371
+       ],
+       "slope": 0.1475163244844218,
+       "slope_ci": [
+        0.06540531789737457,
+        0.23202227953870294
+       ],
+       "mean": -0.0004519144263115467,
+       "median_signed_by_ar": 0.00041655535553662
+      },
+      "after": {
+       "sign_aligned": 0.6583528853994193,
+       "sign_aligned_ci": [
+        0.4829975732660595,
+        0.841472320496112
+       ],
+       "slope": 0.6730220684787748,
+       "slope_ci": [
+        0.5459376094823721,
+        0.7726593218539233
+       ],
+       "mean": -0.0033772295306314214,
+       "median_signed_by_ar": 0.011726836573024774
+      }
+     }
+    },
+    "intraday": {
+     "share": 0.016483516483516484,
+     "shares": {
+      "n_units": 3
+     }
+    },
+    "after_close": {
+     "share": 0.6318681318681318,
+     "shares": {
+      "n_units": 115,
+      "n_weeks": 56,
+      "mean_abs_ar_0_1": 0.025927354643057215,
+      "pre": {
+       "sign_aligned": 0.2426995400343294,
+       "sign_aligned_ci": [
+        0.06308315860299162,
+        0.43472583290862993
+       ],
+       "slope": 0.3087340466851294,
+       "slope_ci": [
+        0.08147744068547047,
+        0.5278770297088737
+       ],
+       "mean": 0.0012725249859561443,
+       "median_signed_by_ar": 0.0005743230140789271
+      },
+      "between": {
+       "sign_aligned": 0.1322615360295039,
+       "sign_aligned_ci": [
+        0.06646450148913259,
+        0.1982592943052812
+       ],
+       "slope": 0.1364936845011978,
+       "slope_ci": [
+        0.07721647597517754,
+        0.1925259635308504
+       ],
+       "mean": -0.003153465064448441,
+       "median_signed_by_ar": 3.9656094283193125e-05
+      },
+      "after": {
+       "sign_aligned": 0.6250389239361663,
+       "sign_aligned_ci": [
+        0.45444527342768226,
+        0.793317798381031
+       ],
+       "slope": 0.554772268813673,
+       "slope_ci": [
+        0.36876735839304636,
+        0.7571128588632504
+       ],
+       "mean": -0.0018853325188840316,
+       "median_signed_by_ar": 0.011897667074525702
+      }
+     }
+    },
+    "other": {
+     "share": 0.005494505494505495,
+     "shares": {
+      "n_units": 1
+     }
+    }
+   },
+   "decomposition": {
+    "unit_level": {
+     "n_units": 182,
+     "n_weeks": 73,
+     "mean_abs_ar_0_1": 0.02519960794593805,
+     "pre": {
+      "sign_aligned": 0.251793351261341,
+      "sign_aligned_ci": [
+       0.1208861823910489,
+       0.39847960322598336
+      ],
+      "slope": 0.27506043187050766,
+      "slope_ci": [
+       0.12279472105626314,
+       0.4323789929223699
+      ],
+      "mean": -7.524206014852727e-05,
+      "median_signed_by_ar": 0.0011698666644598841
+     },
+     "between": {
+      "sign_aligned": 0.11891434572160406,
+      "sign_aligned_ci": [
+       0.04905448941200589,
+       0.18242471117094897
+      ],
+      "slope": 0.1363397320727362,
+      "slope_ci": [
+       0.08784372119197445,
+       0.18410379146237238
+      ],
+      "mean": -0.002154030353289012,
+      "median_signed_by_ar": 5.634130439131479e-05
+     },
+     "after": {
+      "sign_aligned": 0.6292923030170549,
+      "sign_aligned_ci": [
+       0.5026403495343,
+       0.7540312759187016
+      ],
+      "slope": 0.5885998360567564,
+      "slope_ci": [
+       0.44550321664292125,
+       0.7360450801356867
+      ],
+      "mean": -0.0025056932861816537,
+      "median_signed_by_ar": 0.011556143175170333
+     }
+    },
+    "event_level": {
+     "n_units": 129,
+     "n_weeks": 73,
+     "mean_abs_ar_0_1": 0.02601228399547753,
+     "pre": {
+      "sign_aligned": 0.22321426349900783,
+      "sign_aligned_ci": [
+       0.11615333150846963,
+       0.33461189282886133
+      ],
+      "slope": 0.24079107954352355,
+      "slope_ci": [
+       0.13304891341667194,
+       0.35154389900983957
+      ],
+      "mean": 3.734986356188075e-05,
+      "median_signed_by_ar": 0.0008452255221159254
+     },
+     "between": {
+      "sign_aligned": 0.06477860087809668,
+      "sign_aligned_ci": [
+       0.02684101186735915,
+       0.10127327986138976
+      ],
+      "slope": 0.08577409562128145,
+      "slope_ci": [
+       0.05649340994716428,
+       0.11714677188278695
+      ],
+      "mean": -0.000713942214446234,
+      "median_signed_by_ar": 0.0
+     },
+     "after": {
+      "sign_aligned": 0.7120071356228957,
+      "sign_aligned_ci": [
+       0.5984466356525423,
+       0.8235586491290662
+      ],
+      "slope": 0.6734348248351953,
+      "slope_ci": [
+       0.5643776320210265,
+       0.78297115517062
+      ],
+      "mean": -0.00431414703576642,
+      "median_signed_by_ar": 0.01282243672495906
+     }
+    }
+   },
+   "association": {
+    "unit_level": {
+     "ar_0_1": {
+      "mean": 0.21089837288690655,
+      "ci": [
+       -0.0971453848294469,
+       0.51894213060326
+      ],
+      "se": 0.14258851460135455,
+      "n_weeks": 14,
+      "n_weeks_undefined": 59,
+      "n_units": 70,
+      "distinct_focal_d0": 129
+     },
+     "ar_acc": {
+      "mean": -0.010338315985178332,
+      "ci": [
+       -0.22150466900739638,
+       0.2008280370370397
+      ],
+      "se": 0.09774551782655666,
+      "n_weeks": 14,
+      "n_weeks_undefined": 59,
+      "n_units": 70,
+      "distinct_focal_d0": 129
+     },
+     "ar_pub": {
+      "mean": 0.07262563007640936,
+      "ci": [
+       -0.22652170401059413,
+       0.3717729641634129
+      ],
+      "se": 0.13947649702051299,
+      "n_weeks": 15,
+      "n_weeks_undefined": 58,
+      "n_units": 78,
+      "distinct_focal_d0": 129
+     },
+     "ar_acc_regular": {
+      "mean": -0.0014447524806809034,
+      "ci": [
+       -0.21673903999117777,
+       0.21384953502981596
+      ],
+      "se": 0.09965627249147463,
+      "n_weeks": 14,
+      "n_weeks_undefined": 59,
+      "n_units": 70,
+      "distinct_focal_d0": 129
+     },
+     "acc_minus_pub": {
+      "mean": -0.07446433378803684,
+      "ci": [
+       -0.24622409293920172,
+       0.09729542536312803
+      ],
+      "se": 0.079504837582855,
+      "n_weeks": 14,
+      "n_units": 182,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    },
+    "event_level": {
+     "ar_0_1": {
+      "mean": -0.09999999999999996,
+      "ci": [
+       -0.6608144210207266,
+       0.46081442102072667
+      ],
+      "se": 0.20199009876724155,
+      "n_weeks": 5,
+      "n_weeks_undefined": 68,
+      "n_units": 21,
+      "distinct_focal_d0": 129
+     },
+     "ar_acc": {
+      "mean": -0.33999999999999997,
+      "ci": [
+       -0.7256761084878388,
+       0.04567610848783887
+      ],
+      "se": 0.13891004283348268,
+      "n_weeks": 5,
+      "n_weeks_undefined": 68,
+      "n_units": 21,
+      "distinct_focal_d0": 129
+     },
+     "ar_pub": {
+      "mean": -0.37999999999999995,
+      "ci": [
+       -0.7856271324491758,
+       0.025627132449175916
+      ],
+      "se": 0.14609585894199736,
+      "n_weeks": 5,
+      "n_weeks_undefined": 68,
+      "n_units": 21,
+      "distinct_focal_d0": 129
+     },
+     "ar_acc_regular": {
+      "mean": -0.2,
+      "ci": [
+       -0.5649731873099925,
+       0.16497318730999244
+      ],
+      "se": 0.13145341380123984,
+      "n_weeks": 5,
+      "n_weeks_undefined": 68,
+      "n_units": 21,
+      "distinct_focal_d0": 129
+     },
+     "acc_minus_pub": {
+      "mean": 0.039999999999999966,
+      "ci": [
+       -0.0044231216831646936,
+       0.08442312168316463
+      ],
+      "se": 0.015999999999999986,
+      "n_weeks": 5,
+      "n_units": 129,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    }
+   },
+   "earliest_source_on_matched": {
+    "ar_src": {
+     "mean": -0.011996735187376994,
+     "ci": [
+      -0.1570844409976832,
+      0.13309097062292924
+     ],
+     "se": 0.07194340607151611,
+     "n_weeks": 44,
+     "n_weeks_undefined": 51,
+     "n_units": 282,
+     "distinct_focal_d0": 248
+    },
+    "ar_pub": {
+     "mean": 0.016846000293166928,
+     "ci": [
+      -0.10042242093666845,
+      0.1341144215230023
+     ],
+     "se": 0.05814889415188721,
+     "n_weeks": 44,
+     "n_weeks_undefined": 51,
+     "n_units": 282,
+     "distinct_focal_d0": 248
+    },
+    "ar_0_1": {
+     "mean": 0.040771195622425475,
+     "ci": [
+      -0.12039159734531835,
+      0.2019339885901693
+     ],
+     "se": 0.07985939951918922,
+     "n_weeks": 43,
+     "n_weeks_undefined": 52,
+     "n_units": 276,
+     "distinct_focal_d0": 248
+    },
+    "src_minus_pub": {
+     "mean": -0.028842735480543932,
+     "ci": [
+      -0.09324025864749311,
+      0.03555478768640524
+     ],
+     "se": 0.031932251828814776,
+     "n_weeks": 44,
+     "n_units": 377,
+     "definition": "mean over weeks of rho(E[effect], ar_src) - rho(E[effect], ar_pub), same units; NW(4)"
+    }
+   }
+  },
+  "all": {
+   "frame_units_of_type": 6859,
+   "counts": {
+    "matched": 3086,
+    "decomposition": 1931,
+    "news_first": 908,
+    "filing_before_window": 247,
+    "decomposition_events": 910
+   },
+   "share_filing_first_among_matched": 0.7057679844458846,
+   "minutes_acceptance_to_publication": {
+    "median": 118.71666666666667,
+    "p25": 15.375,
+    "p75": 767.2166666666667
+   },
+   "minutes_acceptance_to_entry_bar": {
+    "median": 0.5833333333333334,
+    "share_le_5": 0.9523562920766442
+   },
+   "acceptance_clock": {
+    "pre_open": {
+     "share": 0.36457793889176593,
+     "shares": {
+      "n_units": 704,
+      "n_weeks": 83,
+      "mean_abs_ar_0_1": 0.04376237791721649,
+      "pre": {
+       "sign_aligned": 0.20767859172278835,
+       "sign_aligned_ci": [
+        0.13517720664719948,
+        0.28733253776640694
+       ],
+       "slope": 0.24755947675537185,
+       "slope_ci": [
+        0.17257278225117267,
+        0.32360304105680565
+       ],
+       "mean": 0.004509758844024248,
+       "median_signed_by_ar": 0.0051091943107418195
+      },
+      "between": {
+       "sign_aligned": 0.34540860432271425,
+       "sign_aligned_ci": [
+        0.29728549181592384,
+        0.39328313685127897
+       ],
+       "slope": 0.3347124745087131,
+       "slope_ci": [
+        0.28093076605917444,
+        0.38526657390179725
+       ],
+       "mean": -0.0056028108251147905,
+       "median_signed_by_ar": 0.008579178892117695
+      },
+      "after": {
+       "sign_aligned": 0.44691280395449723,
+       "sign_aligned_ci": [
+        0.3771762838100761,
+        0.5086876194264848
+       ],
+       "slope": 0.41772804873591507,
+       "slope_ci": [
+        0.3586992940647064,
+        0.476533810292555
+       ],
+       "mean": -0.001047577303300934,
+       "median_signed_by_ar": 0.016721312384163356
+      }
+     }
+    },
+    "intraday": {
+     "share": 0.004142931123770067,
+     "shares": {
+      "n_units": 8
+     }
+    },
+    "after_close": {
+     "share": 0.6307612635939928,
+     "shares": {
+      "n_units": 1218,
+      "n_weeks": 106,
+      "mean_abs_ar_0_1": 0.07427119398339647,
+      "pre": {
+       "sign_aligned": 0.2602868486038286,
+       "sign_aligned_ci": [
+        0.1925377697877954,
+        0.3288420262889024
+       ],
+       "slope": 0.309969122212221,
+       "slope_ci": [
+        0.25564371855267637,
+        0.3671820386501493
+       ],
+       "mean": 0.005528318530010389,
+       "median_signed_by_ar": 0.010600911180391998
+      },
+      "between": {
+       "sign_aligned": 0.32905985743991023,
+       "sign_aligned_ci": [
+        0.2813035829868418,
+        0.3786767171569609
+       ],
+       "slope": 0.3209955393003549,
+       "slope_ci": [
+        0.27539858917067417,
+        0.37466899094520284
+       ],
+       "mean": -0.002898431080259953,
+       "median_signed_by_ar": 0.01124401010925814
+      },
+      "after": {
+       "sign_aligned": 0.4106532939562609,
+       "sign_aligned_ci": [
+        0.35689600804303734,
+        0.4614146780841112
+       ],
+       "slope": 0.36903533848742376,
+       "slope_ci": [
+        0.3162708985373712,
+        0.4181201273551317
+       ],
+       "mean": -0.00414977301974984,
+       "median_signed_by_ar": 0.021712108775612055
+      }
+     }
+    },
+    "other": {
+     "share": 0.0005178663904712584,
+     "shares": {
+      "n_units": 1
+     }
+    }
+   },
+   "decomposition": {
+    "unit_level": {
+     "n_units": 1931,
+     "n_weeks": 111,
+     "mean_abs_ar_0_1": 0.06288758278840319,
+     "pre": {
+      "sign_aligned": 0.24750755271225125,
+      "sign_aligned_ci": [
+       0.19392025893077008,
+       0.30775904897565265
+      ],
+      "slope": 0.29964958614595216,
+      "slope_ci": [
+       0.25119017630591367,
+       0.351056729367373
+      ],
+      "mean": 0.0051487777711922995,
+      "median_signed_by_ar": 0.00739348135167385
+     },
+     "between": {
+      "sign_aligned": 0.3325668928213351,
+      "sign_aligned_ci": [
+       0.2945336918085922,
+       0.370379153803643
+      ],
+      "slope": 0.32316232023161096,
+      "slope_ci": [
+       0.28158473718097693,
+       0.36879160787645826
+      ],
+      "mean": -0.0038688297468633505,
+      "median_signed_by_ar": 0.009937180361142023
+     },
+     "after": {
+      "sign_aligned": 0.41992555446641344,
+      "sign_aligned_ci": [
+       0.37492884971315,
+       0.4620923531497867
+      ],
+      "slope": 0.3771880936224362,
+      "slope_ci": [
+       0.33260007699583516,
+       0.4189612089728859
+      ],
+      "mean": -0.0030426732402318185,
+      "median_signed_by_ar": 0.019492237392294342
+     }
+    },
+    "event_level": {
+     "n_units": 910,
+     "n_weeks": 111,
+     "mean_abs_ar_0_1": 0.05538767737937466,
+     "pre": {
+      "sign_aligned": 0.26422531663981724,
+      "sign_aligned_ci": [
+       0.2164797977853533,
+       0.3184796739902779
+      ],
+      "slope": 0.3094224397926519,
+      "slope_ci": [
+       0.26360848878675125,
+       0.36102669653341024
+      ],
+      "mean": 0.0029710086050620936,
+      "median_signed_by_ar": 0.007059091972794796
+     },
+     "between": {
+      "sign_aligned": 0.19372850286837673,
+      "sign_aligned_ci": [
+       0.16098896125888604,
+       0.2248295384987311
+      ],
+      "slope": 0.18266667541279055,
+      "slope_ci": [
+       0.14090400007259646,
+       0.225935929603802
+      ],
+      "mean": -0.0027730951613391857,
+      "median_signed_by_ar": 0.0030602130993491565
+     },
+     "after": {
+      "sign_aligned": 0.5420461804918064,
+      "sign_aligned_ci": [
+       0.49415992425952693,
+       0.5892911638844963
+      ],
+      "slope": 0.5079108847945576,
+      "slope_ci": [
+       0.45705886940393325,
+       0.557398203320785
+      ],
+      "mean": -0.004323107928714117,
+      "median_signed_by_ar": 0.0223772288478344
+     }
+    }
+   },
+   "association": {
+    "unit_level": {
+     "ar_0_1": {
+      "mean": 0.2958009886579219,
+      "ci": [
+       0.2283829639543936,
+       0.36321901336145024
+      ],
+      "se": 0.033954786572627016,
+      "n_weeks": 95,
+      "n_weeks_undefined": 16,
+      "n_units": 1900,
+      "distinct_focal_d0": 904
+     },
+     "ar_acc": {
+      "mean": 0.15846272924013255,
+      "ci": [
+       0.09575553836192012,
+       0.22116992011834496
+      ],
+      "se": 0.031582196188658936,
+      "n_weeks": 95,
+      "n_weeks_undefined": 16,
+      "n_units": 1900,
+      "distinct_focal_d0": 904
+     },
+     "ar_pub": {
+      "mean": -0.014612855231412567,
+      "ci": [
+       -0.07496477708386201,
+       0.045739066621036883
+      ],
+      "se": 0.030395975479248032,
+      "n_weeks": 95,
+      "n_weeks_undefined": 16,
+      "n_units": 1900,
+      "distinct_focal_d0": 904
+     },
+     "ar_acc_regular": {
+      "mean": 0.013832332417702703,
+      "ci": [
+       -0.06951746959964443,
+       0.09718213443504985
+      ],
+      "se": 0.04197875495188787,
+      "n_weeks": 95,
+      "n_weeks_undefined": 16,
+      "n_units": 1900,
+      "distinct_focal_d0": 904
+     },
+     "acc_minus_pub": {
+      "mean": 0.17307558447154514,
+      "ci": [
+       0.12255003731332072,
+       0.22360113162976958
+      ],
+      "se": 0.02544696581911167,
+      "n_weeks": 95,
+      "n_units": 1931,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    },
+    "event_level": {
+     "ar_0_1": {
+      "mean": 0.23266523473225162,
+      "ci": [
+       0.1493767672191768,
+       0.31595370224532643
+      ],
+      "se": 0.041770728725893866,
+      "n_weeks": 72,
+      "n_weeks_undefined": 39,
+      "n_units": 826,
+      "distinct_focal_d0": 904
+     },
+     "ar_acc": {
+      "mean": 0.09462517651418471,
+      "ci": [
+       0.014868018017637694,
+       0.17438233501073175
+      ],
+      "se": 0.03999971101622679,
+      "n_weeks": 72,
+      "n_weeks_undefined": 39,
+      "n_units": 826,
+      "distinct_focal_d0": 904
+     },
+     "ar_pub": {
+      "mean": 0.026393836718881774,
+      "ci": [
+       -0.06688480601303586,
+       0.11967247945079941
+      ],
+      "se": 0.04678098898701491,
+      "n_weeks": 72,
+      "n_weeks_undefined": 39,
+      "n_units": 826,
+      "distinct_focal_d0": 904
+     },
+     "ar_acc_regular": {
+      "mean": 0.027349929675637083,
+      "ci": [
+       -0.07001353583229716,
+       0.12471339518357133
+      ],
+      "se": 0.048829604229498,
+      "n_weeks": 72,
+      "n_weeks_undefined": 39,
+      "n_units": 826,
+      "distinct_focal_d0": 904
+     },
+     "acc_minus_pub": {
+      "mean": 0.06823133979530294,
+      "ci": [
+       0.01901375031060224,
+       0.11744892928000364
+      ],
+      "se": 0.024683544316445805,
+      "n_weeks": 72,
+      "n_units": 910,
+      "definition": "mean over weeks of rho(E[effect], ar_acc) - rho(E[effect], ar_pub), same units; NW(4)"
+     }
+    }
+   },
+   "earliest_source_on_matched": {
+    "ar_src": {
+     "mean": 0.08264427856183076,
+     "ci": [
+      0.019607933821519,
+      0.14568062330214254
+     ],
+     "se": 0.03179133506454292,
+     "n_weeks": 106,
+     "n_weeks_undefined": 6,
+     "n_units": 3077,
+     "distinct_focal_d0": 1303
+    },
+    "ar_pub": {
+     "mean": -0.01789360491014838,
+     "ci": [
+      -0.07624363216919906,
+      0.0404564223489023
+     ],
+     "se": 0.02942786856153802,
+     "n_weeks": 106,
+     "n_weeks_undefined": 6,
+     "n_units": 3077,
+     "distinct_focal_d0": 1303
+    },
+    "ar_0_1": {
+     "mean": 0.17814553623916185,
+     "ci": [
+      0.10847660641112455,
+      0.24781446606719915
+     ],
+     "se": 0.03513636935764223,
+     "n_weeks": 106,
+     "n_weeks_undefined": 6,
+     "n_units": 3077,
+     "distinct_focal_d0": 1303
+    },
+    "src_minus_pub": {
+     "mean": 0.10053788347197917,
+     "ci": [
+      0.05729818495075075,
+      0.1437775819932076
+     ],
+     "se": 0.021807224854824205,
+     "n_weeks": 106,
+     "n_units": 3086,
+     "definition": "mean over weeks of rho(E[effect], ar_src) - rho(E[effect], ar_pub), same units; NW(4)"
+    }
+   }
+  }
+ },
+ "settings": {
+  "nw_lags": 4,
+  "min_units_per_week": 4,
+  "n_boot": 2000,
+  "seed": 0,
+  "label_window_days": [
+   -2,
+   1
+  ],
+  "concepts": {
+   "earnings_results": [
+    "2.02"
+   ],
+   "deal_or_investment": [
+    "1.01",
+    "2.01"
+   ],
+   "management_or_labor": [
+    "5.02"
+   ]
+  },
+  "groups": {
+   "earnings": [
+    "earnings_results"
+   ],
+   "other": [
+    "deal_or_investment",
+    "management_or_labor"
+   ],
+   "all": [
+    "earnings_results",
+    "deal_or_investment",
+    "management_or_labor"
+   ]
+  }
+ }
+}

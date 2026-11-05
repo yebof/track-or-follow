@@ -1,0 +1,137 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/e7_reference_readers.py",
+  "script_sha256": "6a5b805c8d6d6fe287926b0d3b5191be9a81be5034bfca9da355324bae265eb3",
+  "closure_sha256": "5de3aa058a4b1316071e6dad618ae2b87269fe04412744686ced30584b5a5fc4",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "finbert scores": {
+    "path": "results/exploratory/e7_finbert_scores.csv",
+    "sha256": "1d59a3124061e3f4ad0a8c58eee9e18b579ea34d78e9803e37365dcd97bb0863"
+   },
+   "h2": {
+    "path": "results/analysis/h2.json",
+    "sha256": "6d378f7053f6358a648363faaddb46c557c1ad06faf3ad2e19553621034c802a"
+   },
+   "VERB answers": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/answers.parquet",
+    "sha256": "92048746aead9cb9e2332609f2601196deaf1d0efbc304e4102818655463f437"
+   }
+  },
+  "argv": [
+   "run"
+  ],
+  "created_utc": "2026-09-29T05:02:27+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "reference reader and paired contrast specified after the H2 outcome and the round-1 reviews"
+ },
+ "label": "exploratory (not pre-registered)",
+ "question": "a learned finance-sentiment reference reader on the H2 frame; the verbalized reader vs emu on the same units",
+ "frame": {
+  "n_units": 27556,
+  "n_weeks": 115,
+  "h2_mean_recomputed": 0.11921180713578919
+ },
+ "finbert": {
+  "reader": "FinBERT (yiyanghkust/finbert-tone @ 4921590d), tone = P(positive) - P(negative)",
+  "coverage_units": 27556,
+  "units": 27556,
+  "all": {
+   "mean": 0.09389994417017189,
+   "ci": [
+    0.0750846395337984,
+    0.11271524880654538
+   ],
+   "se": 0.009497919126489604,
+   "n_weeks": 115,
+   "n_weeks_undefined": 0,
+   "n_units": 27556,
+   "distinct_focal_d0": 13287
+  },
+  "no_price": {
+   "mean": 0.06214330873087591,
+   "ci": [
+    0.04221386991505573,
+    0.08207274754669609
+   ],
+   "se": 0.010060331297695471,
+   "n_weeks": 115,
+   "n_weeks_undefined": 0,
+   "n_units": 25593,
+   "distinct_focal_d0": 12996
+  },
+  "placebo_all": {
+   "mean": 0.0632874377166885,
+   "ci": [
+    0.04229452686051527,
+    0.08428034857286174
+   ],
+   "se": 0.010597169346707418,
+   "n_weeks": 115,
+   "n_weeks_undefined": 0,
+   "n_units": 27556,
+   "distinct_focal_d0": 13287
+  },
+  "item_auc_all": {
+   "auc": 0.5453245991443862,
+   "ci": [
+    0.5363966524231465,
+    0.5542744769462772
+   ],
+   "n": 27556,
+   "positives": 13887,
+   "n_boot": 2000,
+   "seed": 0
+  },
+  "item_auc_no_price": {
+   "auc": 0.5310023639127559,
+   "ci": [
+    0.5219154105936171,
+    0.5402839469638001
+   ],
+   "n": 25593,
+   "positives": 12836,
+   "n_boot": 2000,
+   "seed": 0
+  },
+  "agreement_with_emu_spearman": 0.5678640108690372,
+  "share_top_neutral": 0.4724197996806503
+ },
+ "verb_minus_emu_same_units": {
+  "n_units": 2000,
+  "n_weeks": 115,
+  "rho_verb": 0.0971078313843679,
+  "rho_emu": 0.09987418124779315,
+  "difference": -0.0027663498634252492,
+  "ci": [
+   -0.029268192445077244,
+   0.022563832116868507
+  ],
+  "n_boot": 2000,
+  "seed": 0,
+  "registered_rho_verb": 0.0971078313843679,
+  "registered_rho_emu_same_units": 0.09987418124779315,
+  "verb_pooled_mde_registered": 0.0627,
+  "reproduction": {
+   "rho_verb_own_units": 0.0971078313843679,
+   "rho_emu_own_units": 0.09987418124779315
+  },
+  "note": "estimate and interval only; the registration allows no parity claim on per-implementation rows"
+ },
+ "settings": {
+  "n_boot": 2000,
+  "seed": 0,
+  "nw_lags": 4,
+  "ci": "two-sided 95%"
+ }
+}

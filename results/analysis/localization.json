@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "script": "experiments/analysis/localization.py",
+  "script_sha256": "a3f6692365d22b9e593074e5034847caaf9b48f1b9a15e1311a4b949b6df5cee",
+  "closure_sha256": "7bb516dafd37c173cc2f55b8af8b6c879b9a71f9836b779b43f875e3eed66a08",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "scores typed": {
+    "path": "results/redteam/rts/typed/scores.parquet",
+    "sha256": "b2a8d8a87e1e362f199631702e57f0b300dd6dd08d04f29a210e667f1af1744d"
+   },
+   "scores nodef": {
+    "path": "results/redteam/rts/nodef/scores.parquet",
+    "sha256": "aa223dda833bb7745e07ac5f2c2b05e2b45199b8326f75e05d83c7e2cee7268f"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T22:58:21+00:00"
+ },
+ "by_reader": {
+  "typed": {
+   "n_success": 117,
+   "n_localized": 103,
+   "rate": 0.8803418803418803,
+   "ci": [
+    0.8076923076923077,
+    0.9423076923076923
+   ],
+   "n_clusters": 59,
+   "status": "ok"
+  },
+  "R-med": {
+   "n_success": 65,
+   "n_localized": 60,
+   "rate": 0.9230769230769231,
+   "ci": [
+    0.8260869565217391,
+    1.0
+   ],
+   "n_clusters": 32,
+   "status": "ok"
+  },
+  "R-vote": {
+   "n_success": 31,
+   "n_localized": 31,
+   "rate": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "n_clusters": 13,
+   "status": "ok"
+  },
+  "nodef": {
+   "n_success": 151,
+   "n_localized": 140,
+   "rate": 0.9271523178807947,
+   "ci": [
+    0.8714285714285714,
+    0.9724137931034482
+   ],
+   "n_clusters": 66,
+   "status": "ok"
+  }
+ },
+ "no_per_item_channel": {
+  "H": "n/a",
+  "H-guard": "n/a",
+  "H-spot": "n/a",
+  "HS": "n/a",
+  "LM": "n/a",
+  "TA-lite": "n/a",
+  "Mono-CoT": "n/a"
+ },
+ "claim": {
+  "per_item_readers_localize": true,
+  "rule": "the typed reader's localization rate CI lies entirely above 0"
+ },
+ "n_rows_without_card": 0,
+ "settings": {
+  "n_boot": 10000,
+  "seed": 0,
+  "card_arm": {
+   "typed": "typed",
+   "R-med": "typed",
+   "R-vote": "typed",
+   "nodef": "nodef"
+  },
+  "ranking": "redteam.faith.card_ranking; top-1 with positive weight"
+ }
+}

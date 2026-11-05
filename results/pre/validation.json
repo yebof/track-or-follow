@@ -1,0 +1,477 @@
+{
+ "pre_blinded_emu_wpre_s30": {
+  "gen_dir": "results/judgments/pre_blinded_emu_wpre_s30",
+  "checks": {
+   "frozen": {
+    "pass": true,
+    "problems": [],
+    "bank": {
+     "version": "v1.0",
+     "sha256": "d4f4e44cb7e03d4f1a6d1cb6e3e86cab2627eb302dd81ceee0e27bbe81012ccb"
+    },
+    "run_tag": "PRE/B",
+    "data_freeze": [
+     "archive-a377a4d6abd3bfe3"
+    ]
+   },
+   "weeks": {
+    "pass": true,
+    "partial": false,
+    "n_weeks": 60,
+    "first": "2023-04-14",
+    "last": "2024-05-31",
+    "expected": 60,
+    "units": 540,
+    "missing_units": []
+   },
+   "focus": {
+    "pass": true,
+    "weeks_mismatch": [],
+    "stock_weeks": 1800
+   },
+   "rows": {
+    "pass": true,
+    "problems": [],
+    "fa_profiled_stock_weeks": 1800,
+    "stock_weeks_without_10k": 0
+   },
+   "items": {
+    "pass": true,
+    "problems": [],
+    "n_problems": 0,
+    "items": 10445,
+    "n0_quarantined": 773,
+    "stage2_items": 7728,
+    "n01_item_errors": 0,
+    "n2_requests": 3103,
+    "n3_requests": 1079
+   },
+   "validity": {
+    "pass": true,
+    "min_required": 0.98,
+    "per_program": {
+     "FA": {
+      "answers": 1402,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "FB": {
+      "answers": 9000,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "M": {
+      "answers": 1080,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N0": {
+      "answers": 28258,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N1": {
+      "answers": 106296,
+      "degraded": 30,
+      "validity": 0.999718
+     },
+     "N1-joint": {
+      "answers": 30912,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N2": {
+      "answers": 14333,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N3": {
+      "answers": 4316,
+      "degraded": 7,
+      "validity": 0.998378
+     },
+     "P1": {
+      "answers": 61398,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "T": {
+      "answers": 10800,
+      "degraded": 4,
+      "validity": 0.99963
+     }
+    },
+    "overall": 0.999847
+   },
+   "retries": {
+    "pass": true,
+    "required_attempts": 3,
+    "requests_with_degraded": 38,
+    "of_which_paid": 38,
+    "short_of_retries": 0,
+    "attempts": {
+     "3": 38
+    }
+   }
+  },
+  "report": {
+   "degraded_by_question": {
+    "N1:problem_kind": 21,
+    "N1:unconfirmed": 9,
+    "N3:analyst_view": 7,
+    "T:breakout": 1,
+    "T:capitulation": 1,
+    "T:overextended": 1,
+    "T:pullback_in_uptrend": 1
+   },
+   "requests": 66479,
+   "requests_paid": 58859,
+   "requests_cached_or_coalesced": 7620,
+   "spend_usd": 17.832,
+   "tokens": {
+    "input_tokens": 54386095,
+    "cached_tokens": 11908608,
+    "output_tokens": 1023827
+   },
+   "latency_s_paid": {
+    "p50": 0.71,
+    "p95": 1.704,
+    "max": 9.648
+   },
+   "per_program": {
+    "FA": {
+     "requests": 309,
+     "paid": 177,
+     "usd": 0.1187,
+     "in_tok_per_req": 1584.6,
+     "degraded_requests": 0
+    },
+    "FB": {
+     "requests": 1800,
+     "paid": 559,
+     "usd": 0.2487,
+     "in_tok_per_req": 1035.3,
+     "degraded_requests": 0
+    },
+    "M": {
+     "requests": 60,
+     "paid": 60,
+     "usd": 0.0419,
+     "in_tok_per_req": 2958.1,
+     "degraded_requests": 0
+    },
+    "N0": {
+     "requests": 10445,
+     "paid": 7825,
+     "usd": 1.5657,
+     "in_tok_per_req": 434.5,
+     "degraded_requests": 0
+    },
+    "N1": {
+     "requests": 44472,
+     "paid": 40847,
+     "usd": 11.0956,
+     "in_tok_per_req": 684.8,
+     "degraded_requests": 30
+    },
+    "N2": {
+     "requests": 3103,
+     "paid": 3103,
+     "usd": 1.3981,
+     "in_tok_per_req": 1058.3,
+     "degraded_requests": 0
+    },
+    "N3": {
+     "requests": 1079,
+     "paid": 1079,
+     "usd": 0.8717,
+     "in_tok_per_req": 1966.1,
+     "degraded_requests": 7
+    },
+    "P1": {
+     "requests": 3411,
+     "paid": 3409,
+     "usd": 1.6601,
+     "in_tok_per_req": 2798.6,
+     "degraded_requests": 0
+    },
+    "T": {
+     "requests": 1800,
+     "paid": 1800,
+     "usd": 0.8314,
+     "in_tok_per_req": 1061.4,
+     "degraded_requests": 1
+    }
+   },
+   "usage_estimated": 0,
+   "manifest": {
+    "counts": {
+     "units": 540,
+     "units_resumed": 0,
+     "requests": 66479,
+     "requests_cached": 7620,
+     "answers": 267795,
+     "answers_degraded": 41,
+     "features": 30600,
+     "evidence": 109033
+    },
+    "validity_rate": 0.9998468978136261,
+    "spend_usd": 17.831968800000002,
+    "tokens": {
+     "input_tokens": 54386095,
+     "cached_tokens": 11908608,
+     "output_tokens": 1023827
+    },
+    "wall_time_s": 1182.419
+   },
+   "availability": {
+    "weeks": 60,
+    "hard": 0,
+    "stale": 0,
+    "soft_notes": []
+   }
+  },
+  "pass": true
+ },
+ "pre_unblinded_emu_wpre_s30": {
+  "gen_dir": "results/judgments/pre_unblinded_emu_wpre_s30",
+  "checks": {
+   "frozen": {
+    "pass": true,
+    "problems": [],
+    "bank": {
+     "version": "v1.0",
+     "sha256": "d4f4e44cb7e03d4f1a6d1cb6e3e86cab2627eb302dd81ceee0e27bbe81012ccb"
+    },
+    "run_tag": "PRE/U",
+    "data_freeze": [
+     "archive-a377a4d6abd3bfe3"
+    ]
+   },
+   "weeks": {
+    "pass": true,
+    "partial": false,
+    "n_weeks": 60,
+    "first": "2023-04-14",
+    "last": "2024-05-31",
+    "expected": 60,
+    "units": 540,
+    "missing_units": []
+   },
+   "focus": {
+    "pass": true,
+    "weeks_mismatch": [],
+    "stock_weeks": 1800
+   },
+   "rows": {
+    "pass": true,
+    "problems": [],
+    "fa_profiled_stock_weeks": 1800,
+    "stock_weeks_without_10k": 0
+   },
+   "items": {
+    "pass": true,
+    "problems": [],
+    "n_problems": 0,
+    "items": 10445,
+    "n0_quarantined": 1107,
+    "stage2_items": 7603,
+    "n01_item_errors": 0,
+    "n2_requests": 2967,
+    "n3_requests": 1058
+   },
+   "validity": {
+    "pass": true,
+    "min_required": 0.98,
+    "per_program": {
+     "FA": {
+      "answers": 1402,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "FB": {
+      "answers": 9000,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "M": {
+      "answers": 1080,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N0": {
+      "answers": 28258,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N1": {
+      "answers": 104044,
+      "degraded": 12,
+      "validity": 0.999885
+     },
+     "N1-joint": {
+      "answers": 30412,
+      "degraded": 1,
+      "validity": 0.999967
+     },
+     "N2": {
+      "answers": 13670,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "N3": {
+      "answers": 4232,
+      "degraded": 6,
+      "validity": 0.998582
+     },
+     "P1": {
+      "answers": 61398,
+      "degraded": 0,
+      "validity": 1.0
+     },
+     "T": {
+      "answers": 10800,
+      "degraded": 8,
+      "validity": 0.999259
+     }
+    },
+    "overall": 0.999898
+   },
+   "retries": {
+    "pass": true,
+    "required_attempts": 3,
+    "requests_with_degraded": 21,
+    "of_which_paid": 21,
+    "short_of_retries": 0,
+    "attempts": {
+     "3": 21
+    }
+   }
+  },
+  "report": {
+   "degraded_by_question": {
+    "N1:problem_kind": 9,
+    "N1:unconfirmed": 3,
+    "N1-joint:N1.new_development": 1,
+    "N3:analyst_view": 6,
+    "T:breakout": 2,
+    "T:capitulation": 2,
+    "T:overextended": 2,
+    "T:pullback_in_uptrend": 2
+   },
+   "requests": 65070,
+   "requests_paid": 54813,
+   "requests_cached_or_coalesced": 10257,
+   "spend_usd": 13.3608,
+   "tokens": {
+    "input_tokens": 51569417,
+    "cached_tokens": 19043712,
+    "output_tokens": 1009415
+   },
+   "latency_s_paid": {
+    "p50": 0.71,
+    "p95": 1.594,
+    "max": 42.2
+   },
+   "per_program": {
+    "FA": {
+     "requests": 309,
+     "paid": 308,
+     "usd": 0.195,
+     "in_tok_per_req": 1546.0,
+     "degraded_requests": 0
+    },
+    "FB": {
+     "requests": 1800,
+     "paid": 575,
+     "usd": 0.2508,
+     "in_tok_per_req": 1013.3,
+     "degraded_requests": 0
+    },
+    "M": {
+     "requests": 60,
+     "paid": 0,
+     "usd": 0.0,
+     "in_tok_per_req": 2958.1,
+     "degraded_requests": 0
+    },
+    "N0": {
+     "requests": 10445,
+     "paid": 7348,
+     "usd": 1.3579,
+     "in_tok_per_req": 412.1,
+     "degraded_requests": 0
+    },
+    "N1": {
+     "requests": 43220,
+     "paid": 40416,
+     "usd": 8.4679,
+     "in_tok_per_req": 656.1,
+     "degraded_requests": 13
+    },
+    "N2": {
+     "requests": 2967,
+     "paid": 2967,
+     "usd": 1.2807,
+     "in_tok_per_req": 1009.6,
+     "degraded_requests": 0
+    },
+    "N3": {
+     "requests": 1058,
+     "paid": 1058,
+     "usd": 0.8315,
+     "in_tok_per_req": 1910.4,
+     "degraded_requests": 6
+    },
+    "P1": {
+     "requests": 3411,
+     "paid": 341,
+     "usd": 0.1618,
+     "in_tok_per_req": 2797.5,
+     "degraded_requests": 0
+    },
+    "T": {
+     "requests": 1800,
+     "paid": 1800,
+     "usd": 0.8155,
+     "in_tok_per_req": 1039.3,
+     "degraded_requests": 2
+    }
+   },
+   "usage_estimated": 0,
+   "manifest": {
+    "counts": {
+     "units": 540,
+     "units_resumed": 60,
+     "requests": 65070,
+     "requests_cached": 10257,
+     "answers": 264296,
+     "answers_degraded": 27,
+     "features": 30600,
+     "evidence": 106403
+    },
+    "validity_rate": 0.999897841813724,
+    "spend_usd": 13.360802800000002,
+    "tokens": {
+     "input_tokens": 51569417,
+     "cached_tokens": 19043712,
+     "output_tokens": 1009415
+    },
+    "wall_time_s": 1263.075
+   },
+   "availability": {
+    "weeks": 60,
+    "hard": 0,
+    "stale": 0,
+    "soft_notes": []
+   }
+  },
+  "pass": true
+ },
+ "arms": {
+  "pass": true,
+  "stock_weeks": 1800,
+  "item_sets_differ": 0,
+  "examples": []
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "meta": {
+  "script": "experiments/analysis/h2_validity.py",
+  "script_sha256": "03eb823a536e4171f64bdae4afc5b54edf18e023be6bf57c48cb13bffa5dd9c0",
+  "closure_sha256": "3eee60d930c37198c9e5857e481e2907c86c71d0c750c915f7302bbbf8377793",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": false,
+   "why": "results/locks/clean_unlocked missing",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "work.jsonl": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "NG items": {
+    "path": "results/judgments/ng_typed-local_wclean_items500/items.parquet",
+    "sha256": "cc53e9e87144708be4bf3248a60afd7932b7bf7a56363111c9cd3b6bfe5f7774"
+   },
+   "VERB answers": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/answers.parquet",
+    "sha256": "92048746aead9cb9e2332609f2601196deaf1d0efbc304e4102818655463f437"
+   },
+   "VERB jobs": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/jobs.parquet",
+    "sha256": "0d75d4d5ab4d3477c4f31aa70ee56451f9b26e608c7b3934b5e9ce477ecdaa70"
+   },
+   "VERB sample": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/sample.parquet",
+    "sha256": "595424c92ccf56d53a4f53a4deaf2ae02ab0448e31dd4089bb6337317e3b6e7e"
+   }
+  },
+  "argv": [
+   "--frame-only"
+  ],
+  "created_utc": "2026-09-28T08:49:14+00:00"
+ },
+ "frame": {
+  "units": 27556,
+  "weeks": 115,
+  "units_per_week": {
+   "min": 60,
+   "median": 232.0,
+   "max": 410
+  },
+  "symbols": 147,
+  "items_in_window": 74314,
+  "kept": 31848,
+  "duplicates_skipped": 0
+ },
+ "rule": "status.kept and top event_type != stock_activity_or_opinion",
+ "implementations": {
+  "NG": {
+   "units": 500,
+   "weeks": 111,
+   "c2_eligible": 386,
+   "complete": null,
+   "sha256": "581deeaeaec37ae1ae9f0181d14cf14a4f008b0ef716abe1d1438f9999932049"
+  },
+  "VERB": {
+   "units": 2000,
+   "weeks": 115,
+   "c2_eligible": 1729,
+   "complete": 2000,
+   "sha256": "73ef10ad9eb5bea664e1e2530b188a2b5a3b2587fbb15f9bdc13748ffef27730"
+  }
+ }
+}

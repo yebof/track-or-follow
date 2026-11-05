@@ -1,0 +1,25 @@
+{
+ "cap": "2024-07-03",
+ "sources": {
+  "data/raw/bars/sp500_daily_2018_2026.parquet": "0b09e1bad495849f04a8e5af8c6f1f802259ce66fcc96455fd59300a0b3d24c8",
+  "data/raw/bars/etf_daily_2018_2026.parquet": "707df839d0d2e9b3c3dd5965c01109d9162a92bfbe4038e3c47ddcabea14d361",
+  "data/raw/bars/all_daily_raw_2018_2026.parquet": "324a2af52c2c8180d94e09db5cfca25cd1633df476d4fae58de0d0914265c91d"
+ },
+ "files": {
+  "data/raw/bars/sp500_daily_2018_2026.parquet": {
+   "rows_in": 1354522,
+   "rows_out": 1021652,
+   "max_date_out": "2024-07-03"
+  },
+  "data/raw/bars/etf_daily_2018_2026.parquet": {
+   "rows_in": 72286,
+   "rows_out": 53872,
+   "max_date_out": "2024-07-03"
+  },
+  "data/raw/bars/all_daily_raw_2018_2026.parquet": {
+   "rows_in": 1425965,
+   "rows_out": 1074681,
+   "max_date_out": "2024-07-03"
+  }
+ }
+}

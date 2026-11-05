@@ -1,0 +1,78 @@
+{
+ "meta": {
+  "script": "experiments/analysis/bound_claim.py",
+  "script_sha256": "de6c7efe724cedfd0d7516178c6c62f645373c4152c9a9d100a42fb5cdcac271",
+  "closure_sha256": "78f5794c4e1ead71947bafefef1d0f7f6ecab49be3180be16a87eb97ff9504cf",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "bound_check.json": {
+    "path": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566/bound_check.json",
+    "sha256": "b8d15228718f8453bf9754070a16213c72fc44f6d249a06c9e76a970f72fa2be"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T10:06:59+00:00"
+ },
+ "bg5": {
+  "status": "ok",
+  "n_weeks": 113,
+  "n_entry_checks": 7910,
+  "n_protection_checks": 1002,
+  "n_cases": 8912,
+  "entry_violations": [],
+  "protection_violations": [],
+  "trusted_all_T": true,
+  "n_violations": 0,
+  "passed": true
+ },
+ "witnesses_bg6": {
+  "P1": {
+   "entered": true,
+   "ratio": 1.0,
+   "symbol_R_T": 6
+  },
+  "P2": {
+   "v_over_v_ref": 0.5,
+   "w_over_w_ref": 0.5
+  },
+  "P3": {
+   "entrant": true,
+   "v_over_tau": 1.0,
+   "w_over_bound": 1.0
+  },
+  "P4": {
+   "ratio": 1.0
+  }
+ },
+ "property_tests": {
+  "status": "run",
+  "returncode": 0,
+  "summary": "46 passed in 140.29s (0:02:20)",
+  "passed": 46,
+  "failed": 0,
+  "skipped": 0,
+  "files": {
+   "tests/test_band_guard_bound.py": "15c4ce3a6ed838c0e2585b33e889acdaa69433ceb60affa55c85d1d175037fa9",
+   "tests/test_bound_history.py": "fb22d7afd4d2b67eb286cb21aa61d791aa7862b6abd5c359f675952d7028ec63"
+  }
+ },
+ "claim": {
+  "bound": true,
+  "rule": "BG-5 worst-case reader passed (0 violations, trusted side all T) and the P0-P5 property tests passed"
+ },
+ "primary_run": {
+  "dir": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566",
+  "bound_check_json": true,
+  "cfg_sha": "4ea23931a045dd49a3f22640ca83c51cf262bba1a812e0f685c76aea990b9273",
+  "inputs_sha": "80d81f4a5566e76186e6f624c8e491186ce15b47680ee901fe6cbbaca80bf848"
+ }
+}

@@ -1,0 +1,138 @@
+# E5 construct checks of the registered H2 association: specification, fixed before the script's first run.
+# EXPLORATORY (not pre-registered). The SHA-256 of this file is logged (results/exploratory/e5_spec_log.json) by
+# `e5_construct_checks.py log-spec` before any E5 statistic or audit code exists, and every E5 output carries it in
+# its meta. A changed file refuses to run until the log is amended (`--amend`, which keeps the history).
+id: E5
+label: exploratory (not pre-registered)
+written_utc: "2026-09-29T02:46:05Z"
+why_exploratory: >-
+  Specified on 2026-09-29, after the W_clean unlock, after the registered H2 outcome (stated) and after the R3
+  reviewers' read-only diagnostics (docs/reviews/r3_track_checks.py) had printed values for most of these checks.
+  Nothing here decides a registered claim: every output is a descriptive estimate with a 95% interval, no p-value is
+  computed or printed, and no configuration, threshold or reader is chosen from it (positioning_v3 D-16; outline_v2
+  §5.3).
+plan_refs: [docs/paper/positioning_v3.md §1.5 §2.1 D-16, docs/paper/outline_v2.md §3 (Fig. 2b, Table 2, Box 1) §5.3]
+
+frame:
+  rule: >-
+    The registered H2 frame, rebuilt read-only with experiments/analysis/h2_validity.py (item_rows, c2_frame,
+    add_abnormal_returns) from results/judgments/main_emu_wclean_u100 on W_clean, weeks from the D1 rule's start
+    (results/analysis/d1.json). Unit = (t, focal symbol, evidence id).
+  first_check: >-
+    the weekly statistic of the rebuilt frame (h2_validity.weekly_test) equals results/analysis/h2.json
+    confirmatory.mean to 1e-12; the script stops otherwise.
+
+text:
+  source: data/processed/news_table.parquet (raw feed headline and summary; licensed, never written to results/)
+  join: eid = "news:" + sha256(str(id))[:16] (programs.news.item_eid), first row per eid
+  text: headline + " " + summary, both raw (before D0 sanitation and blinding), lower-cased for the classifier
+
+classifier:
+  name: price-report regex v1
+  provenance: docs/reviews/r3_track_checks.py PRICE_MOVE, copied verbatim
+  pattern: >-
+    (?:shares?|stock)\s+(?:\w+\s+){0,3}(?:rose|rise|rises|rising|jump|jumps|jumped|surge|surges|surged|soar|soars|soared|fell|fall|falls|drop|drops|dropped|slide|slides|slid|plunge|plunges|plunged|tumble|tumbles|tumbled|climb|climbs|climbed|gain|gains|gained|sink|sinks|sank|trading (?:higher|lower)|are (?:up|down)|is (?:up|down)|higher|lower|up|down)|premarket|pre-market|after-hours|after hours|session high|session low|shares are trading|stock is trading|%\s*(?:higher|lower)
+  flags: [text, headline_only]
+  meaning: >-
+    an item "reports the price move" when its own text states that a company's shares moved or are moving (the
+    market reaction the H2 label measures may then be printed in the item)
+
+audit:
+  population: distinct evidence ids (eid) among the frame's units with text
+  strata: {match: 100, nonmatch: 100}
+  draw: >-
+    within each stratum, the eids with the smallest sha256("E5-AUDIT|<stratum>|<eid>") (hex order); no redraw
+  coder:
+    kind: typed-local (the open non-generative typed decision model, $0, local CPU, no network)
+    model: flock-io/this-that-model-1.0@3d927195c4f9845efe66c5715883a7a0f42b1239
+    threads: 6
+    state: '{"item": {"headline": <raw headline>, "summary": <raw summary>}}'
+    question_name: reports_price_move
+    question_kind: noul
+    instructions: "Does `item` report how a company's stock price moved or is moving?"
+    "true": >-
+      The text states that a company's shares or stock rose, fell, jumped, dropped, or are trading higher or lower
+      (during the session, premarket, or after hours), or gives the size of such a move.
+    "false": "The text does not state any move in a company's share price."
+    decision: code = 1 iff P(yes) >= 0.5; an abstention (no distribution) is reported and excluded
+    pilot: >-
+      the wording was piloted once on 16 items from 2022 (outside W_clean, no outcome read; 8 regex matches, 8
+      non-matches) only to check that the question runs; it was not tuned
+  blind: the coder sees the item text only (no outcome, no stratum, no reader answer)
+  human_codes: >-
+    optional results/exploratory/e5_audit_human_codes.csv (columns eid, code in {0, 1}) from one human coder blind to
+    outcomes and strata (D-16); when it exists its precision and recall are reported next to the model coder's and
+    are the ones the paper macros print
+  estimands:
+    precision: share of audited matches the coder codes 1 (Wilson 95% interval)
+    miss_rate: share of audited non-matches the coder codes 1 (Wilson 95% interval)
+    recall: >-
+      precision * N_match / (precision * N_match + miss_rate * N_nonmatch), N = distinct eids per stratum; 95%
+      interval by a stratified bootstrap of the audit sample (2,000 draws, seed 0)
+    coder_prevalence: (precision * N_match + miss_rate * N_nonmatch) / (N_match + N_nonmatch)
+  outputs: results/exploratory/e5_audit_codes.csv (eid, stratum, p_yes, code; no text)
+
+statistics:
+  weekly: >-
+    h2_validity.weekly_test (mean over weeks of the Spearman correlation, at least 4 units per week) with the
+    two-sided Newey-West(4) 95% interval of stats.nw_test; the one-sided p-value it also returns is dropped
+  subsets:
+    all: the frame (must equal h2.json)
+    no_price: units whose text does not match the classifier
+    price_only: units whose text matches
+    no_price_headline: units whose headline does not match
+    pre_open_no_price: the registered pre-open control's rule (created before 09:30 ET) and no match
+    placebo_no_price: AR[-5,-1] instead of AR[0,+1] on no_price
+  dictionary_reference:
+    reader: >-
+      Loughran-McDonald tone, jevtrader.baselines.text.LMDictionary: minus the net-negative word share of the raw
+      text (headline + " " + summary), word lists as of the decision year of t (the registered LM reader's rule)
+    rows: [all, no_price]
+  item_auc:
+    score: E[effect]
+    label: 1[AR[0,+1] > 0] over units with finite, non-zero AR[0,+1]
+    interval: week-block bootstrap (2,000 draws, seed 0)
+    rows: [all, no_price]
+    dictionary: the same AUC for the Loughran-McDonald tone (units with a finite tone)
+  hit_rate:
+    rule: >-
+      over units with finite, non-zero AR[0,+1] and E[effect] outside [1.5, 2.5]: share with sign(E[effect] - 2) =
+      sign(AR[0,+1]); week-block bootstrap interval (2,000 draws, seed 0)
+    rows: [all, no_price]
+  by_concept: >-
+    the weekly statistic within each top event type of the confirmatory reader (every type in the frame), on all
+    units and on no_price, with the type's share of the frame; Table 2 prints the nine largest types in frame-share
+    order and the remaining types pooled
+  firm_day: >-
+    one row per (t, focal symbol, d0) with the mean E[effect] of its units and their common AR[0,+1]; weekly
+    statistic
+
+box1:
+  rule: >-
+    item A = the unit with the smallest sha256("BOX1-A|<unit>") among units whose top event type is
+    earnings_results, whose top effect level is 0 ("clearly harmful") or 4 ("clearly helpful") and whose text does
+    not match the classifier; item B = the unit with the smallest sha256("BOX1-B|<unit>") among units whose text
+    matches; unit = "<t>|<symbol>|<eid>"; no redraw
+  shown: >-
+    a one-sentence paraphrase of headline and summary written by the author with the firm's blinding pseudonym and
+    no date or number (experiments/exploratory/e5_box1_paraphrases.yaml, keyed by unit hash); the publication time
+    relative to the decision cutoff (days); the reader's top event type and its probability; the five E[effect]
+    level probabilities and E[effect]; the top vs_expectations answer; AR[0,+1] and AR[-5,-1] (%); the classifier
+    flag
+  label: Illustrative items chosen by a fixed rule; not evidence.
+
+# ---- amendment v1.1 (logged 2026-09-29 with `log-spec --amend`; the history keeps v1's hash) ----
+full_frame_coding:
+  added: >-
+    after the 200-item audit's codes were seen (the model coder coded 96 of 100 regex matches and 6 of 100
+    non-matches as reporting the move, which puts the regex's estimated recall near one half); nothing else in this
+    file changed
+  what: >-
+    every distinct frame text is coded by the audit's coder with the audit's question and decision rule (same state
+    format, same pinned model, 6 threads, nice 10), in the order of sha256("E5-FRAME|<eid>") so that any prefix is a
+    random subsample; resumable, one line per text (results/exploratory/e5_frame_codes.csv: eid, p_yes, code; no text)
+  use: >-
+    sensitivity only, reported only when every frame text is coded: the share of units the coder flags; the weekly
+    statistic on units flagged by neither the regex nor the coder ("no_price_either") and on units flagged by either
+    ("price_either"); the same pre-open and placebo rows. The regex remains the classifier of record for every other
+    E5 row (Fig. 2b and Table 2 use the regex; the either-classifier rows are an appendix sensitivity)

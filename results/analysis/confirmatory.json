@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "script": "experiments/analysis/confirmatory.py",
+  "script_sha256": "1b4af272692556ec1a09cf2044184904cab78b549e20e1d02ab372b1aa949333",
+  "closure_sha256": "a82c4359aa61612c91a981c17b787901c49e0fbfe5c1e283d4b5e54e76fd3a28",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "H1": {
+    "path": "results/analysis/h1.json",
+    "sha256": "0b9f74e9053d456df443d20ee6cd8092e9fe954bd60b35855318da9fafe26c30"
+   },
+   "H2": {
+    "path": "results/analysis/h2.json",
+    "sha256": "6d378f7053f6358a648363faaddb46c557c1ad06faf3ad2e19553621034c802a"
+   },
+   "H3": {
+    "path": "results/analysis/h3.json",
+    "sha256": "13c4c8a3871164140d0ddcfca30ca9c9ba307ec6c57f4c304de2a1366196d281"
+   },
+   "BOUND": {
+    "path": "results/analysis/bound.json",
+    "sha256": "07eda83676692f813c31b340659ec1d38d4e7bbcfff872eeadec217decc700dd"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T22:58:23+00:00"
+ },
+ "alpha": 0.05,
+ "method": "Holm step-down, m = 3, one-sided p-values",
+ "family": [
+  {
+   "hypothesis": "H1",
+   "p_one_sided": 1.0,
+   "estimate": 0.10366398570151922,
+   "ci": [
+    0.08100991457028199,
+    0.12732101653634148
+   ],
+   "available": true,
+   "p_holm": 1.0,
+   "claim": "fallback"
+  },
+  {
+   "hypothesis": "H2",
+   "p_one_sided": 1.0972251997097266e-20,
+   "estimate": 0.11921180713578919,
+   "ci": [
+    0.09836377437607437,
+    0.14005983989550402
+   ],
+   "available": true,
+   "p_holm": 3.29167559912918e-20,
+   "claim": "stated"
+  },
+  {
+   "hypothesis": "H3",
+   "p_one_sided": 0.985314181552664,
+   "estimate": -0.015504066668040896,
+   "ci": [
+    -0.029424674754683598,
+    -0.0015834585813981911
+   ],
+   "available": true,
+   "p_holm": 1.0,
+   "claim": "fallback"
+  }
+ ],
+ "claims": {
+  "H1": false,
+  "H2": true,
+  "H3": false,
+  "BOUND": true
+ },
+ "bound": {
+  "available": true,
+  "claim": true,
+  "bg5_violations": 0,
+  "property_tests": "46 passed in 140.29s (0:02:20)",
+  "rule": "outside the Holm family: BG-5 finds 0 violations and the property tests pass"
+ },
+ "complete": true
+}

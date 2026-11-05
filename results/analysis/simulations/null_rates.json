@@ -1,0 +1,84 @@
+{
+ "meta": {
+  "script": "experiments/analysis/sim_null_rates.py",
+  "script_sha256": "8adedc57d6532639250ec9e8a62d60c63dcaabe868e7e2c60b9974dfe5206dee",
+  "closure_sha256": "400d385be4620409fc3596bfc87adaee95685e6eed1f7c01213689e843c23d49",
+  "window": "synthetic",
+  "registered_window": false,
+  "lock": {
+   "open": false,
+   "why": "results/locks/clean_unlocked missing",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {},
+  "argv": [],
+  "created_utc": "2026-09-28T08:59:41+00:00"
+ },
+ "h1": {
+  "setting": {
+   "units": 200,
+   "weeks": 113,
+   "families": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7"
+   ],
+   "a7_offset": 2,
+   "sd_d": 1.5,
+   "n_boot": 500,
+   "seed": 0
+  },
+  "unit_effect": {
+   "eval_t": {
+    "reject_05": 0.067,
+    "reject_10": 0.12,
+    "reps": 4000
+   },
+   "t_attack": {
+    "reject_05": 0.051,
+    "reject_10": 0.10575,
+    "reps": 4000
+   }
+  },
+  "no_unit_effect": {
+   "eval_t": {
+    "reject_05": 0.0555,
+    "reject_10": 0.103,
+    "reps": 2000
+   },
+   "t_attack": {
+    "reject_05": 0.0585,
+    "reject_10": 0.1065,
+    "reps": 2000
+   }
+  }
+ },
+ "d1": {
+  "setting": {
+   "weeks": 6,
+   "names": 10,
+   "alpha": 0.05,
+   "seed": 2
+  },
+  "iid": {
+   "bootstrap_interval_excludes_0.5": 0.134,
+   "name_permutation_p_below_0.05": 0.044,
+   "reps": 1000,
+   "n_boot_or_perm": 1000
+  },
+  "persistent_names": {
+   "bootstrap_interval_excludes_0.5": 0.316,
+   "name_permutation_p_below_0.05": 0.053,
+   "reps": 1000,
+   "n_boot_or_perm": 1000
+  }
+ },
+ "wall_s": 246.7
+}

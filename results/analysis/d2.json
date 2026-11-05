@@ -1,0 +1,735 @@
+{
+ "meta": {
+  "script": "experiments/analysis/d2_reid.py",
+  "script_sha256": "ce9f18d9f3bc432c4899947ba584e7b2c545f9a77295ceb1417d445441099e8b",
+  "closure_sha256": "308e5c1832b5dc3c3c371dbbe360a09632f73b35275063a8d9638b3703307d86",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "jobs": {
+    "path": "results/judgments/probe_emu_d1d2/jobs.parquet",
+    "sha256": "b5bcd6c594d13c6884a51d0da8ae3427f8464ac2577c18448630a48994c06584"
+   },
+   "answers": {
+    "path": "results/judgments/probe_emu_d1d2/answers.parquet",
+    "sha256": "275502b89816c0ba9233153e8ad57bd387ee0b37e46e4a67ab9200c302d988a1"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T21:01:24+00:00"
+ },
+ "by_period_level": [
+  {
+   "period": "W_clean",
+   "level": "full",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 3,
+   "accuracy": 0.03,
+   "ci": [
+    0.010254524024038925,
+    0.0845193642905276
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9999999316829059,
+   "cannot_tell_share": 0.94,
+   "mean_p_true": 0.034483946216001364
+  },
+  {
+   "period": "W_clean",
+   "level": "full",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.8823529411764706,
+   "mean_p_true": 0.021289387404646504
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 5,
+   "accuracy": 0.05,
+   "ci": [
+    0.02154367915436796,
+    0.11175046923191913
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9999962968269427,
+   "cannot_tell_share": 0.92,
+   "mean_p_true": 0.04956063896934815
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.9411764705882353,
+   "mean_p_true": 0.021291439411353707
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 100,
+   "accuracy": 1.0,
+   "ci": [
+    0.9630065017930143,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.2676506002282365e-70,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9997407595699788
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 0,
+   "accuracy": 0.0,
+   "ci": [
+    0.0,
+    0.10151455415332376
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 1.0,
+   "cannot_tell_share": 0.9411764705882353,
+   "mean_p_true": 0.0002833248420813237
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 5,
+   "accuracy": 0.05,
+   "ci": [
+    0.02154367915436796,
+    0.11175046923191913
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9999962968269427,
+   "cannot_tell_share": 0.95,
+   "mean_p_true": 0.04880156444233343
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 4,
+   "accuracy": 0.11764705882352941,
+   "ci": [
+    0.04671446664882335,
+    0.26620842770371833
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.6291007645330737,
+   "cannot_tell_share": 0.8235294117647058,
+   "mean_p_true": 0.10453936359493636
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 9,
+   "accuracy": 0.09,
+   "ci": [
+    0.04807254000256516,
+    0.1622621285271631
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9991446016377815,
+   "cannot_tell_share": 0.91,
+   "mean_p_true": 0.0888136061848192
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 2,
+   "accuracy": 0.058823529411764705,
+   "ci": [
+    0.016282655210122746,
+    0.19093606904280996
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9374885432841397,
+   "cannot_tell_share": 0.9117647058823529,
+   "mean_p_true": 0.056148273245160585
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "question": "reid_company",
+   "n": 100,
+   "correct": 100,
+   "accuracy": 1.0,
+   "ci": [
+    0.9630065017930143,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.2676506002282365e-70,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9999992309275586
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.9705882352941176,
+   "mean_p_true": 0.043314250871934544
+  }
+ ],
+ "by_period_level_source": [
+  {
+   "period": "W_clean",
+   "level": "full",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 2,
+   "accuracy": 0.06060606060606061,
+   "ci": [
+    0.016780883087191875,
+    0.1960624480864781
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9941371159739444,
+   "cannot_tell_share": 0.9393939393939394,
+   "mean_p_true": 0.06050999685124878
+  },
+  {
+   "period": "W_clean",
+   "level": "full",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 0,
+   "accuracy": 0.0,
+   "ci": [
+    0.0,
+    0.10151455415332376
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.0,
+   "cannot_tell_share": 0.9411764705882353,
+   "mean_p_true": 0.013282293207933305
+  },
+  {
+   "period": "W_clean",
+   "level": "full",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.8823529411764706,
+   "mean_p_true": 0.021289387404646504
+  },
+  {
+   "period": "W_clean",
+   "level": "full",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9393939393939394,
+   "mean_p_true": 0.03030202292239981
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 2,
+   "accuracy": 0.06060606060606061,
+   "ci": [
+    0.016780883087191875,
+    0.1960624480864781
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9941371159739444,
+   "cannot_tell_share": 0.9393939393939394,
+   "mean_p_true": 0.06050999685124878
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 2,
+   "accuracy": 0.058823529411764705,
+   "ci": [
+    0.016282655210122746,
+    0.19093606904280996
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9951829277191327,
+   "cannot_tell_share": 0.8823529411764706,
+   "mean_p_true": 0.05762550718836504
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.9411764705882353,
+   "mean_p_true": 0.021291439411353707
+  },
+  {
+   "period": "W_clean",
+   "level": "names",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9393939393939394,
+   "mean_p_true": 0.03030202292239981
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 33,
+   "accuracy": 1.0,
+   "ci": [
+    0.895730002457548,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 8.589934592000015e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9992146269835754
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 34,
+   "accuracy": 1.0,
+   "ci": [
+    0.8984854458466761,
+    0.9999999999999999
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.717986918400003e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.999999959529009
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 0,
+   "accuracy": 0.0,
+   "ci": [
+    0.0,
+    0.10151455415332376
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 1.0,
+   "cannot_tell_share": 0.9411764705882353,
+   "mean_p_true": 0.0002833248420813237
+  },
+  {
+   "period": "W_clean",
+   "level": "none",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 33,
+   "accuracy": 1.0,
+   "ci": [
+    0.895730002457548,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 8.589934592000015e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9999998376531395
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9696969696969697,
+   "mean_p_true": 0.030607835729860977
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 3,
+   "accuracy": 0.08823529411764706,
+   "ci": [
+    0.030465943674648555,
+    0.22960486562808868
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9774041280509318,
+   "cannot_tell_share": 0.9117647058823529,
+   "mean_p_true": 0.08792060421447227
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 4,
+   "accuracy": 0.11764705882352941,
+   "ci": [
+    0.04671446664882335,
+    0.26620842770371833
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.6291007645330737,
+   "cannot_tell_share": 0.8235294117647058,
+   "mean_p_true": 0.10453936359493636
+  },
+  {
+   "period": "W_pre",
+   "level": "full",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9696969696969697,
+   "mean_p_true": 0.02669082793502648
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9696969696969697,
+   "mean_p_true": 0.030607835729860977
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 7,
+   "accuracy": 0.20588235294117646,
+   "ci": [
+    0.10349526899031913,
+    0.36798388051163594
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.5338601154952953,
+   "cannot_tell_share": 0.7941176470588235,
+   "mean_p_true": 0.20560307992766572
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 2,
+   "accuracy": 0.058823529411764705,
+   "ci": [
+    0.016282655210122746,
+    0.19093606904280996
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9374885432841397,
+   "cannot_tell_share": 0.9117647058823529,
+   "mean_p_true": 0.056148273245160585
+  },
+  {
+   "period": "W_pre",
+   "level": "names",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 1,
+   "accuracy": 0.030303030303030304,
+   "ci": [
+    0.00536941053687183,
+    0.1531872538211892
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9993661746998859,
+   "cannot_tell_share": 0.9696969696969697,
+   "mean_p_true": 0.02669082793502648
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "source": "FB",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 33,
+   "accuracy": 1.0,
+   "ci": [
+    0.895730002457548,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 8.589934592000015e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9999977536620135
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "source": "N1",
+   "question": "reid_company",
+   "n": 34,
+   "correct": 34,
+   "accuracy": 1.0,
+   "ci": [
+    0.8984854458466761,
+    0.9999999999999999
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.717986918400003e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9999999518860089
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "source": "N1",
+   "question": "reid_year",
+   "n": 34,
+   "correct": 1,
+   "accuracy": 0.029411764705882353,
+   "ci": [
+    0.0052109062762689395,
+    0.1491557329268593
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9893273122680238,
+   "cannot_tell_share": 0.9705882352941176,
+   "mean_p_true": 0.043314250871934544
+  },
+  {
+   "period": "W_pre",
+   "level": "none",
+   "source": "T",
+   "question": "reid_company",
+   "n": 33,
+   "correct": 33,
+   "accuracy": 1.0,
+   "ci": [
+    0.895730002457548,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 8.589934592000015e-24,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9999999653874275
+  }
+ ],
+ "pooled_by_level": [
+  {
+   "level": "full",
+   "question": "reid_company",
+   "n": 200,
+   "correct": 8,
+   "accuracy": 0.04,
+   "ci": [
+    0.020405632066152306,
+    0.07693206820093293
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9999999999932667,
+   "cannot_tell_share": 0.945,
+   "mean_p_true": 0.0416427553291674
+  },
+  {
+   "level": "full",
+   "question": "reid_year",
+   "n": 68,
+   "correct": 5,
+   "accuracy": 0.07352941176470588,
+   "ci": [
+    0.031814844251117996,
+    0.16085188395717748
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9382057809305673,
+   "cannot_tell_share": 0.8529411764705882,
+   "mean_p_true": 0.06291437549979143
+  },
+  {
+   "level": "names",
+   "question": "reid_company",
+   "n": 200,
+   "correct": 14,
+   "accuracy": 0.07,
+   "ci": [
+    0.042152171828342806,
+    0.11405480885610647
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 0.9999999253265295,
+   "cannot_tell_share": 0.915,
+   "mean_p_true": 0.06918712257708368
+  },
+  {
+   "level": "names",
+   "question": "reid_year",
+   "n": 68,
+   "correct": 3,
+   "accuracy": 0.04411764705882353,
+   "ci": [
+    0.01511661970804156,
+    0.12187195182496394
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9934840968086074,
+   "cannot_tell_share": 0.9264705882352942,
+   "mean_p_true": 0.03871985632825715
+  },
+  {
+   "level": "none",
+   "question": "reid_company",
+   "n": 200,
+   "correct": 200,
+   "accuracy": 1.0,
+   "ci": [
+    0.9811546736227335,
+    1.0
+   ],
+   "chance": 0.2,
+   "p_vs_chance_one_sided": 1.6069380442590082e-140,
+   "cannot_tell_share": 0.0,
+   "mean_p_true": 0.9998699952487687
+  },
+  {
+   "level": "none",
+   "question": "reid_year",
+   "n": 68,
+   "correct": 1,
+   "accuracy": 0.014705882352941176,
+   "ci": [
+    0.0026006835761068076,
+    0.07870973128160871
+   ],
+   "chance": 0.125,
+   "p_vs_chance_one_sided": 0.9998860937365758,
+   "cannot_tell_share": 0.9558823529411765,
+   "mean_p_true": 0.02179878785700793
+  }
+ ],
+ "n_requests": 804,
+ "n_unanswered": 0,
+ "definitions": {
+  "accuracy": "top answer = the true label; cannot_tell counts as wrong",
+  "true_year": "'y' + the calendar year of the decision date t",
+  "chance": {
+   "reid_company": 0.2,
+   "reid_year": 0.125
+  }
+ }
+}

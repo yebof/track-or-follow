@@ -1,0 +1,415 @@
+{
+ "M1a": {
+  "beta_positive_weeks": 58,
+  "ic_direct": {
+   "mean": 0.10828039735711784,
+   "n": 58,
+   "sd": 0.08465174719891165,
+   "se_nw4": 0.01021157018882258,
+   "t_nw4": 10.603697115614972
+  },
+  "ic_layer_b": {
+   "mean": 0.10828039735711784,
+   "n": 58,
+   "sd": 0.08465174719891165,
+   "se_nw4": 0.01021157018882258,
+   "t_nw4": 10.603697115614972
+  },
+  "ic_th": 0.1,
+  "learned_weeks": 58,
+  "max_abs_ic_diff": 0.0,
+  "pass": true,
+  "sigma": 9.501181206773287,
+  "z_vs_th": 0.8108838507697297
+ },
+ "M1b": {
+  "0.1": {
+   "beta_syn_last": 0.1049514387136986,
+   "first_learned_weeks": {
+    "2023-04-28": 0.2062166216621662,
+    "2023-05-05": 0.33053705370537045,
+    "2023-05-12": 0.07782778277827782,
+    "2023-05-19": 0.07318331833183317
+   },
+   "ic_direct": {
+    "mean": 0.09623219324043593,
+    "n": 58,
+    "sd": 0.10192980510000899,
+    "se_nw4": 0.015346208286390559,
+    "t_nw4": 6.27074723896308
+   },
+   "ic_layer_b": {
+    "mean": 0.03544242390460016,
+    "n": 58,
+    "sd": 0.18092667251299846,
+    "se_nw4": 0.02257190268214061,
+    "t_nw4": 1.570200988534431
+   },
+   "ic_th": 0.1,
+   "ratio": 0.36830111328801723
+  },
+  "0.3": {
+   "beta_syn_last": 0.32181986346058944,
+   "first_learned_weeks": {
+    "2023-04-28": 0.22369036903690365,
+    "2023-05-05": 0.5124752475247525,
+    "2023-05-12": 0.11597959795979597,
+    "2023-05-19": 0.20196819681968195
+   },
+   "ic_direct": {
+    "mean": 0.29557402116003295,
+    "n": 58,
+    "sd": 0.10476149948634798,
+    "se_nw4": 0.014045062438809423,
+    "t_nw4": 21.04469257062899
+   },
+   "ic_layer_b": {
+    "mean": 0.24400502048797418,
+    "n": 58,
+    "sd": 0.15061163996828508,
+    "se_nw4": 0.023416555204337004,
+    "t_nw4": 10.420192823356945
+   },
+   "ic_th": 0.3,
+   "ratio": 0.8255293192897433
+  },
+  "pass": true
+ },
+ "M2": {
+  "m1a_score_vs_shifted_labels": {
+   "r_t": {
+    "mean": 0.10825535892569724,
+    "n": 58,
+    "sd": 0.08464961149038325,
+    "se_nw4": 0.010211069949580605,
+    "t_nw4": 10.60176450266542
+   },
+   "r_t+1": {
+    "mean": -0.005832790801993392,
+    "n": 57,
+    "sd": 0.11091759162442065,
+    "se_nw4": 0.013202657798299742,
+    "t_nw4": -0.44178913754354426
+   },
+   "r_t-1": {
+    "mean": -0.005394635965173595,
+    "n": 58,
+    "sd": 0.10280863471691135,
+    "se_nw4": 0.009017690252548163,
+    "t_nw4": -0.5982281287216771
+   }
+  },
+  "pass": true,
+  "primary_L_vs_labels_descriptive": {
+   "r_t": {
+    "mean": -0.03084149231249655,
+    "n": 58,
+    "sd": 0.24179173071581217,
+    "se_nw4": 0.026232343447648607,
+    "t_nw4": -1.175704807847089
+   },
+   "r_t+1": {
+    "mean": -0.022531383047899804,
+    "n": 57,
+    "sd": 0.2350368604033454,
+    "se_nw4": 0.025276956556718792,
+    "t_nw4": -0.891380376325836
+   },
+   "r_t-1": {
+    "mean": 0.025066296169975688,
+    "n": 58,
+    "sd": 0.2708883363732244,
+    "se_nw4": 0.04134928158778978,
+    "t_nw4": 0.6062087467410228
+   }
+  },
+  "shifted_scores_through_layer_b": {
+   "score_from_r_t+1": {
+    "beta_last": 0.021828466062339767,
+    "ic_layer_b_vs_r_t": {
+     "mean": 0.023935791890237573,
+     "n": 58,
+     "sd": 0.10593783097576649,
+     "se_nw4": 0.013471009740843733,
+     "t_nw4": 1.7768372490790283
+    }
+   },
+   "score_from_r_t-1": {
+    "beta_last": 0.015228481946602536,
+    "ic_layer_b_vs_r_t": {
+     "mean": -0.00845970592836905,
+     "n": 58,
+     "sd": 0.10859906705840681,
+     "se_nw4": 0.011155208557737826,
+     "t_nw4": -0.7583637620563323
+    }
+   }
+  }
+ },
+ "M3": {
+  "code_feature_values": {
+   "both_missing": 3593,
+   "max_rel_diff": 0.0,
+   "n_rel_diff_gt_1e-9": 0,
+   "one_side_missing": 0,
+   "rows": 84000
+  },
+  "pass": true,
+  "signal_ics": {
+   "low_vol": {
+    "classical": {
+     "mean": -0.014559243679469985,
+     "n": 60,
+     "sd": 0.25128979122039663,
+     "se_nw4": 0.021983764162418064,
+     "t_nw4": -0.6622725558691841
+    },
+    "corr_weekly": 1.0,
+    "layer_b_feature": {
+     "mean": -0.014559243679469985,
+     "n": 60,
+     "sd": 0.25128979122039663,
+     "se_nw4": 0.021983764162418064,
+     "t_nw4": -0.6622725558691841
+    },
+    "mean_diff": 0.0,
+    "pass": true,
+    "weeks": 60
+   },
+   "momentum_12_1": {
+    "classical": {
+     "mean": 0.03297133795012153,
+     "n": 60,
+     "sd": 0.25671060738021073,
+     "se_nw4": 0.02510741233087681,
+     "t_nw4": 1.3132113144759947
+    },
+    "corr_weekly": 1.0,
+    "layer_b_feature": {
+     "mean": 0.03297133795012153,
+     "n": 60,
+     "sd": 0.25671060738021073,
+     "se_nw4": 0.02510741233087681,
+     "t_nw4": 1.3132113144759947
+    },
+    "mean_diff": 0.0,
+    "pass": true,
+    "weeks": 60
+   },
+   "reversal_1w": {
+    "classical": {
+     "mean": 0.009647099045211247,
+     "n": 60,
+     "sd": 0.1959815872641284,
+     "se_nw4": 0.022859478985146637,
+     "t_nw4": 0.4220174506811649
+    },
+    "corr_weekly": 1.0,
+    "layer_b_feature": {
+     "mean": 0.009647099045211247,
+     "n": 60,
+     "sd": 0.1959815872641284,
+     "se_nw4": 0.022859478985146637,
+     "t_nw4": 0.4220174506811649
+    },
+    "mean_diff": 0.0,
+    "pass": true,
+    "weeks": 60
+   }
+  },
+  "through_layer_b": {
+   "low_vol": {
+    "beta_negative_weeks": 30,
+    "ic_layer_b": {
+     "mean": -0.08766250446297269,
+     "n": 58,
+     "sd": 0.239232369734301,
+     "se_nw4": 0.028300196254442644,
+     "t_nw4": -3.097593517543582
+    },
+    "max_abs_diff": 0.0,
+    "weeks": 58
+   },
+   "momentum_12_1": {
+    "beta_negative_weeks": 2,
+    "ic_layer_b": {
+     "mean": 0.008421987870849012,
+     "n": 58,
+     "sd": 0.2623401946807018,
+     "se_nw4": 0.02429291265334367,
+     "t_nw4": 0.34668497726186864
+    },
+    "max_abs_diff": 0.0,
+    "weeks": 58
+   },
+   "reversal_1w": {
+    "beta_negative_weeks": 50,
+    "ic_layer_b": {
+     "mean": -0.01414148459930689,
+     "n": 58,
+     "sd": 0.19814608760775473,
+     "se_nw4": 0.02438464990304923,
+     "t_nw4": -0.5799338787118915
+    },
+    "max_abs_diff": 0.0,
+    "weeks": 58
+   }
+  }
+ },
+ "M4": {
+  "pass": true,
+  "permutation_null_primary": {
+   "mean_of_means": -0.0005591477902188533,
+   "n_perm": 1000,
+   "primary_mean_ic": -0.03084149231249655,
+   "primary_percentile": 0.011,
+   "sd_of_means": 0.013117452387567218
+  },
+  "shuffled_through_layer_b": {
+   "ic_layer_b": {
+    "mean": 0.0017169809377434622,
+    "n": 58,
+    "sd": 0.13037843755215767,
+    "se_nw4": 0.015078356734835926,
+    "t_nw4": 0.11387056082687551
+   }
+  }
+ },
+ "M5": {
+  "anchors": {
+   "examples": [],
+   "filing_anchor_hits": 7,
+   "filing_source": true,
+   "mismatches": 0,
+   "missing_in_panel": 0,
+   "price_anchor_hits": 417,
+   "stock_weeks": 6000
+  },
+  "eligible_risk_rows": {
+   "anchored": 19,
+   "anchored_collapsed": 18,
+   "bylines": 19,
+   "items": 20
+  },
+  "pass": true,
+  "rules": {
+   "anchored": {
+    "exclusions_without_anchor": 0,
+    "mismatches_vs_independent_rule": 0,
+    "n_exclusions_all_causes": 3,
+    "n_halvings_all_causes": 159,
+    "sentinel_exclusions": 3,
+    "unanchored_halvings": 15
+   },
+   "anchored_collapsed": {
+    "exclusions_without_anchor": 0,
+    "mismatches_vs_independent_rule": 0,
+    "n_exclusions_all_causes": 3,
+    "n_halvings_all_causes": 159,
+    "sentinel_exclusions": 3,
+    "unanchored_halvings": 14
+   },
+   "bylines": {
+    "exclusions_without_anchor": 0,
+    "mismatches_vs_independent_rule": 0,
+    "n_exclusions_all_causes": 18,
+    "n_halvings_all_causes": 144,
+    "sentinel_exclusions": 18,
+    "unanchored_halvings": 0
+   },
+   "items": {
+    "exclusions_without_anchor": 0,
+    "mismatches_vs_independent_rule": 0,
+    "n_exclusions_all_causes": 19,
+    "n_halvings_all_causes": 143,
+    "sentinel_exclusions": 19,
+    "unanchored_halvings": 0
+   }
+  }
+ },
+ "M6": {
+  "J": 10.0,
+  "K": 20,
+  "entry_violations": [],
+  "exclusion_rule": "anchored",
+  "learned_weeks": 58,
+  "n_entry_checks": 4060,
+  "n_protection_checks": 540,
+  "n_weeks": 58,
+  "pass": true,
+  "passed": true,
+  "protection_violations": [],
+  "sizing": "reference",
+  "trusted_all_T": true,
+  "trusted_not_T": []
+ },
+ "M7": {
+  "differ": [],
+  "files": [
+   "bound",
+   "cards.jsonl",
+   "code_sha",
+   "daily_returns.parquet",
+   "heads.parquet",
+   "metrics.json",
+   "multipliers.parquet",
+   "predictions.parquet",
+   "sizing.jsonl",
+   "sizing_weeks.jsonl",
+   "snapshots.jsonl",
+   "weights.parquet"
+  ],
+  "pass": true,
+  "seeds": [
+   "1",
+   "2",
+   "3"
+  ],
+  "sha256_seed1": {
+   "bound": "d62e9359cf90f9feed1bb3288cf37832509707c957c316c6185440f1bceef064",
+   "cards.jsonl": "deae70a1f93ff4be8d3d3d22e82a59410b67440e30b4862c5306728728f85da6",
+   "code_sha": "d8148455716ae75d7c0b33faaf17090171d52ba1f9cdd41af639640dfcbb1d28",
+   "daily_returns.parquet": "f897b89272b76c9bd5294d5c58f8d0c04ec51ef34a2985b27894a6aaab1e84cb",
+   "heads.parquet": "15a750f189081b630561be311dd452a64c3d44f9e757c5b6b51853118dc86542",
+   "metrics.json": "6b8ee5a3811fdc0181d6dbc3568ef31df4150ef1fccbc040431e5c56a3125c61",
+   "multipliers.parquet": "e23c70e9f6e223e4dba9e265e8baed5c83bb1697b0761a258b57add834a58ff1",
+   "predictions.parquet": "33992a5c434a43e66cb6fd12b03636fa895a52241ad546c3093bd01294c8b50a",
+   "sizing.jsonl": "3fec91095b3c37f5184b8ea28ee862d0f1fb56ac9b0625e153398eaea9f7c6b0",
+   "sizing_weeks.jsonl": "c27df632521534a162ee1def64d2a6e2398bde194fdc4633e1c2997caa138531",
+   "snapshots.jsonl": "196b6a542aa3b617c4192a6c6ef347fd1d3220a4b4cb3e2fd5daa98ed9a9c606",
+   "weights.parquet": "c94a525c9f44ceefb47bd26b906610b346a3cec723867f436ab44610c6e8c279"
+  }
+ },
+ "criteria": {
+  "M1a": "beta>0 on every learned week; |IC_L - IC_direct| <= 1e-9 every learned week; |mean IC - IC_th| <= 3 NW SE (IC_th = 0.10)",
+  "M1b": "mean Layer-B IC >= 0.8 x mean direct IC on the same learned weeks (IC_th = 0.30)",
+  "M2": "|mean IC| < 3 NW SE vs r_{t-1} and vs r_{t+1} for the M1a Layer-B score; |mean IC| < 3 NW SE vs r_t for a score built from r_{t+1} through the isolated Layer B",
+  "M3": "per classical signal: corr(weekly IC) >= 0.99 and |mean IC diff| <= 0.005; through Layer B ||IC_L| - |IC_x~|| <= 1e-9 every learned week; code-feature values equal (rel diff <= 1e-9)",
+  "M4": "shuffled M1a score through Layer B: |mean IC| < 3 NW SE; permutation null of the primary L: |mean of permutation mean ICs| <= 0.002",
+  "M5": "price anchor recomputed == panel on every (t, U_t); logged multipliers == independent BG-3 rule for all four rules; no anchored-rule exclusion with A = 0",
+  "M6": "0 entry violations, 0 protection violations, trusted set all T, >= 1 check per learned week",
+  "M7": "identical SHA-256 of every Layer-B output across PYTHONHASHSEED 1, 2, 3"
+ },
+ "gen_id": "pre_blinded_emu_wpre_s30",
+ "independent_vs_labelstore": {
+  "independent_only": 0,
+  "labelstore_only": 2,
+  "max_abs_diff": 0.00014365563897367206,
+  "n_diff_gt_1e-9": 198,
+  "pairs": 5997
+ },
+ "price_cap": "2024-07-03",
+ "seed": 20260928,
+ "summary": {
+  "M1a": true,
+  "M1b": true,
+  "M2": true,
+  "M3": true,
+  "M4": true,
+  "M5": true,
+  "M6": true,
+  "M7": true
+ },
+ "wall_s": 616.3,
+ "window": "W_pre_slice"
+}

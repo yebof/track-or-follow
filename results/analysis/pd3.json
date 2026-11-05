@@ -1,0 +1,22 @@
+{
+ "meta": {
+  "script": "experiments/analysis/pd3_stores.py",
+  "script_sha256": "8be7f5fec4fd847485d5f0fd7875ab797bf76e1d7fa07d36de1c9b891c538d6d",
+  "closure_sha256": "75b1af0e8da7a9f444758c1276e0de1341d77fd5dee53cd86ebbacfa40777207",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {},
+  "argv": [],
+  "created_utc": "2026-09-28T21:03:50+00:00"
+ },
+ "status": "not run",
+ "reason": "no all-stores-off replay (MEM not run)"
+}

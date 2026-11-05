@@ -1,0 +1,510 @@
+{
+ "conventions": {
+  "z2": 2.8016,
+  "z_holm": 2.9696000000000002,
+  "c1_design_effect": 2,
+  "source": "experiments/plan/plan_v1.py power(); results/pre/power_inputs.json"
+ },
+ "windows": {
+  "W_clean_decisions": 115,
+  "W_clean_learned_decisions": 113
+ },
+ "H1": {
+  "design": {
+   "units": 400,
+   "families": 7,
+   "pairs": 2800,
+   "mde_pid0.1": 0.0251,
+   "mde_pid0.2": 0.0355,
+   "mde_pid0.3": 0.0435,
+   "mde_pid0.4": 0.0502,
+   "plan_v1_json": {
+    "C1_MDE_n1400_pid0.2": 0.05,
+    "C1_MDE_n1400_pid0.4": 0.071,
+    "C1_MDE_n2800_pid0.2": 0.035,
+    "C1_MDE_n2800_pid0.4": 0.05
+   }
+  },
+  "registered": {
+   "units": 200,
+   "families": 7,
+   "pairs": 1400,
+   "mde_pid0.1": 0.0355,
+   "mde_pid0.2": 0.0502,
+   "mde_pid0.3": 0.0615,
+   "mde_pid0.4": 0.071
+  },
+  "registered_if_A7_units_all_lost": {
+   "pairs": 1200,
+   "mde_pid0.1": 0.0383,
+   "mde_pid0.2": 0.0542,
+   "mde_pid0.3": 0.0664,
+   "mde_pid0.4": 0.0767,
+   "note": "A7 counts only units still eligible at t+2 (design_v1 \u00a713.1)"
+  },
+  "per_family_95ci_halfwidth_n200": {
+   "pid0.1": 0.062,
+   "pid0.2": 0.0877,
+   "pid0.4": 0.124
+  },
+  "c1_secondary": {
+   "contrasts": 7,
+   "z_holm_within_family": 3.2916,
+   "pairs_same_units": 1400,
+   "mde_pid0.1": 0.0393,
+   "mde_pid0.2": 0.0556,
+   "mde_pid0.3": 0.0681,
+   "mde_pid0.4": 0.0787,
+   "ta_lite_pairs": 400,
+   "ta_lite": {
+    "mde_pid0.1": 0.0736,
+    "mde_pid0.2": 0.1041,
+    "mde_pid0.3": 0.1275,
+    "mde_pid0.4": 0.1472
+   }
+  }
+ },
+ "H2": {
+  "design": {
+   "C2_MDE_between_sd0.0": 0.0152,
+   "C2_MDE_between_sd0.05": 0.0205,
+   "assumed_items_per_week": "about 260 (plan_v1.py)"
+  },
+  "main_c2_frame": {
+   "rows": 27556,
+   "weeks": 115,
+   "units_per_week": {
+    "min": 60,
+    "median": 232.0,
+    "max": 410
+   },
+   "distinct_focal_d0_per_week": {
+    "min": 38,
+    "median": 116.0,
+    "max": 170
+   },
+   "distinct_focal_d0_total": 13287
+  },
+  "registered_W_clean": {
+   "mde_between_sd0.0_units": 0.019,
+   "mde_between_sd0.0_focal_d0": 0.0267,
+   "mde_between_sd0.05_units": 0.0235,
+   "mde_between_sd0.05_focal_d0": 0.0301
+  },
+  "W_release": {
+   "mde_between_sd0.0_units": 0.0233,
+   "mde_between_sd0.0_focal_d0": 0.033,
+   "mde_between_sd0.05_units": 0.0291,
+   "mde_between_sd0.05_focal_d0": 0.0373
+  },
+  "note": "per-week null variance 1/(n_t - 1); items sharing a (focal, d0) share their AR label, so the focal_d0 column is the conservative effective size. Counts only: no AR was computed."
+ },
+ "H3": {
+  "design": {
+   "C3_MDE_rho0.5": 0.0332,
+   "C3_MDE_rho0.8": 0.021,
+   "sigma": 0.12,
+   "weeks": 115
+  },
+  "registered_W_clean": {
+   "weeks": 113,
+   "sigma_0.12": {
+    "mde_rho0.5": 0.0335,
+    "mde_rho0.8": 0.0212,
+    "mde_rho0.9": 0.015,
+    "mde_rho0.95": 0.0106
+   },
+   "sigma_0.2418": {
+    "mde_rho0.5": 0.0675,
+    "mde_rho0.8": 0.0427,
+    "mde_rho0.9": 0.0302,
+    "mde_rho0.95": 0.0214
+   }
+  },
+  "W_release": {
+   "weeks": 73,
+   "sigma_0.12": {
+    "mde_rho0.5": 0.0417,
+    "mde_rho0.8": 0.0264,
+    "mde_rho0.9": 0.0187,
+    "mde_rho0.95": 0.0132
+   },
+   "sigma_0.2418": {
+    "mde_rho0.5": 0.084,
+    "mde_rho0.8": 0.0532,
+    "mde_rho0.9": 0.0376,
+    "mde_rho0.95": 0.0266
+   }
+  },
+  "rho_note": "PRE's S30 slice gives rho 0.989 for primary vs V-codeonly, inflated because 70 of 100 names have no S1 judgment there (pre_report R-2); rho on U100 is unknown before the unlock"
+ },
+ "descriptive": {
+  "single_system_IC_95ci_halfwidth": {
+   "sigma_0.12": 0.0221,
+   "sigma_0.2418": 0.0446
+  },
+  "single_system_IC_mde": {
+   "sigma_0.12": 0.0316,
+   "sigma_0.2418": 0.0637
+  },
+  "portfolio_IR_mde": 1.9,
+  "minbtl": {
+   "years": 2.173,
+   "trial_series_full_sweep": 71,
+   "expected_max_sharpe_of_N_null_trials": {
+    "2": 0.8,
+    "10": 1.46,
+    "71": 1.98
+   },
+   "max_independent_trials_for_E_max_1": 2.96,
+   "note": "approximation of bailey2014pseudo Eq. 3.2 (p.11), a necessary, non-sufficient condition"
+  }
+ },
+ "baselines_reduced": {
+  "TAL": {
+   "design": {
+    "units": "W_clean x S50",
+    "weeks": 115,
+    "names": 50,
+    "stock_weeks": 5750,
+    "plan_0.12": {
+     "sigma_ic": 0.1572,
+     "ci95_halfwidth": 0.0287,
+     "mde_single": 0.0411,
+     "mde_paired_rho0.2": 0.0519,
+     "mde_paired_rho0.5": 0.0411
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2622,
+     "ci95_halfwidth": 0.0479,
+     "mde_single": 0.0685,
+     "mde_paired_rho0.2": 0.0867,
+     "mde_paired_rho0.5": 0.0685
+    },
+    "ir_mde": 1.88
+   },
+   "reduced": {
+    "units": "last 60 W_clean decisions x S30",
+    "weeks": 60,
+    "names": 30,
+    "stock_weeks": 1800,
+    "plan_0.12": {
+     "sigma_ic": 0.1969,
+     "ci95_halfwidth": 0.0498,
+     "mde_single": 0.0712,
+     "mde_paired_rho0.2": 0.0901,
+     "mde_paired_rho0.5": 0.0712
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2878,
+     "ci95_halfwidth": 0.0728,
+     "mde_single": 0.1041,
+     "mde_paired_rho0.2": 0.1317,
+     "mde_paired_rho0.5": 0.1041
+    },
+    "ir_mde": 2.61
+   },
+   "c1_secondary_ta_lite_under_attack": {
+    "pairs": 400,
+    "note": "unchanged n (100 stock-weeks x A1, A2, A3, A6), drawn from the S30 x last-60 pool",
+    "mde_pid0.2": 0.094,
+    "mde_pid0.4": 0.133
+   },
+   "t4_pool": {
+    "design": "500 of 5,750 S50 stock-weeks",
+    "reduced": "500 of 1,800 S30 stock-weeks"
+   }
+  },
+  "MCOT": {
+   "design": {
+    "units": "W_clean x S50",
+    "weeks": 115,
+    "names": 50,
+    "stock_weeks": 5750,
+    "plan_0.12": {
+     "sigma_ic": 0.1572,
+     "ci95_halfwidth": 0.0287,
+     "mde_single": 0.0411,
+     "mde_paired_rho0.2": 0.0519,
+     "mde_paired_rho0.5": 0.0411
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2622,
+     "ci95_halfwidth": 0.0479,
+     "mde_single": 0.0685,
+     "mde_paired_rho0.2": 0.0867,
+     "mde_paired_rho0.5": 0.0685
+    },
+    "ir_mde": 1.88
+   },
+   "reduced": {
+    "units": "last 60 W_clean decisions x S30",
+    "weeks": 60,
+    "names": 30,
+    "stock_weeks": 1800,
+    "plan_0.12": {
+     "sigma_ic": 0.1969,
+     "ci95_halfwidth": 0.0498,
+     "mde_single": 0.0712,
+     "mde_paired_rho0.2": 0.0901,
+     "mde_paired_rho0.5": 0.0712
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2878,
+     "ci95_halfwidth": 0.0728,
+     "mde_single": 0.1041,
+     "mde_paired_rho0.2": 0.1317,
+     "mde_paired_rho0.5": 0.1041
+    },
+    "ir_mde": 2.61
+   }
+  },
+  "VERB": {
+   "design": {
+    "items": 6000,
+    "items_per_week_115": 52.2,
+    "spearman_pooled_mde": 0.0362,
+    "weekly_spearman_mean_mde": 0.0373,
+    "auc_mde_prev0.1": 0.0348,
+    "auc_mde_prev0.3": 0.0228,
+    "ece_sd_ratio_vs_6000": 1.0
+   },
+   "reduced": {
+    "items": 2000,
+    "items_per_week_115": 17.4,
+    "spearman_pooled_mde": 0.0627,
+    "weekly_spearman_mean_mde": 0.0689,
+    "auc_mde_prev0.1": 0.0603,
+    "auc_mde_prev0.3": 0.0395,
+    "ece_sd_ratio_vs_6000": 1.73
+   },
+   "note": "IF-2 aligned the 6,000-item sample to contain NG-C2's 4,000 items; 2,000 items can only be a seeded subset of that set, so H2 per implementation compares emu / VERB / NG on those 2,000"
+  },
+  "PROBE": {
+   "D1": {
+    "design": {
+     "per_month": 80,
+     "total": 1440,
+     "month_auc_se_null": 0.065,
+     "month_auc_mde": 0.182,
+     "month_ci95_halfwidth": 0.127,
+     "week_blocks_per_month": 4,
+     "three_month_auc_mde": 0.105
+    },
+    "reduced": {
+     "per_month": 20,
+     "total": 360,
+     "month_auc_se_null": 0.1323,
+     "month_auc_mde": 0.371,
+     "month_ci95_halfwidth": 0.259,
+     "week_blocks_per_month": 2,
+     "three_month_auc_mde": 0.211
+    },
+    "note": "the window-start rule (design_v1 \u00a72.5) needs the July-2024 AUC CI; with 2 weeks per month a week-block bootstrap has 2 blocks per month, so the reduced rule should pool 3-month windows centered on each month (to be stated in the pre-registration)"
+   },
+   "D2": {
+    "design": {
+     "states": 2000,
+     "reid_company_mde_vs_chance_0.2": 0.0251,
+     "reid_year_mde_vs_chance_0.125": 0.0207,
+     "per_cell_6": 333,
+     "reid_company_mde_per_cell": 0.0614
+    },
+    "reduced": {
+     "states": 600,
+     "reid_company_mde_vs_chance_0.2": 0.0457,
+     "reid_year_mde_vs_chance_0.125": 0.0378,
+     "per_cell_6": 100,
+     "reid_company_mde_per_cell": 0.1121
+    },
+    "cells": "3 blinding levels x 2 periods (W_pre slice, W_clean)"
+   }
+  },
+  "FID": {
+   "V1": {
+    "design": {
+     "stock_weeks": 300,
+     "mean_abs_dp_se_ratio": 1.0
+    },
+    "reduced": {
+     "stock_weeks": 150,
+     "mean_abs_dp_se_ratio": 1.41
+    }
+   },
+   "V2": {
+    "design": {
+     "requests": 200,
+     "repeats": 5,
+     "answers": 1000,
+     "sd_df_per_question": 800,
+     "sd_rel_se": 0.025,
+     "flip_rate_se_at_0.05": 0.0154,
+     "pairs": 2000
+    },
+    "reduced": {
+     "requests": 100,
+     "repeats": 3,
+     "answers": 300,
+     "sd_df_per_question": 200,
+     "sd_rel_se": 0.05,
+     "flip_rate_se_at_0.05": 0.0218,
+     "pairs": 300
+    }
+   },
+   "note": "an intervention's flip rate is compared with the floor: with 300 intervention answers and the floor at 5%, the MDE above the floor is 0.0705 (reduced) vs 0.0557 (design), per-request floor"
+  },
+  "MEM": {
+   "design": {
+    "names": 100,
+    "weeks": 115,
+    "stock_weeks": 11500,
+    "plan_0.12": {
+     "sigma_ic": 0.12,
+     "mde_holm_rho0.9": 0.0149,
+     "mde_holm_rho0.95": 0.0105
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2418,
+     "mde_holm_rho0.9": 0.0299,
+     "mde_holm_rho0.95": 0.0212
+    }
+   },
+   "reduced": {
+    "names": 30,
+    "weeks": 115,
+    "stock_weeks": 3450,
+    "plan_0.12": {
+     "sigma_ic": 0.1969,
+     "mde_holm_rho0.9": 0.0244,
+     "mde_holm_rho0.95": 0.0172
+    },
+    "wpre_measured": {
+     "sigma_ic": 0.2878,
+     "mde_holm_rho0.9": 0.0356,
+     "mde_holm_rho0.95": 0.0252
+    }
+   },
+   "note": "rho = correlation of the weekly ICs with and without the store; an ablation changes one program's features, so rho is high (0.9-0.95 assumed; PRE's V-codeonly contrast measured 0.989 on the S30 slice)"
+  },
+  "NG_500": {
+   "units": 500,
+   "weeks": 111,
+   "pooled_spearman_mde": 0.1257,
+   "pooled_spearman_95ci_halfwidth_fisher_z": 0.0879,
+   "agreement_share_95ci_halfwidth_at_0.5": 0.0438,
+   "note": "descriptive per-implementation H2 row (VC-13, IF-4); weekly means are not estimable at ~4.5 units per week, so the pooled Spearman with a week-block bootstrap is registered for NG and VERB"
+  }
+ },
+ "cost_projection": {
+  "unit_costs_usd": {
+   "MAIN/N0": 0.0002106,
+   "MAIN/N1": 0.0002695,
+   "MAIN/N2": 0.0004557,
+   "MAIN/N3": 0.0008221,
+   "MAIN/T": 0.0004597,
+   "DEV2/H": 0.0003949,
+   "DEV2/H-spot": 0.0004978,
+   "DEV2/H-guard": 0.000441,
+   "DEV2/HS": 0.0003877,
+   "typed_attacked_item": 0.002704,
+   "nodef_attacked_item": 0.002038,
+   "MAIN_all_in_per_stock_week": 0.010264,
+   "MAIN_news_per_stock_week": 0.009249,
+   "TAL_per_stock_week_measured": 0.003736,
+   "MCOT_per_stock_week_dry_run": 0.00239
+  },
+  "H_clean_U100_design": {
+   "requests": 11500,
+   "usd": 4.54
+  },
+  "H_clean_in_band": {
+   "requests": 3450,
+   "usd": 1.36,
+   "sub_cap": 1.5,
+   "fits": true
+  },
+  "HSPOT_clean_in_band": {
+   "requests": 3450,
+   "usd": 1.72,
+   "sub_cap": 2.0,
+   "fits": true
+  },
+  "HGUARD_clean_in_band": {
+   "requests": 2277,
+   "usd": 1.0,
+   "sub_cap": 2.0,
+   "fits": true
+  },
+  "NODEF_clean_unit_stock_weeks": {
+   "stock_weeks": 200,
+   "usd": 1.66,
+   "note": "the 200 promotion units' week-t stock-weeks, typed news cost minus N0",
+   "sub_cap": 3.0,
+   "fits": true
+  },
+  "RT_S_stages": {
+   "1_H1_typed_plus_H": 5.58,
+   "2_H_guard_plus_H_spot": 1.69,
+   "3_TA_lite_under_attack_100x4": 0.93,
+   "4_nodef_attacked": 3.67,
+   "5_demotion_RB2_100_held_x_A8_1_A8_2": 1.16,
+   "unit_weeks_promotion": 1800,
+   "note": "attacked-item costs at MAIN's measured per-request costs; unchanged items are cache hits (redteam/run.py); TA-lite re-runs the news analyst, bull, bear, trader and risk (5 of 8 calls)",
+   "cumulative_vs_sub_cap": {
+    "1_H1_typed_plus_H": {
+     "cumulative_usd": 5.58,
+     "within_RT_S_sub_cap": true
+    },
+    "2_H_guard_plus_H_spot": {
+     "cumulative_usd": 7.27,
+     "within_RT_S_sub_cap": true
+    },
+    "3_TA_lite_under_attack_100x4": {
+     "cumulative_usd": 8.2,
+     "within_RT_S_sub_cap": true
+    },
+    "4_nodef_attacked": {
+     "cumulative_usd": 11.87,
+     "within_RT_S_sub_cap": true
+    },
+    "5_demotion_RB2_100_held_x_A8_1_A8_2": {
+     "cumulative_usd": 13.03,
+     "within_RT_S_sub_cap": false
+    }
+   },
+   "sub_cap": 12.0
+  },
+  "MCOT_reduced": {
+   "weeks": 34,
+   "first_week": "2026-01-23",
+   "last_week": "2026-09-11",
+   "stock_weeks": 1020,
+   "usd": 2.44,
+   "sub_cap": 4.5,
+   "ci95_halfwidth_mean_ic": {
+    "sigma_0.12": 0.0662,
+    "sigma_0.2418": 0.0968
+   }
+  },
+  "LIVE": {
+   "per_week_usd_at_MAIN_rate": 1.026,
+   "weeks": [
+    "2026-09-25 (pseudo-forward)",
+    "2026-10-02",
+    "2026-10-09",
+    "2026-10-16"
+   ],
+   "usd": 4.11,
+   "sub_cap": 6.5
+  },
+  "NG_cpu": {
+   "s_per_full_item_measured": 26.58,
+   "items500_hours": 3.69,
+   "X6_NG_2000_items_hours": 2.94,
+   "RT_A_NG_30_items_x_64_queries_hours": 14.18,
+   "NG_D1_360_requests_hours": 0.18,
+   "budget_cpu_hours_IF1": 36,
+   "note": "hours of one 6-thread worker; IF-1's budget is 36 CPU-hours of that worker"
+  }
+ }
+}

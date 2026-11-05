@@ -1,0 +1,117 @@
+{
+ "blinded": {
+  "requests": 66479,
+  "with_study_code_names": 62359,
+  "with_unblinded_note": 0,
+  "with_code_name_note": 66479,
+  "cached_or_coalesced": 7620,
+  "by_program": {
+   "FA": 309,
+   "M": 60,
+   "FB": 1800,
+   "P1": 3411,
+   "N0": 10445,
+   "N1": 44472,
+   "N3": 1079,
+   "N2": 3103,
+   "T": 1800
+  },
+  "by_program_with_code_names": {
+   "FA": 309,
+   "FB": 1800,
+   "P1": 342,
+   "N0": 9454,
+   "N1": 44472,
+   "N3": 1079,
+   "N2": 3103,
+   "T": 1800
+  },
+  "without_unblinded_note_by_program": {
+   "FA": 309,
+   "M": 60,
+   "FB": 1800,
+   "P1": 3411,
+   "N0": 10445,
+   "N1": 44472,
+   "N3": 1079,
+   "N2": 3103,
+   "T": 1800
+  },
+  "without_unblinded_note_cached_by_program": {
+   "FA": 132,
+   "M": 0,
+   "FB": 1241,
+   "P1": 2,
+   "N0": 2620,
+   "N1": 3625,
+   "N3": 0,
+   "N2": 0,
+   "T": 0
+  }
+ },
+ "unblinded": {
+  "requests": 65010,
+  "with_study_code_names": 0,
+  "with_unblinded_note": 60950,
+  "with_code_name_note": 4060,
+  "cached_or_coalesced": 10197,
+  "by_program": {
+   "T": 1800,
+   "FA": 309,
+   "FB": 1800,
+   "P1": 3411,
+   "N0": 10445,
+   "N1": 43220,
+   "N3": 1058,
+   "N2": 2967
+  },
+  "by_program_with_code_names": {},
+  "without_unblinded_note_by_program": {
+   "P1": 3069,
+   "N0": 991
+  },
+  "without_unblinded_note_cached_by_program": {
+   "P1": 3069,
+   "N0": 991
+  }
+ },
+ "unblinder": {
+  "version": "unblind-names-v1",
+  "requests": 65010,
+  "requests_revealed": 60950,
+  "requests_unchanged": 4060,
+  "notes_replaced": 60950,
+  "code_names_replaced": 203263,
+  "firms_named": 145,
+  "unknown_code_names": {
+   "Company-7F3A09B2": 65010
+  },
+  "firms": 145,
+  "ticker_fallback": [
+   "CSX",
+   "EBAY",
+   "RTX"
+  ],
+  "renamed_within_window": {
+   "BLK": [
+    "BlackRock",
+    "BlackRock Funding"
+   ],
+   "RTX": [
+    "RAYTHEON TECHNOLOGIES",
+    "RTX"
+   ]
+  },
+  "all_caps_names": 103
+ },
+ "M_identical_across_arms": true,
+ "shared_request_keys": {
+  "n": 3925,
+  "by_program": {
+   "M": 60,
+   "N0": 991,
+   "P1": 3069
+  }
+ },
+ "pass": true
+}

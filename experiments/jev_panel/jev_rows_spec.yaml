@@ -1,0 +1,123 @@
+# Jev rows: specification of the descriptive analysis of the completed Jev panel (Cloudflare Workers AI, jev-1.13.0),
+# fixed and committed BEFORE any Jev outcome statistic is read. The SHA-256 of this file is written into the meta of
+# results/analysis/jev_rows.json; experiments/jev_panel/jev_rows.py refuses to run if this file differs from its
+# committed version.
+id: JEV-ROWS
+label: descriptive (Jev panel; not part of H1-H3)
+written_utc: "2026-10-09T14:00:00Z"
+scope: >-
+  Pre-registration (docs/design/preregistration_v1.md): "Jev: ... `make jev-rows` produces descriptive rows only ...
+  nothing in H1-H3 changes". Admissible uses per component are those of docs/impl/jev_cloudflare.md §4 and of each
+  generation's MANIFEST (admissible_use / not_admissible). No statistic below enters a Holm family, decides a claim,
+  or selects a configuration, threshold or reader. No p-value is computed for any Jev-vs-emu contrast; no difference
+  of Jev and emu statistics is formed or tested. No model is called (every answer exists).
+not_computed:
+  - >-
+    any Jev statistic of E[effect] vs AR[0,+1] or its placebo on W_clean items (aligned2000 or h2frame): those items
+    are "contamination unverified" (Jev released 2026-09-15; no documented training cutoff)
+  - H2 on Jev as a confirmatory or comparative test
+  - a null D1/D2 probe result read as proof of no memorization
+
+inputs:
+  generations:  # every file's SHA-256 must equal its MANIFEST's; validation.json must say pass
+    forward: results/judgments/jevcf_jev-1.13.0_fwd
+    aligned2000: results/judgments/jevcf_jev-1.13.0_wclean_items2000
+    h2frame: results/judgments/jevcf_jev-1.13.0_wclean_h2frame
+    probes: results/judgments/jevcf_jev-1.13.0_d1d2
+    canary: "results/judgments/jevcf_jev-1.13.0_canary/<latest launch> (identity only; counts, no statistic)"
+  references:
+    emu: >-
+      results/judgments/main_emu_wclean_u100 (W_clean and the pseudo-forward week 2026-09-18), and
+      results/judgments/live_<d>_* (live weeks 2026-09-25, 2026-10-02)
+    VERB: results/judgments/verb_llm-verbalized_wclean_items2000
+    NG: results/judgments/ng_typed-local_wclean_items500
+    registered: results/analysis/h2.json (emu's sec_8k), results/analysis/d1.json, results/analysis/d2.json
+  ledger: data/cache/spend_jev_cf.sqlite (opened read-only)
+
+item_answers:
+  parse: >-
+    Jev's item-level answers per unit exactly as h2_validity.verb_items (the five N1 groups; each request contributes
+    only the questions its group `use`s; joined by request key and question); units come from jobs.parquet meta_json.
+    E[effect] = sum_k k P(effect = k) (h2_validity.expected_effect); top event type = argmax in bank order
+    (h2_validity.top_label). A unit missing a group or an answer has NaN E[effect] and is dropped pairwise (counted).
+  emu: N01 item rows of the source generation (h2_validity.item_rows / c2_frame), unit id t|symbol|eid
+  VERB: h2_validity.verb_items
+  NG: h2_validity.implementation_items
+
+statistics:
+  a_forward_post_release_validity:
+    admissible_use: post-release item validity, E[effect] vs later reactions (descriptive)
+    units: >-
+      the forward generation's units (emu's C2-eligible N1 items created on a UTC day after 2026-09-15, weeks
+      2026-09-18 from main_emu_wclean_u100 and 2026-09-25, 2026-10-02 from the live generations). The unit set is
+      rebuilt from the source generations with h2_validity.item_rows + c2_frame + the post-release rule and must equal
+      the forward generation's units; any mismatch stops the script.
+    labels: >-
+      AR[0,+1] and placebo AR[-5,-1] from jevtrader.learn.labels.abnormal_returns (via h2_validity.add_abnormal_returns,
+      identical definition: d0 = session of created_at if before 16:00 ET else the next; trailing 252-session beta;
+      close-to-close adjusted returns; SPY market) on bars of the live data root data/live/root
+      (common.load_prices(droot=data/live/root)).
+    point_in_time: >-
+      a unit enters only if its AR[0,+1] window is fully realized in the data: the window's last session is a session
+      of the live bars, on or before their last session, and that session's close precedes the bar files' write time.
+      Units whose window is not realized (or whose AR or placebo is not computable) are dropped and counted per week
+      and reason. The placebo statistic uses the same units as the AR statistic.
+    statistic: >-
+      pooled Spearman (average ranks) of Jev E[effect] with AR[0,+1], and with placebo AR[-5,-1]
+      (h2_validity.pooled_spearman: week-block bootstrap 95% percentile CI, B = 2000, seed 0; Fisher-z CI alongside);
+      n units, n weeks, units per week. With about three week clusters the week-block interval is coarse; both
+      intervals are reported, the week-block one is the one printed.
+    reference: >-
+      the same statistic for emu's E[effect] on the identical units (a reference, not a test: no p-value, no
+      difference). Also reported: Jev's own C2-eligibility rate on these units (programs.news.triage on its answers,
+      as verb_items), and the Spearman agreement of Jev and emu E[effect] on them.
+  b_aligned2000_agreement:
+    admissible_use: agreement with emu, VERB and NG on identical requests (descriptive)
+    units: the 2,000 aligned units (VERB's sample); NG on its nested 500
+    statistic: >-
+      Spearman of E[effect]: Jev vs emu, Jev vs VERB (2,000), Jev vs NG (500), each with a week-block bootstrap 95% CI
+      (B = 2000, seed 0); Cohen's kappa of the top event type (stats.cohen_kappa) for the same pairs. No AR, return or
+      other market outcome is read for these units.
+    reference: emu vs VERB and emu vs NG on the identical units (same statistics)
+  c_h2frame_8k_concept_agreement:
+    admissible_use: 8-K concept agreement on the registered frame (C2 secondary); never a confirmatory or comparative H2
+    units: >-
+      the registered H2 frame (h2_frame.json: MAIN's C2-eligible W_clean units from the D1 start), as the h2frame
+      generation's units; units of the frame without a Jev answer are counted
+    labels: >-
+      h2_validity.sec_labels on data/raw/sec/submissions: 1[a focal-firm 8-K with the concept's items accepted in
+      [created - 2 days, created + 1 day]]
+    statistic: >-
+      h2_validity.sec_agreement on Jev's P(event type): AUC with week-block 95% CI, Brier, ECE, resolution, prevalence,
+      for earnings_results vs Item 2.02, deal_or_investment vs 1.01/2.01, management_or_labor vs 5.02
+    reference: >-
+      emu's registered values (results/analysis/h2.json sec_8k), printed next to Jev's; emu recomputed on the
+      identical units as a reproduction check (must equal the registered AUCs to 1e-9 when the unit sets are equal)
+  d_cost_latency:
+    admissible_use: cost and latency
+    statistic: >-
+      per component (canary, aligned2000, probes, forward, h2frame) from requests.parquet: requests, paid (uncached)
+      requests, input tokens, booked USD, latency of paid requests (median, 90th and 99th percentile, seconds);
+      totals; USD per 1,000 items (5 requests per item); and the ledger's row count, total USD and first/last booking
+      time (read-only). Validation files' jev_ledger_usd is reported as given.
+  e_probes_lower_bounds:
+    admissible_use: D1 recall and D2 re-identification as lower bounds only
+    statistic: >-
+      D1: Jev's P(beat) (D.recall_beats_median) on the registered D1 schedule (d1_window_start.schedule over the probe
+      period 2024-01..2025-06) vs the realized T1 label: AUC of the window centred on 2024-07 and of the whole probe
+      period, week-block 95% CI (descriptive; B = 2000, seed 0); answered probes counted. D2: d2_reid.summarize on
+      Jev's D2 rows (accuracy with Wilson CI, chance, cannot_tell share) pooled by level and question.
+    reference: emu on the same probes (registered d1.json centre window; d2.json pooled_by_level)
+    reading: >-
+      a probe that detects recall bounds Jev's recall from below; a probe that does not is not evidence of no recall
+
+output:
+  path: results/analysis/jev_rows.json
+  meta: >-
+    label, spec path and SHA-256, the commit that added the spec, each generation's MANIFEST SHA-256s and file
+    hashes, validation pass flags, the live bars' last session and write time
+  paper_macros: >-
+    experiments/report/make_numbers_extra.py reads jev_rows.json for the Jev slot (IfJevResults true only when the
+    file exists with this label and every generation validated): hTwoSpearmanJev, hTwoCIJev, hTwoPlaceboJev,
+    nJevUnits = the forward statistic (a); hTwoAUCEarningsJev = the h2frame earnings AUC (c); new \jev... macros for
+    (a) emu reference, (b) agreement, (c) other concepts, (d) cost/latency, (e) probes.

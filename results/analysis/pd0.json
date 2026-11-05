@@ -1,0 +1,1165 @@
+{
+ "meta": {
+  "script": "experiments/analysis/pd0_operations.py",
+  "script_sha256": "26d6269b2156f8620e0eb75edfc684f621ca7612684c1086cfccbf627bba616e",
+  "closure_sha256": "148d6fbf0e3a92a65db925e9238c678f524d5e4ffdccdfd368a2df21572d0579",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "typed requests": {
+    "path": "results/judgments/main_emu_wclean_u100/requests.parquet",
+    "sha256": "93df749c2101d678834dd089baa442f24aa78f8e932c814597e211926581bc53"
+   },
+   "TA-lite requests": {
+    "path": "results/gens/tal_ta-lite_wclean-last60_s30/requests.parquet",
+    "sha256": "83ca159d19e4e7d8df2e678b59e27cd3a3348e26392f442933054e2d85a3ae8c"
+   },
+   "H requests": {
+    "path": "results/judgments/h_emu_wclean_et/requests.parquet",
+    "sha256": "220a93fd6f73a5d21d32656bd318fd8930277e91653cb35db0f013c117e6c98b"
+   },
+   "H-guard requests": {
+    "path": "results/judgments/hguard_emu_wclean_et/requests.parquet",
+    "sha256": "16cfac6f7606352fa30220af9953f88009dad633a07285a68ce90f5f077d151c"
+   },
+   "H-spot requests": {
+    "path": "results/judgments/hspot_emu_wclean_et/requests.parquet",
+    "sha256": "200c7a43973f4fd4b52c1e59c396cc72b2e7629e5d0eb4e81e52da2bb7e945d4"
+   },
+   "Mono-CoT requests": {
+    "path": "results/judgments/mcot_mono-cot_wclean-last60_s30/requests.parquet",
+    "sha256": "29352dba54af903da80c02b8dd823e2f1967833bad61d62133e89a5a36e87b02"
+   }
+  },
+  "argv": [
+   "--reader",
+   "TA-lite=results/gens/tal_ta-lite_wclean-last60_s30",
+   "--reader",
+   "H=results/judgments/h_emu_wclean_et",
+   "--reader",
+   "H-guard=results/judgments/hguard_emu_wclean_et",
+   "--reader",
+   "H-spot=results/judgments/hspot_emu_wclean_et",
+   "--reader",
+   "Mono-CoT=results/judgments/mcot_mono-cot_wclean-last60_s30"
+  ],
+  "created_utc": "2026-09-28T22:58:53+00:00"
+ },
+ "typed": {
+  "gen": "main_emu_wclean_u100",
+  "stock_weeks": 11600,
+  "weeks": 116,
+  "programs": {
+   "FA": {
+    "requests": 1716,
+    "paid": 1703,
+    "requests_per_stock_week": 0.14793103448275863,
+    "requests_per_week": 14.793103448275861,
+    "input_tokens_per_request": 1509.4965034965035,
+    "output_tokens_per_paid_request": 16.486788021139166,
+    "response_cache_share": 0.007575757575757576,
+    "provider_cached_share_paid": 0.0011913469123095764,
+    "usd_paid": 1.0754392,
+    "usd_per_stock_week": 9.271027586206896e-05,
+    "usd_per_week": 0.009271027586206897,
+    "latency_p50_s": 0.9771471843123436,
+    "latency_p95_s": 8.265639625489712,
+    "degraded_share": 0.0
+   },
+   "FB": {
+    "requests": 11600,
+    "paid": 3596,
+    "requests_per_stock_week": 1.0,
+    "requests_per_week": 100.0,
+    "input_tokens_per_request": 1040.7266379310345,
+    "output_tokens_per_paid_request": 19.137931034482758,
+    "response_cache_share": 0.69,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 1.605584,
+    "usd_per_stock_week": 0.00013841241379310344,
+    "usd_per_week": 0.013841241379310344,
+    "latency_p50_s": 1.165602178312838,
+    "latency_p95_s": 3.101221776101738,
+    "degraded_share": 0.0016379310344827587
+   },
+   "M": {
+    "requests": 116,
+    "paid": 116,
+    "requests_per_stock_week": 0.01,
+    "requests_per_week": 1.0,
+    "input_tokens_per_request": 2948.956896551724,
+    "output_tokens_per_paid_request": 71.0,
+    "response_cache_share": 0.0,
+    "provider_cached_share_paid": 0.6559420484741829,
+    "usd_paid": 0.082694,
+    "usd_per_stock_week": 7.128793103448276e-06,
+    "usd_per_week": 0.0007128793103448277,
+    "latency_p50_s": 2.37248030398041,
+    "latency_p95_s": 4.098327283747494,
+    "degraded_share": 0.0
+   },
+   "N0": {
+    "requests": 74891,
+    "paid": 46272,
+    "requests_per_stock_week": 6.456120689655172,
+    "requests_per_week": 645.6120689655172,
+    "input_tokens_per_request": 464.14537127291663,
+    "output_tokens_per_paid_request": 11.619813278008298,
+    "response_cache_share": 0.38214204644082733,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 9.7592708,
+    "usd_per_stock_week": 0.000841316448275862,
+    "usd_per_week": 0.0841316448275862,
+    "latency_p50_s": 0.7896628892049193,
+    "latency_p95_s": 1.7477329292334611,
+    "degraded_share": 0.0
+   },
+   "N1": {
+    "requests": 322560,
+    "paid": 263079,
+    "requests_per_stock_week": 27.806896551724137,
+    "requests_per_week": 2780.689655172414,
+    "input_tokens_per_request": 677.4021980406746,
+    "output_tokens_per_paid_request": 11.714317752462188,
+    "response_cache_share": 0.18440290178571428,
+    "provider_cached_share_paid": 0.09492728641096142,
+    "usd_paid": 72.51440400000001,
+    "usd_per_stock_week": 0.006251241724137932,
+    "usd_per_week": 0.6251241724137933,
+    "latency_p50_s": 0.6585997510701418,
+    "latency_p95_s": 1.581727639958262,
+    "degraded_share": 0.0003596230158730159
+   },
+   "N2": {
+    "requests": 21520,
+    "paid": 21329,
+    "requests_per_stock_week": 1.8551724137931034,
+    "requests_per_week": 185.51724137931035,
+    "input_tokens_per_request": 1068.9022304832713,
+    "output_tokens_per_paid_request": 17.802194195696,
+    "response_cache_share": 0.00887546468401487,
+    "provider_cached_share_paid": 0.0009879278358359332,
+    "usd_paid": 9.7220804,
+    "usd_per_stock_week": 0.0008381103793103447,
+    "usd_per_week": 0.08381103793103448,
+    "latency_p50_s": 1.005339339375496,
+    "latency_p95_s": 11.067292924970381,
+    "degraded_share": 0.0
+   },
+   "N3": {
+    "requests": 7082,
+    "paid": 7081,
+    "requests_per_stock_week": 0.6105172413793103,
+    "requests_per_week": 61.05172413793103,
+    "input_tokens_per_request": 2091.7110985597287,
+    "output_tokens_per_paid_request": 15.901708798192345,
+    "response_cache_share": 0.0001412030499858797,
+    "provider_cached_share_paid": 0.010093158371932724,
+    "usd_paid": 6.0602728,
+    "usd_per_stock_week": 0.0005224373103448276,
+    "usd_per_week": 0.05224373103448276,
+    "latency_p50_s": 0.9390710052102804,
+    "latency_p95_s": 2.8676113840192556,
+    "degraded_share": 0.012990680598700932
+   },
+   "P1": {
+    "requests": 6817,
+    "paid": 6809,
+    "requests_per_stock_week": 0.5876724137931034,
+    "requests_per_week": 58.76724137931034,
+    "input_tokens_per_request": 2814.860789203462,
+    "output_tokens_per_paid_request": 71.99867822000294,
+    "response_cache_share": 0.0011735367463693706,
+    "provider_cached_share_paid": 0.8687746694483701,
+    "usd_paid": 3.4555956,
+    "usd_per_stock_week": 0.0002978961724137931,
+    "usd_per_week": 0.02978961724137931,
+    "latency_p50_s": 1.574321299791336,
+    "latency_p95_s": 5.250019367411727,
+    "degraded_share": 0.0005867683731846853
+   },
+   "P2": {
+    "requests": 377638,
+    "paid": 123,
+    "requests_per_stock_week": 32.555,
+    "requests_per_week": 3255.5,
+    "input_tokens_per_request": 2811.6104311536446,
+    "output_tokens_per_paid_request": 16.650406504065042,
+    "response_cache_share": 0.9996742912524693,
+    "provider_cached_share_paid": 0.17994192304144024,
+    "usd_paid": 0.08204040000000001,
+    "usd_per_stock_week": 7.0724482758620705e-06,
+    "usd_per_week": 0.000707244827586207,
+    "latency_p50_s": 1.8271829653531313,
+    "latency_p95_s": 65.70200421698391,
+    "degraded_share": 0.0001482901614773937
+   },
+   "T": {
+    "requests": 11600,
+    "paid": 11600,
+    "requests_per_stock_week": 1.0,
+    "requests_per_week": 100.0,
+    "input_tokens_per_request": 1057.641724137931,
+    "output_tokens_per_paid_request": 23.260086206896553,
+    "response_cache_share": 0.0,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 5.3391648,
+    "usd_per_stock_week": 0.0004602728275862069,
+    "usd_per_week": 0.04602728275862069,
+    "latency_p50_s": 1.1376537531614304,
+    "latency_p95_s": 6.629484148323531,
+    "degraded_share": 0.0002586206896551724
+   }
+  },
+  "agents": {
+   "news": {
+    "requests": 426053,
+    "paid": 337761,
+    "requests_per_stock_week": 36.72870689655172,
+    "requests_per_week": 3672.8706896551726,
+    "input_tokens_per_request": 683.2000666583735,
+    "output_tokens_per_paid_request": 12.173596122702147,
+    "response_cache_share": 0.20723243352352877,
+    "provider_cached_share_paid": 0.0721347781485688,
+    "usd_paid": 98.05602800000001,
+    "usd_per_stock_week": 0.008453105862068967,
+    "usd_per_week": 0.8453105862068967,
+    "latency_p50_s": 0.6902469843626022,
+    "latency_p95_s": 1.6992349233478308,
+    "degraded_share": 0.0004882021720302404
+   },
+   "technical": {
+    "requests": 11600,
+    "paid": 11600,
+    "requests_per_stock_week": 1.0,
+    "requests_per_week": 100.0,
+    "input_tokens_per_request": 1057.641724137931,
+    "output_tokens_per_paid_request": 23.260086206896553,
+    "response_cache_share": 0.0,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 5.3391648,
+    "usd_per_stock_week": 0.0004602728275862069,
+    "usd_per_week": 0.04602728275862069,
+    "latency_p50_s": 1.1376537531614304,
+    "latency_p95_s": 6.629484148323531,
+    "degraded_share": 0.0002586206896551724
+   },
+   "fundamentals": {
+    "requests": 13316,
+    "paid": 5299,
+    "requests_per_stock_week": 1.1479310344827587,
+    "requests_per_week": 114.79310344827586,
+    "input_tokens_per_request": 1101.1358516070893,
+    "output_tokens_per_paid_request": 18.285903000566144,
+    "response_cache_share": 0.6020576749774708,
+    "provider_cached_share_paid": 0.00048628569854655663,
+    "usd_paid": 2.6810232000000003,
+    "usd_per_stock_week": 0.00023112268965517243,
+    "usd_per_week": 0.023112268965517244,
+    "latency_p50_s": 1.1237306874245405,
+    "latency_p95_s": 4.639349837228625,
+    "degraded_share": 0.0014268549113848003
+   },
+   "policy": {
+    "requests": 384455,
+    "paid": 6932,
+    "requests_per_stock_week": 33.1426724137931,
+    "requests_per_week": 3314.2672413793102,
+    "input_tokens_per_request": 2811.668065183181,
+    "output_tokens_per_paid_request": 71.016589728794,
+    "response_cache_share": 0.9819692811902563,
+    "provider_cached_share_paid": 0.8606899077883803,
+    "usd_paid": 3.537636,
+    "usd_per_stock_week": 0.0003049686206896552,
+    "usd_per_week": 0.030496862068965517,
+    "latency_p50_s": 1.57576026301831,
+    "latency_p95_s": 5.798358570411798,
+    "degraded_share": 0.00015606507913800056
+   },
+   "macro": {
+    "requests": 116,
+    "paid": 116,
+    "requests_per_stock_week": 0.01,
+    "requests_per_week": 1.0,
+    "input_tokens_per_request": 2948.956896551724,
+    "output_tokens_per_paid_request": 71.0,
+    "response_cache_share": 0.0,
+    "provider_cached_share_paid": 0.6559420484741829,
+    "usd_paid": 0.082694,
+    "usd_per_stock_week": 7.128793103448276e-06,
+    "usd_per_week": 0.0007128793103448277,
+    "latency_p50_s": 2.37248030398041,
+    "latency_p95_s": 4.098327283747494,
+    "degraded_share": 0.0
+   }
+  },
+  "unmapped_programs": [],
+  "total": {
+   "requests": 835540,
+   "paid": 361708,
+   "requests_per_stock_week": 72.02931034482759,
+   "requests_per_week": 7202.931034482759,
+   "input_tokens_per_request": 1674.7405653828662,
+   "output_tokens_per_paid_request": 13.765255399382928,
+   "response_cache_share": 0.5670967278646145,
+   "provider_cached_share_paid": 0.12267313244239696,
+   "usd_paid": 109.69654600000001,
+   "usd_per_stock_week": 0.00945659879310345,
+   "usd_per_week": 0.9456598793103449,
+   "latency_p50_s": 0.7069400772452354,
+   "latency_p95_s": 1.8384956485591821,
+   "degraded_share": 0.00034708092969815927
+  },
+  "ledger": {
+   "tag_prefix": "MAIN",
+   "rows": 404024,
+   "usd": 119.058064,
+   "input_tokens": 303384932,
+   "output_tokens": 5351177,
+   "wall_clock_h": 2.3797474272222225,
+   "spans": [
+    [
+     "2026-09-27T23:29:31.805658102+00:00",
+     "2026-09-28T00:45:20.429925203+00:00"
+    ],
+    [
+     "2026-09-28T01:30:13.327180147+00:00",
+     "2026-09-28T02:37:11.793651342+00:00"
+    ]
+   ],
+   "wall_gap_min": 30.0,
+   "ledger_total_usd": 194.98425440000003,
+   "ledger_rows": 625462,
+   "usd_per_week": 1.0263626206896552,
+   "usd_per_stock_week": 0.010263626206896552,
+   "tables_minus_ledger_usd": -9.36151799999999
+  }
+ },
+ "comparators": {
+  "TA-lite": {
+   "gen": "tal_ta-lite_wclean-last60_s30",
+   "stock_weeks": 1800,
+   "weeks": 60,
+   "roles": {
+    "bear": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 906.1427777777777,
+     "output_tokens_per_paid_request": 181.53722222222223,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 1.1752500000000001,
+     "usd_per_stock_week": 0.0006529166666666668,
+     "usd_per_week": 0.0195875,
+     "latency_p50_s": 1.656324547715485,
+     "latency_p95_s": 1.9974137281067668,
+     "degraded_share": 0.0
+    },
+    "bull": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 906.1427777777777,
+     "output_tokens_per_paid_request": 175.035,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 1.1565236,
+     "usd_per_stock_week": 0.0006425131111111111,
+     "usd_per_week": 0.019275393333333335,
+     "latency_p50_s": 1.6147757023572922,
+     "latency_p95_s": 1.8915740089491009,
+     "degraded_share": 0.0
+    },
+    "fundamentals": {
+     "requests": 1800,
+     "paid": 598,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 474.115,
+     "output_tokens_per_paid_request": 205.19899665551839,
+     "response_cache_share": 0.6677777777777778,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.30975,
+     "usd_per_stock_week": 0.00017208333333333336,
+     "usd_per_week": 0.0051625,
+     "latency_p50_s": 1.9597204439342022,
+     "latency_p95_s": 5.319327493850142,
+     "degraded_share": 0.0
+    },
+    "macro_policy": {
+     "requests": 1800,
+     "paid": 60,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 2987.1833333333334,
+     "output_tokens_per_paid_request": 181.05,
+     "response_cache_share": 0.9666666666666667,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.08907320000000002,
+     "usd_per_stock_week": 4.948511111111112e-05,
+     "usd_per_week": 0.0014845533333333336,
+     "latency_p50_s": 1.6720493091270328,
+     "latency_p95_s": 1.915839391481131,
+     "degraded_share": 0.0
+    },
+    "news": {
+     "requests": 1800,
+     "paid": 1643,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 620.9372222222222,
+     "output_tokens_per_paid_request": 175.8277541083384,
+     "response_cache_share": 0.08722222222222223,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.8968652,
+     "usd_per_stock_week": 0.0004982584444444445,
+     "usd_per_week": 0.014947753333333334,
+     "latency_p50_s": 1.9224243704229593,
+     "latency_p95_s": 5.374667220562697,
+     "degraded_share": 0.0
+    },
+    "risk": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 1072.5983333333334,
+     "output_tokens_per_paid_request": 73.88944444444445,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.9850724000000001,
+     "usd_per_stock_week": 0.0005472624444444445,
+     "usd_per_week": 0.016417873333333336,
+     "latency_p50_s": 1.0794605854898691,
+     "latency_p95_s": 1.2460786837153135,
+     "degraded_share": 0.0
+    },
+    "technical": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 486.1511111111111,
+     "output_tokens_per_paid_request": 209.08,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.9521792,
+     "usd_per_stock_week": 0.0005289884444444444,
+     "usd_per_week": 0.015869653333333334,
+     "latency_p50_s": 1.949837270192802,
+     "latency_p95_s": 5.435789142362773,
+     "degraded_share": 0.0
+    },
+    "trader": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 1327.7377777777779,
+     "output_tokens_per_paid_request": 71.08611111111111,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 1.1606992,
+     "usd_per_stock_week": 0.000644832888888889,
+     "usd_per_week": 0.019344986666666668,
+     "latency_p50_s": 1.0462951641529799,
+     "latency_p95_s": 1.2148765956051648,
+     "degraded_share": 0.0
+    }
+   },
+   "total": {
+    "requests": 14400,
+    "paid": 11301,
+    "requests_per_stock_week": 8.0,
+    "requests_per_week": 240.0,
+    "input_tokens_per_request": 1097.6260416666667,
+    "output_tokens_per_paid_request": 150.56959561100788,
+    "response_cache_share": 0.21520833333333333,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 6.725412800000001,
+    "usd_per_stock_week": 0.003736340444444445,
+    "usd_per_week": 0.11209021333333334,
+    "latency_p50_s": 1.6036154013127089,
+    "latency_p95_s": 4.570696013048291,
+    "degraded_share": 0.0
+   },
+   "invalid_share": {
+    "invalid": 0.0,
+    "invalid_final": 0.0
+   },
+   "invalid_lines": {
+    "invalid_analyst_stance": 3,
+    "invalid_trader": 0,
+    "invalid_risk": 0
+   },
+   "decisions": {
+    "HOLD": 1747,
+    "BUY": 28,
+    "SELL": 25
+   },
+   "ledger": {
+    "tag_prefix": "TAL/",
+    "rows": 11301,
+    "usd": 6.7254128,
+    "input_tokens": 10007184,
+    "output_tokens": 1701587,
+    "wall_clock_h": 0.3202629463888889,
+    "spans": [
+     [
+      "2026-09-28T03:16:44.896470547+00:00",
+      "2026-09-28T03:35:57.843078375+00:00"
+     ]
+    ],
+    "wall_gap_min": 30.0,
+    "ledger_total_usd": 194.98425440000003,
+    "ledger_rows": 625462,
+    "usd_per_week": 0.11209021333333333,
+    "usd_per_stock_week": 0.0037363404444444442
+   }
+  },
+  "H": {
+   "gen": "h_emu_wclean_et",
+   "stock_weeks": 3390,
+   "weeks": 113,
+   "programs": {
+    "H": {
+     "requests": 3092,
+     "paid": 3091,
+     "requests_per_stock_week": 0.912094395280236,
+     "requests_per_week": 27.36283185840708,
+     "input_tokens_per_request": 806.5045278137128,
+     "output_tokens_per_paid_request": 3.0857327725655126,
+     "response_cache_share": 0.0003234152652005175,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 1.0125716,
+     "usd_per_stock_week": 0.0002986936873156342,
+     "usd_per_week": 0.008960810619469026,
+     "latency_p50_s": 1.0650385916233063,
+     "latency_p95_s": 2.25816847383976,
+     "degraded_share": 0.0
+    }
+   },
+   "agents": {
+    "news": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "technical": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "fundamentals": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "policy": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "macro": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    }
+   },
+   "unmapped_programs": [
+    "H"
+   ],
+   "total": {
+    "requests": 3092,
+    "paid": 3091,
+    "requests_per_stock_week": 0.912094395280236,
+    "requests_per_week": 27.36283185840708,
+    "input_tokens_per_request": 806.5045278137128,
+    "output_tokens_per_paid_request": 3.0857327725655126,
+    "response_cache_share": 0.0003234152652005175,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 1.0125716,
+    "usd_per_stock_week": 0.0002986936873156342,
+    "usd_per_week": 0.008960810619469026,
+    "latency_p50_s": 1.0650385916233063,
+    "latency_p95_s": 2.25816847383976,
+    "degraded_share": 0.0
+   },
+   "ledger": {
+    "tag_prefix": "H/",
+    "rows": 3091,
+    "usd": 1.0125716,
+    "input_tokens": 2493277,
+    "output_tokens": 9538,
+    "wall_clock_h": 0.023300279166666667,
+    "spans": [
+     [
+      "2026-09-28T10:38:47.391690731+00:00",
+      "2026-09-28T10:40:11.272696257+00:00"
+     ]
+    ],
+    "wall_gap_min": 30.0,
+    "ledger_total_usd": 194.98425440000003,
+    "ledger_rows": 625462,
+    "usd_per_week": 0.008960810619469026,
+    "usd_per_stock_week": 0.0002986936873156342
+   }
+  },
+  "H-guard": {
+   "gen": "hguard_emu_wclean_et",
+   "stock_weeks": 3390,
+   "weeks": 113,
+   "programs": {
+    "H-guard": {
+     "requests": 3004,
+     "paid": 1489,
+     "requests_per_stock_week": 0.8861356932153392,
+     "requests_per_week": 26.58407079646018,
+     "input_tokens_per_request": 775.3824900133155,
+     "output_tokens_per_paid_request": 3.09267965077233,
+     "response_cache_share": 0.5043275632490013,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 0.5701328,
+     "usd_per_stock_week": 0.0001681807669616519,
+     "usd_per_week": 0.005045423008849558,
+     "latency_p50_s": 0.6883607879281044,
+     "latency_p95_s": 0.9027652334421872,
+     "degraded_share": 0.0
+    },
+    "N0": {
+     "requests": 20624,
+     "paid": 0,
+     "requests_per_stock_week": 6.083775811209439,
+     "requests_per_week": 182.5132743362832,
+     "input_tokens_per_request": 456.6348913886734,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": 1.0,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": 0.0
+    },
+    "N1": {
+     "requests": 89225,
+     "paid": 25,
+     "requests_per_stock_week": 26.320058997050147,
+     "requests_per_week": 789.6017699115044,
+     "input_tokens_per_request": 677.988321658728,
+     "output_tokens_per_paid_request": 128.4,
+     "response_cache_share": 0.9997198094704399,
+     "provider_cached_share_paid": 0.5586072766946539,
+     "usd_paid": 0.034533600000000005,
+     "usd_per_stock_week": 1.0186902654867258e-05,
+     "usd_per_week": 0.00030560707964601776,
+     "latency_p50_s": 3.751375999301672,
+     "latency_p95_s": 5.393004696071146,
+     "degraded_share": 0.00017932193891846454
+    }
+   },
+   "agents": {
+    "news": {
+     "requests": 109849,
+     "paid": 25,
+     "requests_per_stock_week": 32.40383480825959,
+     "requests_per_week": 972.1150442477876,
+     "input_tokens_per_request": 636.4295168822656,
+     "output_tokens_per_paid_request": 128.4,
+     "response_cache_share": 0.9997724148603993,
+     "provider_cached_share_paid": 0.5586072766946539,
+     "usd_paid": 0.034533600000000005,
+     "usd_per_stock_week": 1.0186902654867258e-05,
+     "usd_per_week": 0.00030560707964601776,
+     "latency_p50_s": 3.751375999301672,
+     "latency_p95_s": 5.393004696071146,
+     "degraded_share": 0.00014565448934446377
+    },
+    "technical": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "fundamentals": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "policy": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "macro": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    }
+   },
+   "unmapped_programs": [
+    "H-guard"
+   ],
+   "total": {
+    "requests": 112853,
+    "paid": 1514,
+    "requests_per_stock_week": 33.289970501474926,
+    "requests_per_week": 998.6991150442478,
+    "input_tokens_per_request": 640.1282642021037,
+    "output_tokens_per_paid_request": 5.161822985468956,
+    "response_cache_share": 0.986584317652167,
+    "provider_cached_share_paid": 0.046078056708043186,
+    "usd_paid": 0.6046664,
+    "usd_per_stock_week": 0.00017836766961651918,
+    "usd_per_week": 0.005351030088495576,
+    "latency_p50_s": 0.6913558132946491,
+    "latency_p95_s": 0.9329406540840863,
+    "degraded_share": 0.00014177735638396853
+   },
+   "ledger": {
+    "tag_prefix": "HGUARD/",
+    "rows": 1550,
+    "usd": 0.6046664,
+    "input_tokens": 1533398,
+    "output_tokens": 7815,
+    "wall_clock_h": 0.13640364222222223,
+    "spans": [
+     [
+      "2026-09-28T22:44:15.055573225+00:00",
+      "2026-09-28T22:52:26.108685493+00:00"
+     ]
+    ],
+    "wall_gap_min": 30.0,
+    "ledger_total_usd": 194.98425440000003,
+    "ledger_rows": 625462,
+    "usd_per_week": 0.005351030088495576,
+    "usd_per_stock_week": 0.00017836766961651918
+   }
+  },
+  "H-spot": {
+   "gen": "hspot_emu_wclean_et",
+   "stock_weeks": 3390,
+   "weeks": 113,
+   "programs": {
+    "H-spot": {
+     "requests": 3092,
+     "paid": 3091,
+     "requests_per_stock_week": 0.912094395280236,
+     "requests_per_week": 27.36283185840708,
+     "input_tokens_per_request": 993.6148124191462,
+     "output_tokens_per_paid_request": 3.0951148495632483,
+     "response_cache_share": 0.0003234152652005175,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 1.2440144,
+     "usd_per_stock_week": 0.0003669658997050147,
+     "usd_per_week": 0.011008976991150441,
+     "latency_p50_s": 1.0986807402223349,
+     "latency_p95_s": 2.4741311678662896,
+     "degraded_share": 0.0
+    }
+   },
+   "agents": {
+    "news": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "technical": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "fundamentals": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "policy": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    },
+    "macro": {
+     "requests": 0,
+     "paid": 0,
+     "requests_per_stock_week": 0.0,
+     "requests_per_week": 0.0,
+     "input_tokens_per_request": null,
+     "output_tokens_per_paid_request": null,
+     "response_cache_share": null,
+     "provider_cached_share_paid": null,
+     "usd_paid": 0.0,
+     "usd_per_stock_week": 0.0,
+     "usd_per_week": 0.0,
+     "latency_p50_s": null,
+     "latency_p95_s": null,
+     "degraded_share": null
+    }
+   },
+   "unmapped_programs": [
+    "H-spot"
+   ],
+   "total": {
+    "requests": 3092,
+    "paid": 3091,
+    "requests_per_stock_week": 0.912094395280236,
+    "requests_per_week": 27.36283185840708,
+    "input_tokens_per_request": 993.6148124191462,
+    "output_tokens_per_paid_request": 3.0951148495632483,
+    "response_cache_share": 0.0003234152652005175,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 1.2440144,
+    "usd_per_stock_week": 0.0003669658997050147,
+    "usd_per_week": 0.011008976991150441,
+    "latency_p50_s": 1.0986807402223349,
+    "latency_p95_s": 2.4741311678662896,
+    "degraded_share": 0.0
+   },
+   "ledger": {
+    "tag_prefix": "HSPOT/",
+    "rows": 3091,
+    "usd": 1.2440144000000002,
+    "input_tokens": 3071768,
+    "output_tokens": 9567,
+    "wall_clock_h": 0.0233368325,
+    "spans": [
+     [
+      "2026-09-28T10:42:47.242527246+00:00",
+      "2026-09-28T10:44:11.255124807+00:00"
+     ]
+    ],
+    "wall_gap_min": 30.0,
+    "ledger_total_usd": 194.98425440000003,
+    "ledger_rows": 625462,
+    "usd_per_week": 0.011008976991150445,
+    "usd_per_stock_week": 0.00036696589970501483
+   }
+  },
+  "Mono-CoT": {
+   "gen": "mcot_mono-cot_wclean-last60_s30",
+   "stock_weeks": 1800,
+   "weeks": 60,
+   "roles": {
+    "mono": {
+     "requests": 1800,
+     "paid": 1800,
+     "requests_per_stock_week": 1.0,
+     "requests_per_week": 30.0,
+     "input_tokens_per_request": 4143.386666666666,
+     "output_tokens_per_paid_request": 471.9277777777778,
+     "response_cache_share": 0.0,
+     "provider_cached_share_paid": 0.0,
+     "usd_paid": 4.342390399999999,
+     "usd_per_stock_week": 0.002412439111111111,
+     "usd_per_week": 0.07237317333333332,
+     "latency_p50_s": 3.759337203577161,
+     "latency_p95_s": 4.950990378763526,
+     "degraded_share": 0.0
+    }
+   },
+   "total": {
+    "requests": 1800,
+    "paid": 1800,
+    "requests_per_stock_week": 1.0,
+    "requests_per_week": 30.0,
+    "input_tokens_per_request": 4143.386666666666,
+    "output_tokens_per_paid_request": 471.9277777777778,
+    "response_cache_share": 0.0,
+    "provider_cached_share_paid": 0.0,
+    "usd_paid": 4.342390399999999,
+    "usd_per_stock_week": 0.002412439111111111,
+    "usd_per_week": 0.07237317333333332,
+    "latency_p50_s": 3.759337203577161,
+    "latency_p95_s": 4.950990378763526,
+    "degraded_share": 0.0
+   },
+   "invalid_share": {
+    "invalid": 0.0
+   },
+   "invalid_lines": {},
+   "decisions": {},
+   "ledger": {
+    "tag_prefix": "MCOT/",
+    "rows": 1800,
+    "usd": 4.342390400000001,
+    "input_tokens": 7458096,
+    "output_tokens": 849470,
+    "wall_clock_h": 0.113958475,
+    "spans": [
+     [
+      "2026-09-28T05:18:02.035915375+00:00",
+      "2026-09-28T05:24:52.286426067+00:00"
+     ]
+    ],
+    "wall_gap_min": 30.0,
+    "ledger_total_usd": 194.98425440000003,
+    "ledger_rows": 625462,
+    "usd_per_week": 0.07237317333333335,
+    "usd_per_stock_week": 0.002412439111111112
+   }
+  }
+ },
+ "screening": {
+  "items": 74891,
+  "n0_quarantined": 3427,
+  "n0_quarantine_rate": 0.045759837630689935,
+  "asked": 71464,
+  "guard_quarantined": 1407,
+  "guard_quarantine_rate_of_asked": 0.019688234635620732,
+  "promotional_rate_of_non_quarantined": 0.027192143540260075,
+  "about_focal_rate_of_asked": 0.772053061681406,
+  "kept": 32108,
+  "sentences": 112363,
+  "sentence_removal_rate": 0.10638733390884902,
+  "sentinel_escalation_rate": 0.10344827586206896,
+  "sentinel_threshold": 0.5,
+  "risk_stock_weeks": 11600
+ },
+ "replay_determinism": {
+  "status": "not run"
+ },
+ "deployment": {
+  "n": 0,
+  "decisions": {}
+ },
+ "settings": {
+  "wall_gap_min": 30.0,
+  "subsets": [
+   "S30",
+   "S50"
+  ],
+  "deciles": 10,
+  "sentinel_escalation": 0.5
+ },
+ "scaling": {
+  "by_set": {
+   "S30": {
+    "names": 30.0,
+    "requests_per_week": 4439.275862068966,
+    "usd_per_week": 0.2971966310344828
+   },
+   "S50": {
+    "names": 50.0,
+    "requests_per_week": 5364.879310344828,
+    "usd_per_week": 0.514143851724138
+   },
+   "all": {
+    "names": 100.0,
+    "requests_per_week": 7202.931034482759,
+    "usd_per_week": 0.9456598793103449
+   }
+  },
+  "requests_per_week_per_10_names": 389.577586206897,
+  "requests_per_week_intercept": 3331.563218390804,
+  "usd_per_week_per_10_names": 0.0914194527851459,
+  "usd_per_week_intercept": 0.03715007064544652,
+  "news_volume_deciles": {
+   "1": {
+    "items": 0.0,
+    "requests": 2.1336206896551726,
+    "usd": 0.0006646010344827586
+   },
+   "2": {
+    "items": 0.9637931034482758,
+    "requests": 7.223275862068966,
+    "usd": 0.0018851600000000003
+   },
+   "3": {
+    "items": 1.3853448275862068,
+    "requests": 10.102586206896552,
+    "usd": 0.002490694827586207
+   },
+   "4": {
+    "items": 2.0,
+    "requests": 13.449137931034484,
+    "usd": 0.003208966551724138
+   },
+   "5": {
+    "items": 2.956896551724138,
+    "requests": 19.01206896551724,
+    "usd": 0.004664536551724138
+   },
+   "6": {
+    "items": 3.7724137931034485,
+    "requests": 24.125862068965517,
+    "usd": 0.005834417241379311
+   },
+   "7": {
+    "items": 5.163793103448276,
+    "requests": 32.27672413793103,
+    "usd": 0.008117940689655174
+   },
+   "8": {
+    "items": 7.228448275862069,
+    "requests": 44.83965517241379,
+    "usd": 0.011042000000000001
+   },
+   "9": {
+    "items": 12.464655172413794,
+    "requests": 75.19741379310345,
+    "usd": 0.017932283448275865
+   },
+   "10": {
+    "items": 28.625862068965517,
+    "requests": 160.40603448275863,
+    "usd": 0.03560441344827587
+   }
+  },
+  "usd_per_stock_week_per_item": 0.001224805294256488,
+  "requests_per_stock_week_per_item": 5.534461797326925
+ }
+}

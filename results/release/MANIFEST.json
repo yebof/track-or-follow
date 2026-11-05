@@ -1,0 +1,35 @@
+{
+ "script": "scripts/export_item_tables.py",
+ "files": {
+  "h2_frame_emu.parquet": {
+   "rows": 27556,
+   "source": "main_emu_wclean_u100",
+   "sha256": "bc35466b19137ad928f420d8b1b85f2a3f78e35fb89612cd75ae00d1c7ed4a51"
+  },
+  "readers_jev_aligned2000.parquet": {
+   "rows": 34170,
+   "source": "jevcf_jev-1.13.0_wclean_items2000",
+   "sha256": "66f6f6b1f2ad4bbe9f339593686237feee833f5d9d040b5720752059ca3d9c42"
+  },
+  "readers_jev_h2frame.parquet": {
+   "rows": 491912,
+   "source": "jevcf_jev-1.13.0_wclean_h2frame",
+   "sha256": "da7d8c348453804e3841a52da5c47dd101f2851c2ccd883433b424640431af06"
+  },
+  "readers_jev_forward.parquet": {
+   "rows": 10285,
+   "source": "jevcf_jev-1.13.0_fwd",
+   "sha256": "b8cd4a14db6922185bf9644fc2df8bd138ff531dd6416f4ce059fa118516c0b8"
+  },
+  "readers_verb_aligned2000.parquet": {
+   "rows": 34170,
+   "source": "verb_llm-verbalized_wclean_items2000",
+   "sha256": "19ae8da675bdbcd78788b5abc2b49b88f46523b3a40e3112d649d37c825cd004"
+  },
+  "readers_ng_items500.parquet": {
+   "rows": 500,
+   "source": "ng_typed-local_wclean_items500",
+   "sha256": "f730f65c2b3b881339cbbc0f8bc9d53f4518e8c633a875fe552053e6f1428b50"
+  }
+ }
+}

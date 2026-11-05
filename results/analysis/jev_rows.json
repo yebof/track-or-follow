@@ -1,0 +1,901 @@
+{
+ "meta": {
+  "script": "experiments/jev_panel/jev_rows.py",
+  "script_sha256": "96bbaadb25996cbcd12db4d900c0169f3235cb51ae344a36f06f082ee5fef67e",
+  "closure_sha256": "dd122b56d2e316cb829d742aa3682140367deb643b1310e5939b8313e5ec229e",
+  "window": "jev_panel",
+  "registered_window": false,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "spec": {
+    "path": "experiments/jev_panel/jev_rows_spec.yaml",
+    "sha256": "2b67cfbff692e2664ecf58506141d89b129f103ed7ade1f887c171511d815dc3"
+   },
+   "h2.json": {
+    "path": "results/analysis/h2.json",
+    "sha256": "6d378f7053f6358a648363faaddb46c557c1ad06faf3ad2e19553621034c802a"
+   },
+   "h2_frame.json": {
+    "path": "results/analysis/h2_frame.json",
+    "sha256": "511261ab8dcf9460995d4b514daedcf36df4bcfa5cd938170b0d7d01b7e0eaec"
+   },
+   "d2.json": {
+    "path": "results/analysis/d2.json",
+    "sha256": "2265bf8c5b145b204bd539400058b6b5f94728fff35150a22ccfea474fffdfd8"
+   },
+   "main work.jsonl": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "forward source main_emu_wclean_u100": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "forward source live_2026-09-25_f4394ea02f": {
+    "path": "results/judgments/live_2026-09-25_f4394ea02f/memory/work.jsonl",
+    "sha256": "0254eaa2d93065380722229410c451f6cdcb11a3799be2fb092df3bfb523215a"
+   },
+   "forward source live_2026-10-02_f4394ea02f": {
+    "path": "results/judgments/live_2026-10-02_f4394ea02f/memory/work.jsonl",
+    "sha256": "aa60f008c57fa2ec819bd1a8e1cebd51e473cd9150bd2b51bdb61e56b0a43b81"
+   },
+   "live bars sp500_daily_2018_2026.parquet": {
+    "path": "data/live/root/data/raw/bars/sp500_daily_2018_2026.parquet",
+    "sha256": "3d5a6d488a452a83a86cf0f84cde5f8c31e7a430e29bae02a4a001153e878af8"
+   },
+   "live bars etf_daily_2018_2026.parquet": {
+    "path": "data/live/root/data/raw/bars/etf_daily_2018_2026.parquet",
+    "sha256": "1546d31d473b1ace86f56664ebdaab76fe81ce6547e82c0dab4506e251708045"
+   },
+   "VERB answers": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/answers.parquet",
+    "sha256": "92048746aead9cb9e2332609f2601196deaf1d0efbc304e4102818655463f437"
+   },
+   "VERB jobs": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/jobs.parquet",
+    "sha256": "0d75d4d5ab4d3477c4f31aa70ee56451f9b26e608c7b3934b5e9ce477ecdaa70"
+   },
+   "VERB sample": {
+    "path": "results/judgments/verb_llm-verbalized_wclean_items2000/sample.parquet",
+    "sha256": "595424c92ccf56d53a4f53a4deaf2ae02ab0448e31dd4089bb6337317e3b6e7e"
+   },
+   "NG items": {
+    "path": "results/judgments/ng_typed-local_wclean_items500/items.parquet",
+    "sha256": "cc53e9e87144708be4bf3248a60afd7932b7bf7a56363111c9cd3b6bfe5f7774"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-10-09T14:02:47+00:00",
+  "label": "descriptive (Jev panel; not part of H1-H3)",
+  "descriptive": true,
+  "spec": {
+   "file": "experiments/jev_panel/jev_rows_spec.yaml",
+   "sha256": "2b67cfbff692e2664ecf58506141d89b129f103ed7ade1f887c171511d815dc3",
+   "commit": "ab1e59a9c4ed6cad142a3f3543d30358cedf14cb",
+   "added_in": "ab1e59a9c4ed6cad142a3f3543d30358cedf14cb",
+   "added_utc": "2026-10-09T13:58:44+00:00"
+  },
+  "generations": {
+   "forward": {
+    "gen_id": "jevcf_jev-1.13.0_fwd",
+    "component": "forward",
+    "sha256": {
+     "answers": "e239331eabb53c0ab496a32aca0ed9973fd261cec7d589c9356e2ee3c78a62e4",
+     "requests": "cc97c01e2dfbc6727246b550393312f007051856f2cb2d5418282ff842181d9b",
+     "evidence": "fe5bc416f5a1d71122779033b2b2ce197e974e07630f3a446c46524142e8dbcb",
+     "jobs": "b2e772c1bf4e4ed0753f77be4ff9c9a5bc07bfa5a3962c255e3565745371dd52"
+    },
+    "manifest_sha256": "83889e9e15df0b5e63edc26513f06acab6a1aa150302cbe5380cefbf309d8310",
+    "labels": {
+     "post-release": 3025
+    },
+    "validity_rate": 1.0,
+    "validation_pass": true,
+    "response_model": "jev-1.13.0"
+   },
+   "aligned2000": {
+    "gen_id": "jevcf_jev-1.13.0_wclean_items2000",
+    "component": "aligned2000",
+    "sha256": {
+     "answers": "8f15955060b5052a29c05678a56b32cac7bd73a7ee27e6842299e84dddfe3efe",
+     "requests": "7b2baabb46aa85323bb795eb875abab2aea57b39abd752b60e8420b0ce1835df",
+     "evidence": "f069b752830ba285d6c613f80452f2b45cf8c292f384d2949c20b5729bc7b9d9",
+     "jobs": "bc6f1b46f0341bc23033017fec3d1a553cb863b11bfa67c83dc92099e2ae7b71"
+    },
+    "manifest_sha256": "70304704466a4866c768bf79b3c9da97d9f8db4abc438b4477867a2db14db684",
+    "labels": {
+     "contamination unverified": 10000
+    },
+    "validity_rate": 1.0,
+    "validation_pass": true,
+    "response_model": "jev-1.13.0"
+   },
+   "h2frame": {
+    "gen_id": "jevcf_jev-1.13.0_wclean_h2frame",
+    "component": "h2frame",
+    "sha256": {
+     "answers": "21e2c6a344909b7f2350c4996e60efb2205ac569a44c7b20036447f6cd99ed51",
+     "requests": "ae04b240f664a0fb5e31e72c2382566bc3eff194b08e1cd49c5960ed56bace5b",
+     "evidence": "c96eda10654910c388fc6a8f18d2baa4bfb4b9962f12f5ef9f758e5de5d2407e",
+     "jobs": "596b429bd18e461fa70cffec99d9d9786f61d27189aa54a49de69d84b3f6e193"
+    },
+    "manifest_sha256": "9f7393e1ce1c02194e8b7ab90bd10998f0528fd21e59e288cd0d70435a7cfb60",
+    "labels": {
+     "contamination unverified": 137780
+    },
+    "validity_rate": 1.0,
+    "validation_pass": true,
+    "response_model": "jev-1.13.0"
+   },
+   "probes": {
+    "gen_id": "jevcf_jev-1.13.0_d1d2",
+    "component": "probes",
+    "sha256": {
+     "answers": "6bf821c4e0b25647a2def98667e821f45f9fce6c3b831281ce8bbb2d183e1ce2",
+     "requests": "389dca4ca29b2f5e1288fb716a62dda1de4331855fa629e32743cc374a81c19e",
+     "evidence": "c574b005fb4bd4af2c44d888cf27fff0ce544d7ecb1761945436162ad457bea1",
+     "jobs": "78b7fcda4693a885fce2d37fd6c272d2f382c7991fa5968a052d9f7697ea112b"
+    },
+    "manifest_sha256": "c69f34a0db9dbfa5a1c4ceb69d8aa1805d0888dbcb66b389c9fe6da0a6434a4f",
+    "labels": {
+     "contamination unverified": 1404
+    },
+    "validity_rate": 1.0,
+    "validation_pass": true,
+    "response_model": "jev-1.13.0"
+   },
+   "canary": {
+    "gen_id": "20261009T035012Z",
+    "component": "canary",
+    "sha256": {
+     "answers": "f3a3cf44114621fbfb1d0e5e7c96c595e7be22c66d76366866683d57b3a9e702",
+     "requests": "741f1d3f8372556e7292a3d9767c0bafdb8b9dcba78a5cb6decc4dcd134cab1f",
+     "evidence": "eefed0b011be3ecd2b9b30cefa828dc69917cb0c886e1e3cc97556f3d1ccd37c",
+     "jobs": "ba2f39b56a8c7e1b59e4d30a340b8e3f159f864abc36fd548bafb153c19ce6bf"
+    },
+    "manifest_sha256": "2fa5c9573c94fada86dd484018c8fe08a35678445880fabebab72354225f6d20",
+    "labels": {
+     "contamination unverified": 50
+    },
+    "validity_rate": 1.0,
+    "validation_pass": null,
+    "response_model": "jev-1.13.0"
+   }
+  }
+ },
+ "label": "descriptive (Jev panel; not part of H1-H3)",
+ "model": "jev-1.13.0",
+ "forward": {
+  "admissible_use": "post-release item validity, E[effect] vs later reactions (descriptive)",
+  "units_total": 605,
+  "units_used": 549,
+  "units_dropped": {
+   "AR window not realized by the last session in the data": 56
+  },
+  "per_week": {
+   "2026-09-18": {
+    "source": "main_emu_wclean_u100",
+    "units": 115,
+    "kept": 115,
+    "dropped": {}
+   },
+   "2026-09-25": {
+    "source": "live_2026-09-25_f4394ea02f",
+    "units": 208,
+    "kept": 208,
+    "dropped": {}
+   },
+   "2026-10-02": {
+    "source": "live_2026-10-02_f4394ea02f",
+    "units": 282,
+    "kept": 226,
+    "dropped": {
+     "AR window not realized by the last session in the data": 56
+    }
+   }
+  },
+  "jev": {
+   "spearman_ar": {
+    "rho": 0.10175467386459931,
+    "n": 549,
+    "weeks": 3,
+    "ci_week_block": [
+     0.01740616969628878,
+     0.28447875732626715
+    ],
+    "ci_fisher": [
+     0.018227327422703287,
+     0.18387154472759473
+    ],
+    "n_boot": 2000,
+    "seed": 0
+   },
+   "spearman_ar_placebo": {
+    "rho": -0.02382589757194784,
+    "n": 549,
+    "weeks": 3,
+    "ci_week_block": [
+     -0.05486586024395035,
+     0.006876406611380485
+    ],
+    "ci_fisher": [
+     -0.1072945262557969,
+     0.05997623756055901
+    ],
+    "n_boot": 2000,
+    "seed": 0
+   }
+  },
+  "emu_reference_same_units": {
+   "spearman_ar": {
+    "rho": 0.07556191044330844,
+    "n": 549,
+    "weeks": 3,
+    "ci_week_block": [
+     0.044753127422317525,
+     0.16058623091980218
+    ],
+    "ci_fisher": [
+     -0.008172318666545284,
+     0.15824385453761053
+    ],
+    "n_boot": 2000,
+    "seed": 0
+   },
+   "spearman_ar_placebo": {
+    "rho": 0.05815281431365441,
+    "n": 549,
+    "weeks": 3,
+    "ci_week_block": [
+     0.026001238863915168,
+     0.12314439765188416
+    ],
+    "ci_fisher": [
+     -0.02565458433317162,
+     0.14114848649785733
+    ],
+    "n_boot": 2000,
+    "seed": 0
+   },
+   "note": "reference, not a test: no p-value, no difference"
+  },
+  "jev_emu_agreement_spearman_E_effect": 0.8439186765957561,
+  "jev_c2_eligible_own_rate": 0.9089253187613844,
+  "jev_c2_eligible_own_ci": [
+   0.8819327388649577,
+   0.9302350044113773
+  ],
+  "point_in_time": {
+   "data_root": "data/live/root",
+   "last_session": "2026-10-02",
+   "bars_written_utc": "2026-10-08T00:58:03+00:00",
+   "rule": "AR[0,+1] window's last session <= the last session of the live bars, whose close precedes the bar files' write time"
+  },
+  "settings": {
+   "ar_window": [
+    0,
+    1
+   ],
+   "placebo_window": [
+    -5,
+    -1
+   ],
+   "n_boot": 2000,
+   "seed": 0,
+   "release_date": "2026-09-15",
+   "post_release": "created on a UTC day after the release"
+  }
+ },
+ "aligned2000": {
+  "admissible_use": "agreement with emu, VERB and NG on identical requests (descriptive)",
+  "units": 2000,
+  "units_ng": 500,
+  "aligned_units_in_emu_c2_frame": 2000,
+  "jev_complete_units": 2000,
+  "jev_vs_emu": {
+   "n_units": 2000,
+   "spearman_E_effect": {
+    "rho": 0.8406882605047269,
+    "n": 2000,
+    "weeks": 115,
+    "ci_week_block": [
+     0.8212280774078983,
+     0.8573365761852114
+    ]
+   },
+   "top_event_type": {
+    "n": 2000,
+    "kappa": 0.7679356376834924,
+    "agreement": 0.8025,
+    "agreement_ci": [
+     0.7844794422797299,
+     0.8193607441151121
+    ]
+   }
+  },
+  "jev_vs_verb": {
+   "n_units": 2000,
+   "spearman_E_effect": {
+    "rho": 0.7491328086594475,
+    "n": 2000,
+    "weeks": 115,
+    "ci_week_block": [
+     0.7249400169358898,
+     0.7712135490117967
+    ]
+   },
+   "top_event_type": {
+    "n": 2000,
+    "kappa": 0.7296860081710179,
+    "agreement": 0.774,
+    "agreement_ci": [
+     0.7551549722724759,
+     0.7917944858173974
+    ]
+   }
+  },
+  "jev_vs_ng": {
+   "n_units": 500,
+   "spearman_E_effect": {
+    "rho": 0.7816284371287229,
+    "n": 500,
+    "weeks": 111,
+    "ci_week_block": [
+     0.7306228081663835,
+     0.8232687272495947
+    ]
+   },
+   "top_event_type": {
+    "n": 500,
+    "kappa": 0.7024192127678822,
+    "agreement": 0.75,
+    "agreement_ci": [
+     0.7102363265170449,
+     0.785951503252179
+    ]
+   }
+  },
+  "reference": {
+   "emu_vs_verb": {
+    "n_units": 2000,
+    "spearman_E_effect": {
+     "rho": 0.8107365075034931,
+     "n": 2000,
+     "weeks": 115,
+     "ci_week_block": [
+      0.7899997318908497,
+      0.8283360279495083
+     ]
+    },
+    "top_event_type": {
+     "n": 2000,
+     "kappa": 0.7317780784876292,
+     "agreement": 0.7725,
+     "agreement_ci": [
+      0.753615089127177,
+      0.79034012010454
+     ]
+    }
+   },
+   "emu_vs_ng": {
+    "n_units": 500,
+    "spearman_E_effect": {
+     "rho": 0.7608421185543289,
+     "n": 500,
+     "weeks": 111,
+     "ci_week_block": [
+      0.711318501548591,
+      0.8022159556063582
+     ]
+    },
+    "top_event_type": {
+     "n": 500,
+     "kappa": 0.6498010870174258,
+     "agreement": 0.7,
+     "agreement_ci": [
+      0.6584321959560773,
+      0.7385180678593017
+     ]
+    }
+   }
+  },
+  "outcome_read": "none"
+ },
+ "h2frame": {
+  "admissible_use": "8-K concept agreement on the registered frame (C2 secondary); never a confirmatory or comparative H2",
+  "frame_units": 27556,
+  "jev_units": 27556,
+  "frame_units_without_jev_answer": 0,
+  "frame_start": "2024-07-05",
+  "jev_sec_8k": {
+   "earnings_results_vs_2.02": {
+    "n": 27556,
+    "resolution": 0.06370516608123175,
+    "uncertainty": 0.1940161399725877,
+    "reliability": 0.03040869801412521,
+    "auc": 0.7661246470032449,
+    "brier": 0.15945897518737254,
+    "log_loss": 1.2252765714412845,
+    "ece": 0.15967607194018865,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.2633909130497895,
+    "auc_ci": [
+     0.7584645951932238,
+     0.7738402656622491
+    ]
+   },
+   "deal_or_investment_vs_1.01/2.01": {
+    "n": 27556,
+    "resolution": 0.0001160852216012983,
+    "uncertainty": 0.011832197982730995,
+    "reliability": 0.0743162964084461,
+    "auc": 0.647851930752467,
+    "brier": 0.08619364537264416,
+    "log_loss": 0.5826162731586122,
+    "ece": 0.09437099254997353,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.011975613296559733,
+    "auc_ci": [
+     0.5931843793699785,
+     0.7005161336250558
+    ]
+   },
+   "management_or_labor_vs_5.02": {
+    "n": 27556,
+    "resolution": 0.0014187131004793558,
+    "uncertainty": 0.0397919260565497,
+    "reliability": 0.034267929732906696,
+    "auc": 0.6162344985962092,
+    "brier": 0.07265363787713428,
+    "log_loss": 0.5542664618537209,
+    "ece": 0.07535437844844145,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.04151545942807374,
+    "auc_ci": [
+     0.5957191207254191,
+     0.6378547818699558
+    ]
+   }
+  },
+  "emu_registered_sec_8k": {
+   "earnings_results_vs_2.02": {
+    "n": 27556,
+    "resolution": 0.051464156299158015,
+    "uncertainty": 0.1940161399725877,
+    "reliability": 0.031196479426324763,
+    "auc": 0.8329482709556514,
+    "brier": 0.17361888583695023,
+    "log_loss": 1.566969595463691,
+    "ece": 0.17354190641315267,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.2633909130497895,
+    "auc_ci": [
+     0.8257779046675054,
+     0.8397581022012096
+    ]
+   },
+   "deal_or_investment_vs_1.01/2.01": {
+    "n": 27556,
+    "resolution": 0.00010524033516574301,
+    "uncertainty": 0.011832197982730995,
+    "reliability": 0.07244995546698264,
+    "auc": 0.610681857137451,
+    "brier": 0.08419055374692036,
+    "log_loss": 0.7318291840560003,
+    "ece": 0.0849481772136059,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.011975613296559733,
+    "auc_ci": [
+     0.5500966482717569,
+     0.668268604321171
+    ]
+   },
+   "management_or_labor_vs_5.02": {
+    "n": 27556,
+    "resolution": 0.0010332683773052965,
+    "uncertainty": 0.0397919260565497,
+    "reliability": 0.042268223932335855,
+    "auc": 0.5569009047328561,
+    "brier": 0.08102770848425743,
+    "log_loss": 0.7296940671999195,
+    "ece": 0.08125754832664187,
+    "eps": 0.0001,
+    "n_bins": 10,
+    "prevalence": 0.04151545942807374,
+    "auc_ci": [
+     0.5304297428390635,
+     0.5855473848746449
+    ]
+   }
+  },
+  "emu_reproduced": {
+   "earnings_results_vs_2.02": true,
+   "deal_or_investment_vs_1.01/2.01": true,
+   "management_or_labor_vs_5.02": true
+  },
+  "sec_symbols_without_archive": []
+ },
+ "cost_latency": {
+  "admissible_use": "cost and latency",
+  "by_component": {
+   "canary": {
+    "requests": 50,
+    "paid": 50,
+    "input_tokens": 125828,
+    "usd_rows": 0.005284776000000001,
+    "usd_paid": 0.005284776000000001,
+    "latency_paid_s": {
+     "median": 0.4166544239851646,
+     "p90": 0.8785140246327503,
+     "p99": 1.4299476921046153,
+     "n": 50
+    },
+    "jev_ledger_usd_at_validation": null
+   },
+   "forward": {
+    "requests": 3025,
+    "paid": 3025,
+    "input_tokens": 2894605,
+    "usd_rows": 0.12157341000000002,
+    "usd_paid": 0.12157341000000002,
+    "latency_paid_s": {
+     "median": 0.32223222800530493,
+     "p90": 0.4225706271943636,
+     "p99": 0.8853291738242813,
+     "n": 3025
+    },
+    "jev_ledger_usd_at_validation": 0.55907019,
+    "usd_per_1000_items_paid": 0.20094778512396697,
+    "items": 605
+   },
+   "aligned2000": {
+    "requests": 10000,
+    "paid": 9975,
+    "input_tokens": 9563130,
+    "usd_rows": 0.40165146000000007,
+    "usd_paid": 0.4006789500000001,
+    "latency_paid_s": {
+     "median": 0.37221981200855225,
+     "p90": 0.5107034882064909,
+     "p99": 1.2150598643708512,
+     "n": 9975
+    },
+    "jev_ledger_usd_at_validation": 0.4117617,
+    "usd_per_1000_items_paid": 0.20033947500000004,
+    "items": 2000
+   },
+   "h2frame": {
+    "requests": 137780,
+    "paid": 124467,
+    "input_tokens": 131895421,
+    "usd_rows": 5.539607682,
+    "usd_paid": 5.007103584,
+    "latency_paid_s": {
+     "median": 0.3620781970093958,
+     "p90": 0.5484473797958345,
+     "p99": 1.2932402019575195,
+     "n": 124467
+    },
+    "jev_ledger_usd_at_validation": 5.603155404000001,
+    "usd_per_1000_items_paid": 0.1817064735084918,
+    "items": 27556
+   },
+   "probes": {
+    "requests": 1404,
+    "paid": 1186,
+    "input_tokens": 759644,
+    "usd_rows": 0.031905048000000005,
+    "usd_paid": 0.02573508,
+    "latency_paid_s": {
+     "median": 0.3823126765200868,
+     "p90": 0.5131130390218459,
+     "p99": 1.1454507231392221,
+     "n": 1186
+    },
+    "jev_ledger_usd_at_validation": 0.43749678000000003
+   }
+  },
+  "totals_requests_parquet": {
+   "requests": 152259,
+   "paid": 138703,
+   "input_tokens": 145238628,
+   "usd_rows": 6.100022375999999,
+   "usd_paid": 5.5603758
+  },
+  "ledger": {
+   "path": "data/cache/spend_jev_cf.sqlite",
+   "rows": 139671,
+   "usd": 5.603155404000001,
+   "first_utc": "2026-10-09T03:46:31+00:00",
+   "last_utc": "2026-10-09T13:53:10+00:00",
+   "opened": "read-only"
+  },
+  "price_usd_per_m_input": {
+   "input": 0.042,
+   "output": 0.0,
+   "cached_input": 0.0
+  }
+ },
+ "probes": {
+  "admissible_use": "D1 recall and D2 re-identification as lower bounds only",
+  "reading": "a probe that detects recall bounds Jev's recall from below; one that does not is not evidence of no recall",
+  "d1": {
+   "jev": {
+    "answered": 360,
+    "scheduled": 360,
+    "centre_window": {
+     "months": [
+      "2024-06",
+      "2024-07",
+      "2024-08"
+     ],
+     "n": 60,
+     "weeks": 6,
+     "positives": 30,
+     "auc": 0.5044444444444445,
+     "ci_week_block": [
+      0.41294642857142855,
+      0.5959821428571429
+     ]
+    },
+    "probe_period": {
+     "months": [
+      "2024-01",
+      "2025-06"
+     ],
+     "n": 360,
+     "weeks": 36,
+     "positives": 191,
+     "auc": 0.5753121224325413,
+     "ci_week_block": [
+      0.5167549804438984,
+      0.6339840792479549
+     ]
+    }
+   },
+   "emu_reference": {
+    "answered": 360,
+    "scheduled": 360,
+    "centre_window": {
+     "months": [
+      "2024-06",
+      "2024-07",
+      "2024-08"
+     ],
+     "n": 60,
+     "weeks": 6,
+     "positives": 30,
+     "auc": 0.48833333333333334,
+     "ci_week_block": [
+      0.3320172991071429,
+      0.6195286195286195
+     ]
+    },
+    "probe_period": {
+     "months": [
+      "2024-01",
+      "2025-06"
+     ],
+     "n": 360,
+     "weeks": 36,
+     "positives": 191,
+     "auc": 0.572616871650299,
+     "ci_week_block": [
+      0.5137012961027552,
+      0.6310852981345219
+     ]
+    }
+   }
+  },
+  "d2": {
+   "jev": {
+    "pooled_by_level": [
+     {
+      "level": "full",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 13,
+      "accuracy": 0.065,
+      "ci": [
+       0.03837635464915299,
+       0.10801907929906895
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 0.999999979941192,
+      "cannot_tell_share": 0.915,
+      "mean_p_true": 0.09486262626262626
+     },
+     {
+      "level": "full",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 9,
+      "accuracy": 0.1323529411764706,
+      "ci": [
+       0.07122244410229805,
+       0.23280059745657733
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.4814425567936708,
+      "cannot_tell_share": 0.6764705882352942,
+      "mean_p_true": 0.13044117647058825
+     },
+     {
+      "level": "names",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 15,
+      "accuracy": 0.075,
+      "ci": [
+       0.04597491718438201,
+       0.12004361023629456
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 0.9999997429525668,
+      "cannot_tell_share": 0.905,
+      "mean_p_true": 0.11587777777777777
+     },
+     {
+      "level": "names",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 10,
+      "accuracy": 0.14705882352941177,
+      "ci": [
+       0.08188817736343271,
+       0.24997394253308772
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.34233954974094055,
+      "cannot_tell_share": 0.6470588235294118,
+      "mean_p_true": 0.14382352941176468
+     },
+     {
+      "level": "none",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 200,
+      "accuracy": 1.0,
+      "ci": [
+       0.9811546736227335,
+       1.0
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 1.6069380442590082e-140,
+      "cannot_tell_share": 0.0,
+      "mean_p_true": 0.99845
+     },
+     {
+      "level": "none",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 13,
+      "accuracy": 0.19117647058823528,
+      "ci": [
+       0.11527294030924928,
+       0.30010641460020604
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.0768548429727565,
+      "cannot_tell_share": 0.5294117647058824,
+      "mean_p_true": 0.1604411764705882
+     }
+    ],
+    "n_requests": 804,
+    "n_unanswered": 0
+   },
+   "emu_reference_registered": {
+    "pooled_by_level": [
+     {
+      "level": "full",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 8,
+      "accuracy": 0.04,
+      "ci": [
+       0.020405632066152306,
+       0.07693206820093293
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 0.9999999999932667,
+      "cannot_tell_share": 0.945,
+      "mean_p_true": 0.0416427553291674
+     },
+     {
+      "level": "full",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 5,
+      "accuracy": 0.07352941176470588,
+      "ci": [
+       0.031814844251117996,
+       0.16085188395717748
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.9382057809305673,
+      "cannot_tell_share": 0.8529411764705882,
+      "mean_p_true": 0.06291437549979143
+     },
+     {
+      "level": "names",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 14,
+      "accuracy": 0.07,
+      "ci": [
+       0.042152171828342806,
+       0.11405480885610647
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 0.9999999253265295,
+      "cannot_tell_share": 0.915,
+      "mean_p_true": 0.06918712257708368
+     },
+     {
+      "level": "names",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 3,
+      "accuracy": 0.04411764705882353,
+      "ci": [
+       0.01511661970804156,
+       0.12187195182496394
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.9934840968086074,
+      "cannot_tell_share": 0.9264705882352942,
+      "mean_p_true": 0.03871985632825715
+     },
+     {
+      "level": "none",
+      "question": "reid_company",
+      "n": 200,
+      "correct": 200,
+      "accuracy": 1.0,
+      "ci": [
+       0.9811546736227335,
+       1.0
+      ],
+      "chance": 0.2,
+      "p_vs_chance_one_sided": 1.6069380442590082e-140,
+      "cannot_tell_share": 0.0,
+      "mean_p_true": 0.9998699952487687
+     },
+     {
+      "level": "none",
+      "question": "reid_year",
+      "n": 68,
+      "correct": 1,
+      "accuracy": 0.014705882352941176,
+      "ci": [
+       0.0026006835761068076,
+       0.07870973128160871
+      ],
+      "chance": 0.125,
+      "p_vs_chance_one_sided": 0.9998860937365758,
+      "cannot_tell_share": 0.9558823529411765,
+      "mean_p_true": 0.02179878785700793
+     }
+    ]
+   }
+  },
+  "d1_definition": "P(beat) of D.recall_beats_median vs the realized T1 label on the registered D1 schedule; AUC with a descriptive week-block 95% CI"
+ },
+ "not_computed": [
+  "any Jev statistic of E[effect] vs AR[0,+1] or its placebo on W_clean items (aligned2000 or h2frame): those items are \"contamination unverified\" (Jev released 2026-09-15; no documented training cutoff)",
+  "H2 on Jev as a confirmatory or comparative test",
+  "a null D1/D2 probe result read as proof of no memorization"
+ ]
+}

@@ -1,0 +1,117 @@
+# Layer-B learning hyper-parameters, fixed a priori (design_v1 §6.5). The SHA-256 of this file is logged with every
+# result (pipeline.registry). No value here is tuned on any evaluation window; `sensitivity` lists the values that are
+# reported alongside, never selected.
+version: learning_v1
+
+allocator:
+  prior_sd_beta: 0.04      # sigma_beta: single-feature implied IC within +-0.046 at 95% prior probability (§6.5);
+  prior_sd_gamma: 0.04     # scaled proportionally if experiments/plan/prior_check.py (W_pre, code only) finds the
+                           # 95th pct of |mean weekly IC| of the code features above 0.05 (check rule, validity M4)
+  half_life_weeks: 52      # decay on label available_at; effective sample ~150 weeks x 100 names
+  intercept: false         # T1 is a median split: base rate 1/2 each week
+  refit: every_decision    # MAP refit by L-BFGS from the prior at every decision (no warm start)
+
+text_cap:
+  multiplier: 2.0          # kappa_t = 2 * max(s^T_t, floor)
+  floor: 0.01
+
+feature_map:
+  noul_logit_clip: 4.0     # x = clip(logit p, -4, 4)
+
+standardization:
+  trailing_weeks: 52       # S_{j,t}: sd of covered, median-demeaned values over the 52 weeks before t
+  min_history_weeks: 8     # fewer weeks of history -> the current week is used
+  scale_floor: 0.05
+  clip: 4.0
+
+labels:
+  primary: T1              # y = 1[r > median over U_t], adjusted open(e_t) -> open(e_{t+1})
+  tail_k: 2.5              # T3: z = 1[(r - m) / sigma < -2.5]
+  idio_vol:
+    market: SPY
+    ewma_center_of_mass_days: 60
+    beta_window_sessions: 252
+    beta_min_periods: 60
+    ewma_min_periods: 20
+
+features:
+  # §6.1. fcf_yield and accruals join the trusted set once the M14 YTD-differencing tests pass. They pass
+  # (tests/test_fundamentals.py; data.fundamentals.CASHFLOW_READY = True, 2026-09-26), so T_code has 14 features,
+  # the same list as B8/B9, V-codeonly and experiments/plan/prior_check.py (T.CODE_FEATURES + F.CODE_FEATURES).
+  trusted: [mom_12_1, rev_1w, rev_1m, vol_60d, dist_52w_high, rel_sector_3m,
+            earnings_yield, sales_yield, gross_profitability, operating_margin, rev_growth_ttm, share_change_1y,
+            fcf_yield, accruals,
+            x_trend, t_pullback, t_capitulation, t_breakout, t_overextended, x_growth, x_prof, x_strain, x_val, x_mac]
+  untrusted: [f_imp, f_cont, f_rev, f_sur, f_net, f_und, f_story, f_cov, no_news, h, s_pol, s_ind]
+
+sensitivity:               # reported, never selected
+  prior_sd: [0.02, 0.08]
+  half_life_weeks: [26, .inf]
+  noul_logit_clip: [2.94]
+  text_cap_multiplier: [1, 4, .inf]
+
+variants:                  # design §6.6 and design_v2_delta MA-1..MA-12 (registered in results/trials.jsonl; $0 replays)
+  static_fit_weeks: 26     # V-static: slopes fitted on the first 26 matured weeks, then frozen; scored after
+  best_trailing_weeks: 26  # V-best: best single agent head by trailing-26-week log loss (as-of)
+  reputation:              # V-REP-best / V-REP-vote (MA-3): one Beta(1, 1) per agent head, hit = sign agrees with y
+    prior: [1.0, 1.0]
+    decay: 0.9             # per matured week (the B1 baseline of feng2026sigmamem, p.21)
+  cdb:                     # V-CDB (calibrated_learning §6.2): shrinkage of the head-logit correlation matrix
+    n0: 2000
+    shrink_floor: 0.2
+    rho0: 0.5              # monoculture prior during warm-up
+    kappa_prior: [1.0, 0.25]
+  disc_prior: [1.0, 0.5]   # V-DISC (MA-4): single shared scale a on the summed head logits, prior N(1, 0.5^2), a in [0, 1]
+  gbm:                     # V-GBM (design §6.6): LightGBM on all logged x~, weekly expanding refit on matured labels
+    n_estimators: 300
+    learning_rate: 0.05
+    num_leaves: 15
+    min_child_samples: 200
+    feature_fraction: 0.8
+    bagging_fraction: 0.8
+    bagging_freq: 1
+    seed: 0
+  # V-UAW (MA-5): a-priori signs, equal weight per program, no outcome learning. Proposed economic directions (our
+  # own a-priori reading of each feature's definition; 0 = no directional prior), to be frozen with the
+  # pre-registration on 10-02 (design_v2_delta §7 item 5).
+  uaw_signs:
+    mom_12_1: 1
+    rev_1w: 1              # signed so that a past loser scores high (features/technical.py)
+    rev_1m: 1
+    vol_60d: -1
+    dist_52w_high: 1       # drawdown from the 52-week high (<= 0): nearer the high scores higher
+    rel_sector_3m: 1
+    earnings_yield: 1
+    sales_yield: 1
+    gross_profitability: 1
+    operating_margin: 1
+    rev_growth_ttm: 1
+    share_change_1y: -1
+    fcf_yield: 1
+    accruals: -1
+    x_trend: 1
+    t_pullback: 1
+    t_capitulation: 0
+    t_breakout: 1
+    t_overextended: -1
+    x_growth: 1
+    x_prof: 1
+    x_strain: -1
+    x_val: 1
+    x_mac: 1
+    f_imp: 1
+    f_cont: 1
+    f_rev: -1
+    f_sur: 1
+    f_net: 1
+    f_und: 1
+    f_story: 1
+    f_cov: 0
+    no_news: 0
+    h: -1
+    s_pol: 1
+    s_ind: 1
+    news_count: 0
+    h_outlook: 1
+    hs_tone: 1
+    lm_neg: -1

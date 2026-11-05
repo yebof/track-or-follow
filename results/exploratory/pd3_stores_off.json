@@ -1,0 +1,265 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/pd3_stores_off.py",
+  "script_sha256": "3d22840ab4bb93dfc246134e5dc0bf28b9edb0fe08397fafaf325f1edc79c383",
+  "closure_sha256": "9c82bcb5b74385f8e43ee80b69e8f6f96d3a946c6a42dd7e67bc55a4af52f00d",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "MEM arm 1 features": {
+    "path": "results/judgments/mem_emu_mepi-off_wclean_s30/features.parquet",
+    "sha256": "d426f9ba5a0ae3b456684b0267ec98e1a8021a380a3ec99b0fa79a142cfb78aa"
+   },
+   "MEM arm 2 answers": {
+    "path": "results/judgments/mem_emu_mwork-off_wclean-last98_s30/answers.parquet",
+    "sha256": "7c5632a065371f642843551a913f6a82618cd2ae1dcfc3d2095f9ded0df8484c"
+   },
+   "MAIN features": {
+    "path": "results/judgments/main_emu_wclean_u100/features.parquet",
+    "sha256": "9d588c37bae6d922f33ead245758b1b1aa797ef4c2206630a53a0e9712c9b3fb"
+   },
+   "primary predictions": {
+    "path": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566/predictions.parquet",
+    "sha256": "af1125476575ab47d38f322f27580488a4c1e7de623a234ca9f716016772ea88"
+   }
+  },
+  "argv": [],
+  "created_utc": "2026-09-28T22:31:17+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "the stores-off Layer-B replay over MEM had no hashed entry point at the commit; built after the unlock"
+ },
+ "label": "exploratory (not pre-registered)",
+ "status": "ok",
+ "estimand": "prereg \u00a74.1 PD3 (full minus stores off), S30, descriptive",
+ "arms": {
+  "mepi_off": "mem_emu_mepi-off_wclean_s30",
+  "mwork_off": "mem_emu_mwork-off_wclean-last98_s30",
+  "all_off": "mem_emu_mepi-off_wclean_s30 + mem_emu_mwork-off_wclean-last98_s30"
+ },
+ "full_replay_equals_registered_primary": {
+  "n": 11500,
+  "max_abs_diff_L": 0.0,
+  "registered_run": "results/eval/4ea23931a045dd49/W_clean__80d81f4a5566"
+ },
+ "comparisons": {
+  "mepi_off": {
+   "subset": "S30",
+   "first_week": null,
+   "n_stock_weeks": 3450,
+   "n_weeks_ic": 113,
+   "delta_ic": {
+    "n": 113,
+    "lags": 4,
+    "level": 0.95,
+    "mean": 0.0004961264728754669,
+    "se": 0.0020615734527926234,
+    "df": 112,
+    "ci": [
+     -0.0035886170607850646,
+     0.004580870006535998
+    ],
+    "ic_full": -0.020599092403555574,
+    "ic_off": -0.02109521887643104
+   },
+   "delta_log_loss": {
+    "n": 113,
+    "lags": 4,
+    "level": 0.95,
+    "mean": -0.00010682522345414032,
+    "se": 0.00012807963221663846,
+    "df": 112,
+    "ci": [
+     -0.0003605985967879109,
+     0.00014694814987963032
+    ],
+    "loss_full": 0.6966008749293571,
+    "loss_off": 0.6964940497059029,
+    "sign": "loss(off) - loss(full); positive = the full system has the lower loss"
+   },
+   "delta_ir_sized": {
+    "ir_full": -1.0056640066656632,
+    "ir_off": -0.969007558188704,
+    "diff": -0.03665644847695926,
+    "n_days": 553,
+    "ci": [
+     -0.22170646628764967,
+     0.15183733536392185
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "delta_ir_sel_ew": {
+    "ir_full": 0.05156999186297188,
+    "ir_off": -0.030103424466061658,
+    "diff": 0.08167341632903354,
+    "n_days": 553,
+    "ci": [
+     -0.05280376116143358,
+     0.21850401451687052
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "rows_replaced": 41400,
+   "ic_all_names": {
+    "full": -0.02386491468418668,
+    "off": -0.023411577118922933
+   }
+  },
+  "mwork_off": {
+   "subset": "S30",
+   "first_week": "2024-11-01",
+   "n_stock_weeks": 2940,
+   "n_weeks_ic": 98,
+   "delta_ic": {
+    "n": 98,
+    "lags": 4,
+    "level": 0.95,
+    "mean": -0.0015663662572926794,
+    "se": 0.0026511059891028174,
+    "df": 97,
+    "ci": [
+     -0.006828077782445579,
+     0.0036953452678602197
+    ],
+    "ic_full": -0.014828267235704073,
+    "ic_off": -0.013261900978411387
+   },
+   "delta_log_loss": {
+    "n": 98,
+    "lags": 4,
+    "level": 0.95,
+    "mean": -1.0543553908689936e-05,
+    "se": 0.00010371045246004722,
+    "df": 97,
+    "ci": [
+     -0.00021638009353814675,
+     0.00019529298572076685
+    ],
+    "loss_full": 0.6959672656646649,
+    "loss_off": 0.6959567221107559,
+    "sign": "loss(off) - loss(full); positive = the full system has the lower loss"
+   },
+   "delta_ir_sized": {
+    "ir_full": -0.9240715686465704,
+    "ir_off": -1.0383492618030639,
+    "diff": 0.1142776931564935,
+    "n_days": 469,
+    "ci": [
+     -0.14008827597555293,
+     0.3817253851701875
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "delta_ir_sel_ew": {
+    "ir_full": 0.18311444841071026,
+    "ir_off": 0.11504196852137338,
+    "diff": 0.06807247988933687,
+    "n_days": 469,
+    "ci": [
+     -0.10979805971145808,
+     0.23461039282864732
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "rows_replaced": 17640,
+   "ic_all_names": {
+    "full": -0.02386491468418668,
+    "off": -0.02355782209732462
+   }
+  },
+  "all_off": {
+   "subset": "S30",
+   "first_week": "2024-11-01",
+   "n_stock_weeks": 2940,
+   "n_weeks_ic": 98,
+   "delta_ic": {
+    "n": 98,
+    "lags": 4,
+    "level": 0.95,
+    "mean": -0.002560668316269773,
+    "se": 0.003179037585896422,
+    "df": 97,
+    "ci": [
+     -0.008870177922208325,
+     0.0037488412896687796
+    ],
+    "ic_full": -0.014828267235704073,
+    "ic_off": -0.012267598919434299
+   },
+   "delta_log_loss": {
+    "n": 98,
+    "lags": 4,
+    "level": 0.95,
+    "mean": -0.00012977074816875327,
+    "se": 0.00016749623242700966,
+    "df": 97,
+    "ci": [
+     -0.0004622044042366267,
+     0.0002026629078991202
+    ],
+    "loss_full": 0.6959672656646649,
+    "loss_off": 0.6958374949164959,
+    "sign": "loss(off) - loss(full); positive = the full system has the lower loss"
+   },
+   "delta_ir_sized": {
+    "ir_full": -0.9240715686465704,
+    "ir_off": -1.0268160325443907,
+    "diff": 0.10274446389782033,
+    "n_days": 469,
+    "ci": [
+     -0.16879893051672062,
+     0.38194483052282996
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "delta_ir_sel_ew": {
+    "ir_full": 0.18311444841071026,
+    "ir_off": 0.0833903735046875,
+    "diff": 0.09972407490602275,
+    "n_days": 469,
+    "ci": [
+     -0.0760846648941653,
+     0.27841300992935947
+    ],
+    "block": 5,
+    "n_boot": 4999,
+    "seed": 0
+   },
+   "rows_replaced": 59040,
+   "ic_all_names": {
+    "full": -0.02386491468418668,
+    "off": -0.022763140809739353
+   }
+  }
+ },
+ "settings": {
+  "nw_lags": 4,
+  "block": 5,
+  "n_boot": 4999,
+  "seed": 0,
+  "allow_missing": [
+   "coverage"
+  ],
+  "cfg_sha": "4ea23931a045dd49a3f22640ca83c51cf262bba1a812e0f685c76aea990b9273",
+  "mwork_first_week": "2024-11-01"
+ },
+ "registered_status": "results/analysis/pd3.json stays 'not run' (no hashed stores-off builder)"
+}

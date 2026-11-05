@@ -1,0 +1,450 @@
+{
+ "meta": {
+  "script": "experiments/exploratory/e8_timing_robustness.py",
+  "script_sha256": "720fa0a1ae3fea5543b6577b748dcaabecd9add5319b2d86148b9b0437bad297",
+  "closure_sha256": "16d53656311baa221d38ba0693248057bdb18c8efa00cd3b56dc5f626a3a8f8c",
+  "window": "W_clean",
+  "registered_window": true,
+  "lock": {
+   "open": true,
+   "why": "unlocked",
+   "locked_window": [
+    "2024-07-05",
+    "2026-09-11"
+   ]
+  },
+  "inputs": {
+   "work.jsonl": {
+    "path": "results/judgments/main_emu_wclean_u100/memory/work.jsonl",
+    "sha256": "39190f88b8c868342514e0eb1bd879f3cb0027b81c8c545b0965adabca0e2fdc"
+   },
+   "h2": {
+    "path": "results/analysis/h2.json",
+    "sha256": "6d378f7053f6358a648363faaddb46c557c1ad06faf3ad2e19553621034c802a"
+   },
+   "finbert scores": {
+    "path": "results/exploratory/e7_finbert_scores.csv",
+    "sha256": "1d59a3124061e3f4ad0a8c58eee9e18b579ea34d78e9803e37365dcd97bb0863"
+   },
+   "news table": {
+    "path": "data/processed/news_table.parquet",
+    "sha256": "5185a7863d3a735256f8f342921b36e2256a12c8cdefba589a3c9f2349c316b4"
+   },
+   "e5 spec": {
+    "path": "experiments/exploratory/e5_spec.yaml",
+    "sha256": "514925e27b85292c4e375296a19ba70e1b89a071c299d3a42764b1bdebb467e7"
+   }
+  },
+  "argv": [
+   "run"
+  ],
+  "created_utc": "2026-09-29T05:51:54+00:00",
+  "label": "exploratory (not pre-registered)",
+  "exploratory": true,
+  "why_exploratory": "stress tests specified after the H2 outcome, E6/E7 and the round-2 paper reviews"
+ },
+ "label": "exploratory (not pre-registered)",
+ "question": "stress tests of the publication-timing and reference-reader findings; frame sensitivities of the registered H2 statistic",
+ "frame": {
+  "n_units": 27556,
+  "n_weeks": 115,
+  "h2_mean_recomputed": 0.11921180713578919,
+  "h2_mean_registered": 0.11921180713578919,
+  "ar_pub_units": 27556
+ },
+ "readers": {
+  "per_reader": {
+   "emu": {
+    "ar_0_1": {
+     "mean": 0.11921180713578919,
+     "ci": [
+      0.09836377437607437,
+      0.14005983989550402
+     ],
+     "se": 0.010524035242851263,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "placebo": {
+     "mean": 0.046404185201220034,
+     "ci": [
+      0.023036303046097502,
+      0.06977206735634256
+     ],
+     "se": 0.011796048969498481,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "ar_pub": {
+     "mean": 0.023066527064853366,
+     "ci": [
+      0.004787373924180192,
+      0.041345680205526536
+     ],
+     "se": 0.009227271180887725,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "main_minus_placebo": {
+     "mean": 0.07280762193456913,
+     "ci": [
+      0.04535806863848911,
+      0.10025717523064916
+     ],
+     "se": 0.01385646644064568,
+     "n_weeks": 115
+    },
+    "coverage_units": 27556
+   },
+   "finbert": {
+    "ar_0_1": {
+     "mean": 0.09389994417017189,
+     "ci": [
+      0.0750846395337984,
+      0.11271524880654538
+     ],
+     "se": 0.009497919126489604,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "placebo": {
+     "mean": 0.0632874377166885,
+     "ci": [
+      0.04229452686051527,
+      0.08428034857286174
+     ],
+     "se": 0.010597169346707418,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "ar_pub": {
+     "mean": 0.0037798740710688118,
+     "ci": [
+      -0.01407794753762119,
+      0.021637695679758814
+     ],
+     "se": 0.00901458406826559,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "main_minus_placebo": {
+     "mean": 0.030612506453483408,
+     "ci": [
+      0.0027934834503626042,
+      0.05843152945660421
+     ],
+     "se": 0.014042973832632158,
+     "n_weeks": 115
+    },
+    "coverage_units": 27556
+   },
+   "dictionary": {
+    "ar_0_1": {
+     "mean": 0.06163232399046392,
+     "ci": [
+      0.04512551484901771,
+      0.07813913313191014
+     ],
+     "se": 0.008332596324737143,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "placebo": {
+     "mean": 0.04738351637780836,
+     "ci": [
+      0.03273014918883088,
+      0.06203688356678584
+     ],
+     "se": 0.007396983422878543,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "ar_pub": {
+     "mean": 0.008597947027827188,
+     "ci": [
+      -0.007022540800369256,
+      0.02421843485602363
+     ],
+     "se": 0.007885183523508489,
+     "n_weeks": 115,
+     "n_units": 27556
+    },
+    "main_minus_placebo": {
+     "mean": 0.014248807612655562,
+     "ci": [
+      -0.006821547989656158,
+      0.03531916321496728
+     ],
+     "se": 0.010636263262528098,
+     "n_weeks": 115
+    },
+    "coverage_units": 27556
+   }
+  },
+  "paired_differences": {
+   "emu_minus_finbert": {
+    "ar_0_1": {
+     "mean": 0.02531186296561728,
+     "ci": [
+      0.012318594874369355,
+      0.038305131056865206
+     ],
+     "se": 0.006558969514684242,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar) - rho(tone, ar), same units; NW(4) two-sided"
+    },
+    "placebo": {
+     "mean": -0.01688325251546846,
+     "ci": [
+      -0.03199169908379437,
+      -0.0017748059471425527
+     ],
+     "se": 0.007626706365170352,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar_placebo) - rho(tone, ar_placebo), same units; NW(4) two-sided"
+    },
+    "ar_pub": {
+     "mean": 0.019286652993784553,
+     "ci": [
+      0.008262572729465944,
+      0.030310733258103163
+     ],
+     "se": 0.005564928382398468,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar_pub) - rho(tone, ar_pub), same units; NW(4) two-sided"
+    }
+   },
+   "emu_minus_dictionary": {
+    "ar_0_1": {
+     "mean": 0.05757948314532527,
+     "ci": [
+      0.04084952442532117,
+      0.07430944186532937
+     ],
+     "se": 0.008445241678677136,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar) - rho(lm_pos, ar), same units; NW(4) two-sided"
+    },
+    "placebo": {
+     "mean": -0.0009793311765883264,
+     "ci": [
+      -0.017493515447138792,
+      0.015534853093962138
+     ],
+     "se": 0.008336319271621788,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar_placebo) - rho(lm_pos, ar_placebo), same units; NW(4) two-sided"
+    },
+    "ar_pub": {
+     "mean": 0.014468580037026174,
+     "ci": [
+      0.0019044816948036482,
+      0.0270326783792487
+     ],
+     "se": 0.0063423256895346345,
+     "n_weeks": 115,
+     "n_units": 27556,
+     "definition": "mean over weeks of rho(E_effect, ar_pub) - rho(lm_pos, ar_pub), same units; NW(4) two-sided"
+    }
+   }
+  }
+ },
+ "timestamps": {
+  "field": "created_at of the vendor record (publication clock of E6)",
+  "sec_clock": {
+   "earnings_units": 2975,
+   "units_with_2_02_in_window": 2709,
+   "share_created_after_acceptance": 0.7231450719822813,
+   "median_gap_minutes_signed": 32.266666666666666,
+   "median_gap_minutes_among_after": 167.95,
+   "share_within_60_min_after": 0.25987449243263194,
+   "definition": "earnings-type frame units; nearest Item 2.02 8-K accepted in [created - 2d, created + 1d]; gap = created_at - acceptance (minutes)"
+  },
+  "edits": {
+   "matched_share": 1.0,
+   "share_edited_gt_1_min": 0.034257511975613296,
+   "share_edited_gt_60_min": 0.008528088256641022,
+   "definition": "updated_at - created_at of the news table's record (the judged text is the last version before the cutoff; E6 dates publication by created_at)"
+  },
+  "after_close_group": {
+   "n_units": 4791,
+   "share_nonsession_day": 0.13358380296389064,
+   "share_after_session_close": 0.8664161970361094,
+   "median_minutes_after_close": 35.233333333333334,
+   "ar_pub_after_session_close": {
+    "mean": -0.013255200310457146,
+    "ci": [
+     -0.0593677026657859,
+     0.032857302044871604
+    ],
+    "se": 0.023277476849579728,
+    "n_weeks": 115,
+    "n_units": 4151
+   },
+   "ar_0_1_after_session_close": {
+    "mean": 0.06752920466184893,
+    "ci": [
+     0.018432053197226225,
+     0.11662635612647164
+    ],
+    "se": 0.024784120319291152,
+    "n_weeks": 115,
+    "n_units": 4151
+   }
+  }
+ },
+ "bylines": {
+  "desk": {
+   "share_units": 0.6430904340252577,
+   "n_units": 17721,
+   "price_report_share": 0.005868743298910897,
+   "ar_0_1": {
+    "mean": 0.08805090313245158,
+    "ci": [
+     0.06562477459031202,
+     0.11047703167459114
+    ],
+    "se": 0.01132065408081303,
+    "n_weeks": 115,
+    "n_units": 17721
+   },
+   "ar_pub": {
+    "mean": 0.020725256565461703,
+    "ci": [
+     0.0034147810565903144,
+     0.03803573207433309
+    ],
+    "se": 0.00873828511426265,
+    "n_weeks": 115,
+    "n_units": 17721
+   }
+  },
+  "named": {
+   "share_units": 0.35563942517056174,
+   "n_units": 9800,
+   "price_report_share": 0.1896938775510204,
+   "ar_0_1": {
+    "mean": 0.17325365303289592,
+    "ci": [
+     0.14552914896320707,
+     0.20097815710258476
+    ],
+    "se": 0.013995260909402457,
+    "n_weeks": 115,
+    "n_units": 9800
+   },
+   "ar_pub": {
+    "mean": 0.03160926697011588,
+    "ci": [
+     0.005959740676654092,
+     0.05725879326357767
+    ],
+    "se": 0.012947817273025254,
+    "n_weeks": 115,
+    "n_units": 9800
+   }
+  },
+  "other": {
+   "share_units": 0.0012701408041805777,
+   "n_units": 35,
+   "price_report_share": 0.0,
+   "ar_0_1": {
+    "mean": -0.39999999999999997,
+    "ci": [
+     null,
+     null
+    ],
+    "se": null,
+    "n_weeks": 1,
+    "n_units": 35
+   },
+   "ar_pub": {
+    "mean": 0.0,
+    "ci": [
+     null,
+     null
+    ],
+    "se": null,
+    "n_weeks": 1,
+    "n_units": 35
+   }
+  },
+  "matched_author_share": 1.0
+ },
+ "frame_sensitivity": {
+  "pairs_in_window": 74314,
+  "pairs_with_effect_answer": 53698,
+  "kept_pairs": 31848,
+  "registered_frame_units": 27556,
+  "all_with_effect": {
+   "mean": 0.08569879969583452,
+   "ci": [
+    0.07088462837656752,
+    0.10051297101510152
+   ],
+   "se": 0.007478156949122854,
+   "n_weeks": 115,
+   "n_units": 53698
+  },
+  "kept_all_types": {
+   "mean": 0.11336073679139126,
+   "ci": [
+    0.0917554428734976,
+    0.13496603070928492
+   ],
+   "se": 0.010906298797814394,
+   "n_weeks": 115,
+   "n_units": 31848
+  },
+  "all_with_effect_no_price": {
+   "mean": 0.0621436717409666,
+   "ci": [
+    0.04692503878398188,
+    0.07736230469795131
+   ],
+   "se": 0.007682328180949946,
+   "n_weeks": 115,
+   "n_units": 49665
+  },
+  "share_price_all_with_effect": 0.07510521807143655,
+  "definition": "(a) every item-firm pair from the D1 start with an effect answer, kept or not, any event type; (b) kept pairs of every type; (c) (a) without price-report items (E5 regex)"
+ },
+ "settings": {
+  "nw_lags": 4,
+  "ci": "two-sided NW 95%",
+  "min_units_per_week": 4,
+  "readers": {
+   "emu": "E_effect",
+   "finbert": "tone",
+   "dictionary": "lm_pos"
+  },
+  "criteria": {
+   "ar_0_1": "ar",
+   "placebo": "ar_placebo",
+   "ar_pub": "ar_pub"
+  },
+  "edit_thresholds_min": [
+   1,
+   60
+  ],
+  "byline_groups": {
+   "desk": [
+    "desk"
+   ],
+   "named": [
+    "named"
+   ],
+   "other": [
+    "wire",
+    "other_email",
+    "other_org",
+    "other_empty"
+   ]
+  }
+ }
+}

@@ -1,0 +1,616 @@
+
+
+Jev (AI model) - Wikipedia
+
+Jump to content
+
+Search
+
+Search
+
+Jev (AI model)
+
+3 languages
+
+Español
+Nordfriisk
+Русский
+
+Edit links
+
+From Wikipedia, the free encyclopedia
+
+Artificial intelligence model developed by TypeSafe AI
+
+Jev
+Developer
+TypeSafe AI
+Release
+September
+
+15, 2026
+;
+
+10 days ago
+
+(
+2026-09-15
+)
+Stable release
+jev-1.13.0
+
+Type
+Artificial intelligence
+ model
+License
+Proprietary
+Website
+typesafe
+.ai
+
+Jev
+ is a 
+proprietary
+
+artificial intelligence
+ model developed by 
+TypeSafe AI
+, a San Francisco–based company founded in 2024. It was released in limited early access on 15 September 2026, alongside the announcement of a US$40
+
+million 
+seed round
+ led by DCVC.
+[
+1
+]
+[
+2
+]
+
+Unlike a 
+large language model
+ (LLM), Jev does not generate natural-language text.
+It instead returns 
+typed values
+ together with probability estimates and confidence
+scores. Its output is intended to be consumed directly by other software rather than read by a
+person.
+[
+1
+]
+[
+3
+]
+
+TypeSafe describes Jev as the first
+of a class of models it calls "System One models",
+[
+2
+]
+[
+4
+]
+ a name the company says comes from fast, intuitive 
+System 1 thinking
+ as popularized by 
+Daniel Kahneman
+.
+[
+5
+]
+[
+6
+]
+
+Background
+[
+edit
+]
+
+TypeSafe AI was founded in 2024 by Diogo Almeida, Erik Gafni and Sasha Sheng. Almeida, the company's chief executive, spent approximately four years at 
+OpenAI
+ working on 
+reinforcement learning from human feedback
+ (RLHF), InstructGPT, 
+ChatGPT
+ and 
+GPT-4
+ before leaving in 2024.
+[
+1
+]
+[
+7
+]
+
+The company positions Jev as a reliable model for automation and software, and as a response to overconfidence in existing models. In an interview with 
+Forbes
+, Almeida explained that "We've been optimizing for humans and we're super human at pleasing humans."
+[
+1
+]
+ He has separately described his disappointment with conversational models as the origin of the project, telling 
+TechCrunch
+ that the technology amounted to "lightning in a bottle" that was nonetheless not useful.
+[
+2
+]
+
+Before the announcement, Jev was being developed in stealth for roughly two years.
+[
+2
+]
+
+Forbes
+ reported that the round valued TypeSafe at US$200
+
+million.
+[
+1
+]
+
+Design & architecture
+[
+edit
+]
+
+A Jev request consists of a block of 
+state
+ (a string, 
+JSON
+ object or array of text) together with one or more typed 
+questions
+. The model evaluates every question against the state in a single parallel pass and returns structured answers rather than plain text.
+[
+3
+]
+[
+8
+]
+
+Jev allows three question types (also called primitives):
+[
+8
+]
+[
+3
+]
+[
+9
+]
+
+Primitive
+Purpose
+Returns
+
+Choice
+Select one option from a defined set
+Selected option, per-option probabilities, confidence
+
+Score
+Rate the state against ordered levels
+Score, per-level probabilities, confidence
+
+Noul
+Evaluate a yes/no statement
+Probability between 0 and 1
+
+Because the answers are defined in advance, the model cannot
+return a value outside the supplied schema. TypeSafe presents this as eliminating
+
+hallucination
+ and type
+errors.
+[
+2
+]
+[
+10
+]
+
+However, TypeSafe has not published Jev's exact architecture, weights, or a technical paper. The company describes the model as 
+transformer
+-based and trained exclusively on 
+synthetic data
+. The method of training is Reinforcement
+Learning for Calibrated Decisions (RLCD), where probabilities are optimized against
+outcomes rather than against human rater preference. Outside observers have suggested the model may be built on an open-weight LLM.
+[
+2
+]
+[
+3
+]
+
+Performance claims
+[
+edit
+]
+
+TypeSafe reports end-to-end response times of 70 to 500
+
+milliseconds. The company claims that Jev is 40 to 200 times faster and 40 to 400 times cheaper than frontier LLMs on comparable
+tasks, with peak figures of 193.6 times faster and 444.6 times cheaper on its own
+workflows.
+[
+10
+]
+[
+3
+]
+
+TypeSafe states in its own technical
+notes that the workflows were created by members of its model-capabilities team,
+acknowledges possible bias, and describes the reported gains as likely to sit at the high
+end of real-world results.
+[
+10
+]
+[
+11
+]
+
+Name
+[
+edit
+]
+
+The model is named after 19th-century English economist 
+William Stanley Jevons
+, whose 
+Jevons paradox
+ describes how more efficient use of a resource can increase consumption. Almeida has said the name reflects an expectation that cheaper machine intelligence will lead to far wider deployment.
+[
+3
+]
+[
+2
+]
+
+References
+[
+edit
+]
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Shrivastava, Rashi (15 September 2026). 
+"This $200 Million Startup Wants To Fix AI's Overconfidence Problem"
+. 
+Forbes
+. Retrieved 
+19 September
+ 2026
+.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Fernholz, Tim (18 September 2026). 
+"A new kind of AI model from a ChatGPT inventor is thrilling developers"
+. 
+TechCrunch
+. Retrieved 
+19 September
+ 2026
+.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Claburn, Thomas (16 September 2026). 
+"TypeSafe AI debuts model for machines that plays Doom"
+. 
+The Register
+. Retrieved 
+19 September
+ 2026
+.
+
+↑
+
+Mink, Zach (16 September 2026). 
+"ChatGPT co-creator launches a new kind of AI"
+. 
+The Rundown AI
+. Retrieved 
+19 September
+ 2026
+.
+
+↑
+
+"Introducing System One Models & Jev - TypeSafe AI Blog"
+. 
+typesafe.ai
+. Retrieved 
+23 September
+ 2026
+.
+
+↑
+
+"System One"
+. 
+TypeSafe AI
+. Retrieved 
+23 September
+ 2026
+.
+
+↑
+
+"TypeSafe AI exits stealth with $40M to build AI for use by software"
+. 
+SiliconANGLE
+. 16 September 2026
+. Retrieved 
+19 September
+ 2026
+.
+
+1
+
+2
+
+"Introduction"
+. TypeSafe AI
+. Retrieved 
+19 September
+ 2026
+.
+
+↑
+
+"Models"
+. TypeSafe AI
+. Retrieved 
+19 September
+ 2026
+.
+
+1
+
+2
+
+3
+
+Almeida, Diogo (15 September 2026). 
+"Introducing System One Models & Jev"
+. TypeSafe AI
+. Retrieved 
+19 September
+ 2026
+.
+
+↑
+
+"TypeSafe AI Raises $40 Million for Jev, but Its 445x Cost Claim Is Still Self-Tested"
+. 
+TechStock²
+. 17 September 2026
+. Retrieved 
+19 September
+ 2026
+.
+
+External links
+[
+edit
+]
+
+Official website
+
+Developer documentation for Jev
+
+Part of 
+a series
+ on
+Artificial intelligence (AI)
+
+Major goals
+
+Artificial general intelligence
+
+superintelligence
+
+Intelligent agent
+
+Recursive self-improvement
+
+Planning
+
+Computer vision
+
+General game playing
+
+Knowledge representation
+
+Natural language processing
+
+Robotics
+
+AI safety
+
+Approaches
+
+Machine learning
+
+Data mining
+
+Symbolic
+
+Deep learning
+
+Bayesian networks
+
+Evolutionary algorithms
+
+Neuro-symbolic AI
+
+Systems integration
+
+Open-source
+
+Open weights
+
+AI data centers
+
+Applications
+
+Art
+
+Music
+
+Bioinformatics
+
+Deepfake
+
+Earth sciences
+
+ Finance 
+
+Generative AI
+
+Audio
+
+Images
+
+Government
+
+Healthcare
+
+Industry
+
+Software development
+
+Translation
+
+ Military 
+
+Physics
+
+Projects
+
+Philosophy
+
+AI alignment
+
+Artificial consciousness
+
+The bitter lesson
+
+Chinese room
+
+Friendly AI
+
+Ethics
+
+Existential risk
+
+Turing test
+
+Uncanny valley
+
+Human–AI interaction
+
+History
+
+Timeline
+
+Progress
+
+AI winter
+
+AI boom
+
+AI build-out financing
+
+AI bubble
+
+Controversies
+
+Deepfake pornography
+
+Taylor Swift deepfake pornography controversy
+
+Grok sexual deepfake scandal
+
+Google Gemini image generation controversy
+
+It's the Most Terrible Time of the Year
+
+Navier–Stokes priority controversy
+
+Pause Giant AI Experiments
+
+Project Panama
+
+Removal of Sam Altman from OpenAI
+
+Statement on AI Risk
+
+Tay (chatbot)
+
+Théâtre D'opéra Spatial
+
+Voiceverse NFT plagiarism scandal
+
+Glossary
+v
+t
+e
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Jev_(AI_model)&oldid=1376630249
+"
+
+Categories
+: 
+2026 software
+Applied machine learning
+Artificial intelligence
+Proprietary software
+Hidden categories: 
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from September 2026
+
+Search
+
+Search
+
+Jev (AI model)
+
+3 languages
+
+Add topic
+

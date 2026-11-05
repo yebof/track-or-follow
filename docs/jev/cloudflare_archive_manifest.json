@@ -1,0 +1,51 @@
+{
+ "fetched": "2026-09-29",
+ "purpose": "Cloudflare Workers AI hosting of Jev (backend jev-cf; docs/impl/jev_cloudflare.md)",
+ "files": {
+  "cloudflare_jev.html": {
+   "source": "https://developers.cloudflare.com/ai/models/typesafe/jev/",
+   "bytes": 200310,
+   "sha256": "9e4be0165406a7464c168e12ee229989189bf69947c28ac2117e85f6ab016595"
+  },
+  "cloudflare_jev.txt": {
+   "source": "text of cloudflare_jev.html",
+   "bytes": 12379,
+   "sha256": "ac99c69c5b1be9760c148b31eea1e2d838837b1e61fd9ee5da36afee6b8931bc"
+  },
+  "cloudflare_jev.md": {
+   "source": "https://developers.cloudflare.com/ai/models/typesafe/jev/index.md",
+   "bytes": 13510,
+   "sha256": "42eb2b5b9cba97728ff5659812874117220c0ebd9567c3fd63dd4650da0c578e"
+  },
+  "cloudflare_jev_schema-input.json": {
+   "source": "https://developers.cloudflare.com/ai/models/typesafe/jev/schema-input.json",
+   "bytes": 2899,
+   "sha256": "bfa5d7509658965fdd8abb6f9df9b3b68e4e53397d22aabead4f7208d49f7a4a"
+  },
+  "cloudflare_jev_schema-output.json": {
+   "source": "https://developers.cloudflare.com/ai/models/typesafe/jev/schema-output.json",
+   "bytes": 1609,
+   "sha256": "89b935f80b7a868f7bc3cb3536c57256050536684824477cf2bd27b0ecc20f2b"
+  },
+  "cloudflare_get-started_rest-api.md": {
+   "source": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/index.md",
+   "bytes": 5610,
+   "sha256": "b76664f7f91ab7202c6ce24879672accc448ff4c53a2a99e8f9f64e2db657aca"
+  },
+  "cloudflare_platform_limits.md": {
+   "source": "https://developers.cloudflare.com/workers-ai/platform/limits/index.md",
+   "bytes": 5189,
+   "sha256": "915c4985139956685c0b2caca1a263b1069629f68c039b460ebb2be985d51a8e"
+  },
+  "cloudflare_platform_errors.md": {
+   "source": "https://developers.cloudflare.com/workers-ai/platform/errors/index.md",
+   "bytes": 4107,
+   "sha256": "87958499a6b8e0b561fb05b2e923599bb4c43ced784d01a59e34d094b633eee1"
+  },
+  "cloudflare_platform_pricing.md": {
+   "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/index.md",
+   "bytes": 16026,
+   "sha256": "ff66d32ef27df1748a62f12d0c98edffdb8cfe36fd7c37f123befc5f99c3071d"
+  }
+ }
+}

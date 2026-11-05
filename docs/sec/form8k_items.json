@@ -1,0 +1,141 @@
+{
+ "source_url": "https://www.sec.gov/files/form8-k.pdf",
+ "retrieved": "2026-09-26",
+ "pdf_sha256": "730ab1de5550870134639fff1ccad3385186c3a08eafd8bd387db44b8bac5d70",
+ "omb_expires": "November 30, 2027",
+ "note": "Item headings parsed from the official Form 8-K (General Instructions B and the item text) by scripts/check_8k_items.py; the EDGAR submissions API lists these codes in its `items` field.",
+ "items": [
+  {
+   "code": "1.01",
+   "title": "Entry into a Material Definitive Agreement."
+  },
+  {
+   "code": "1.02",
+   "title": "Termination of a Material Definitive Agreement."
+  },
+  {
+   "code": "1.03",
+   "title": "Bankruptcy or Receivership."
+  },
+  {
+   "code": "1.04",
+   "title": "Mine Safety – Reporting of Shutdowns and Patterns of Violations."
+  },
+  {
+   "code": "1.05",
+   "title": "Material Cybersecurity Incidents."
+  },
+  {
+   "code": "2.01",
+   "title": "Completion of Acquisition or Disposition of Assets."
+  },
+  {
+   "code": "2.02",
+   "title": "Results of Operations and Financial Condition."
+  },
+  {
+   "code": "2.03",
+   "title": "Creation of a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant."
+  },
+  {
+   "code": "2.04",
+   "title": "Triggering Events That Accelerate or Increase a Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement."
+  },
+  {
+   "code": "2.05",
+   "title": "Costs Associated with Exit or Disposal Activities."
+  },
+  {
+   "code": "2.06",
+   "title": "Material Impairments."
+  },
+  {
+   "code": "3.01",
+   "title": "Notice of Delisting or Failure to Satisfy a Continued Listing Rule or Standard; Transfer of Listing."
+  },
+  {
+   "code": "3.02",
+   "title": "Unregistered Sales of Equity Securities."
+  },
+  {
+   "code": "3.03",
+   "title": "Material Modification to Rights of Security Holders."
+  },
+  {
+   "code": "4.01",
+   "title": "Changes in Registrant’s Certifying Accountant."
+  },
+  {
+   "code": "4.02",
+   "title": "Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review."
+  },
+  {
+   "code": "5.01",
+   "title": "Changes in Control of Registrant."
+  },
+  {
+   "code": "5.02",
+   "title": "Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers."
+  },
+  {
+   "code": "5.03",
+   "title": "Amendments to Articles of Incorporation or Bylaws; Change in Fiscal Year."
+  },
+  {
+   "code": "5.04",
+   "title": "Temporary Suspension of Trading Under Registrant’s Employee Benefit Plans."
+  },
+  {
+   "code": "5.05",
+   "title": "Amendments to the Registrant’s Code of Ethics, or Waiver of a Provision of the Code of Ethics."
+  },
+  {
+   "code": "5.06",
+   "title": "Change in Shell Company Status."
+  },
+  {
+   "code": "5.07",
+   "title": "Submission of Matters to a Vote of Security Holders."
+  },
+  {
+   "code": "5.08",
+   "title": "Shareholder Director Nominations."
+  },
+  {
+   "code": "6.01",
+   "title": "ABS Informational and Computational Material."
+  },
+  {
+   "code": "6.02",
+   "title": "Change of Servicer or Trustee."
+  },
+  {
+   "code": "6.03",
+   "title": "Change in Credit Enhancement or Other External Support."
+  },
+  {
+   "code": "6.04",
+   "title": "Failure to Make a Required Distribution."
+  },
+  {
+   "code": "6.05",
+   "title": "Securities Act Updating Disclosure."
+  },
+  {
+   "code": "6.06",
+   "title": "Static Pool."
+  },
+  {
+   "code": "7.01",
+   "title": "Regulation FD Disclosure."
+  },
+  {
+   "code": "8.01",
+   "title": "Other Events."
+  },
+  {
+   "code": "9.01",
+   "title": "Financial Statements and Exhibits."
+  }
+ ]
+}

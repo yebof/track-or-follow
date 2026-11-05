@@ -1,0 +1,376 @@
+{
+ "label": "LIT-1 search log (LLM-annotation validity and the gap sentence)",
+ "date_utc": "2026-09-29T04:37:27Z",
+ "searches": [
+  {
+   "query": "large language model annotation validity gold labels",
+   "crossref": [
+    {
+     "doi": "10.63317/4odk4p62uz9p",
+     "title": "SALOMO: An Annotation Tool for Complex Annotation Tasks with a Large Number of Labels",
+     "venue": "Proceedings of the Language Resources and Evaluation Conference"
+    },
+    {
+     "doi": "10.31234/osf.io/xw98v_v1",
+     "title": "A validity-guided workflow for robust large language model research in psychology",
+     "venue": ""
+    },
+    {
+     "doi": "10.31234/osf.io/xw98v_v2",
+     "title": "A validity-guided workflow for robust large language model research in psychology",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5964714",
+     "title": "Rubric-Guided Lightweight Large Language Model Annotation of Patient Medication Reviews: Ordinal Agreement, Uncertainty, and Downstream Learnability",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5971317",
+     "title": "When the Rater Is a Large Language Model: Agreement, Uncertainty, and Label Consistency in Behavioral Text Annotation",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5964774",
+     "title": "When the Rater Is a Large Language Model: Agreement, Uncertainty, and Label Consistency in Behavioral Text Annotation",
+     "venue": ""
+    },
+    {
+     "doi": "10.35542/osf.io/4k9r8_v2",
+     "title": "Validity of Large Language Model Comparative Judgment for Universal Writing Screening",
+     "venue": ""
+    },
+    {
+     "doi": "10.1101/2025.04.10.647852",
+     "title": "Large Language Model Consensus Substantially Improves the Cell Type Annotation Accuracy for scRNA-seq Data",
+     "venue": ""
+    },
+    {
+     "doi": "10.31234/osf.io/pnf9b_v1",
+     "title": "From Prompts to Constructs: A Dual-Validity Framework for Large Language Model Research in Psychology",
+     "venue": ""
+    },
+    {
+     "doi": "10.31234/osf.io/pnf9b_v2",
+     "title": "From Prompts to Constructs: A Dual-Validity Framework for Large Language Model Research in Psychology",
+     "venue": ""
+    }
+   ],
+   "datacite": [
+    {
+     "doi": "10.48550/arxiv.2606.02255",
+     "title": "Who Annotates in NLP? A Large-scale Assessment of Human Annotation Reporting between 2018 and 2025",
+     "publisher": "arXiv"
+    },
+    {
+     "doi": "10.48448/9e42-a772",
+     "title": "Humans Hallucinate Too: Language Models Identify and Correct Subjective Annotation Errors With Label-in-a-Haystack Prompts",
+     "publisher": "Underline Science Inc."
+    },
+    {
+     "doi": "10.48550/arxiv.2505.17222",
+     "title": "Humans Hallucinate Too: Language Models Identify and Correct Subjective Annotation Errors With Label-in-a-Haystack Prompts",
+     "publisher": "arXiv"
+    },
+    {
+     "doi": "10.48550/arxiv.2411.15634",
+     "title": "\"All that Glitters\": Approaches to Evaluations with Unreliable Model and Human Annotations",
+     "publisher": "arXiv"
+    }
+   ]
+  },
+  {
+   "query": "LLM text annotation validation human labels",
+   "crossref": [
+    {
+     "doi": "10.1145/3613904.3641960",
+     "title": "Human-LLM Collaborative Annotation Through Effective Verification of LLM Labels",
+     "venue": "Proceedings of the CHI Conference on Human Factors in Computing Systems"
+    },
+    {
+     "doi": "10.18653/v1/2024.law-1.10",
+     "title": "Enhancing Text Classification through LLM-Driven Active Learning and Human Annotation",
+     "venue": "Proceedings of the 18th Linguistic Annotation Workshop (LAW-XVIII)"
+    },
+    {
+     "doi": "10.18653/v1/2024.nlpcss-1.9",
+     "title": "Knowledge Distillation in Automated Annotation: Supervised Text Classification with LLM-Generated Training Labels",
+     "venue": "Proceedings of the Sixth Workshop on Natural Language Processing and Computational Social Science (NLP+CSS 2024)"
+    },
+    {
+     "doi": "10.6035/monti.2026.18.09",
+     "title": "Text processing through LLM for gender-inclusive annotation and translation: A case study on informed consent documents",
+     "venue": "MonTi Monografías de Traducción e Interpretación"
+    },
+    {
+     "doi": "10.2139/ssrn.7389359",
+     "title": "Observational Equivalence of LLM and Human Annotation *",
+     "venue": ""
+    },
+    {
+     "doi": "10.31235/osf.io/bxtsf_v1",
+     "title": "Researchers waste 80% of LLM annotation costs by classifying one text at a time",
+     "venue": ""
+    },
+    {
+     "doi": "10.64898/2026.05.04.26352392",
+     "title": "Multi-LLM Disagreement as a Scalable Detector of Human Annotation Errors in Structured Data from Clinical Free-Text",
+     "venue": ""
+    },
+    {
+     "doi": "10.31235/osf.io/6q8yg_v1",
+     "title": "LLM Tool: A Hybrid Pipeline for Automated High-Throughput Text Annotation Using Local Language Models and BERT Classifiers",
+     "venue": ""
+    },
+    {
+     "doi": "10.31235/osf.io/6q8yg_v2",
+     "title": "LLM Tool: A Hybrid Pipeline for Automated High-Throughput Text Annotation Using Local Language Models and BERT Classifiers",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6550542",
+     "title": "LLM Predictive Scoring and Validation: Inferring Experience Ratings from Unstructured Text",
+     "venue": ""
+    }
+   ],
+   "datacite": [
+    {
+     "doi": "10.5281/zenodo.22832017",
+     "title": "Basis-Free Pattern Architecture: Public Papers, Formal Converters, and Computational Appendices",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.18934501",
+     "title": "Basis-Free Pattern Architecture: Public Papers, Formal Converters, and Computational Appendices",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.48550/arxiv.2604.05793",
+     "title": "BodhiPromptShield: Pre-Inference Prompt Mediation for Surface-Form Privacy Propagation in LLM Agent Pipelines",
+     "publisher": "arXiv"
+    },
+    {
+     "doi": "10.5281/zenodo.20703617",
+     "title": "IMPAC-teen: Intentions, Manipulation, Persuasion, Annotations, and Consequences in Teen Communication Dataset",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.21627255",
+     "title": "IMPAC-teen: Intentions, Manipulation, Persuasion, Annotations, and Consequences in Teen Communication Dataset",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.21021303",
+     "title": "Basis-Free Pattern Architecture: Public Papers, Formal Converters, and Computational Appendices",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.21847277",
+     "title": "dathere/qsv: 22.0.1",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.21817262",
+     "title": "dathere/qsv: 22.0.0",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.18847389",
+     "title": "SENSERO: Semantic Earth-observation and Natural-language Scene Explanation for Romania (2018)",
+     "publisher": "Zenodo"
+    },
+    {
+     "doi": "10.5281/zenodo.18847390",
+     "title": "SENSERO: Semantic Earth-observation and Natural-language Scene Explanation for Romania (2018)",
+     "publisher": "Zenodo"
+    }
+   ]
+  },
+  {
+   "query": "typed decision model news abnormal returns",
+   "crossref": [
+    {
+     "doi": "10.2139/ssrn.6172339",
+     "title": "Abnormal Returns following Business Model Extensions -The Role of Demand Relatedness",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6626064",
+     "title": "Media Pressure and Abnormal Returns in Cryptocurrency Markets Evidence from Global News Data (GDELT) and the Bitcoin Media Pressure Index (BMPI)",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6542901",
+     "title": "Media Pressure and Abnormal Returns in Cryptocurrency Markets: Evidence from Global News Data (GDELT) and the Bitcoin Media Pressure Index (BMPI)",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5339719",
+     "title": "Abnormal Stock Market Returns to Business Model Extension Announcements — Value Drivers &amp; Moderators",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5207418",
+     "title": "Auctions, Announcements, and Abnormal Returns",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5027193",
+     "title": "The Curse of Attention – the Relation between Abnormal Returns, Volume, and Expected Option Returns",
+     "venue": ""
+    },
+    {
+     "doi": "10.24818/ida-ql/2025.178",
+     "title": "ETH Cumulative Abnormal Returns",
+     "venue": "IDA Quantlets Repository"
+    },
+    {
+     "doi": "10.1098/rsos.260310/v3/decision1",
+     "title": "Decision letter for \"The Voorhees Law of Traffic: A Stochastic Model Explaining Why the Car You Passed Always Returns\"",
+     "venue": ""
+    },
+    {
+     "doi": "10.1088/2631-8695/ae76c9/v2/decision1",
+     "title": "Decision letter for \"Abnormal Condition Detection of Bridge Arm Reactors Based on a Pretrained Acoustic Model\"",
+     "venue": ""
+    },
+    {
+     "doi": "10.1088/2631-8695/ae76c9/v1/decision1",
+     "title": "Decision letter for \"Abnormal Condition Detection of Bridge Arm Reactors Based on a Pretrained Acoustic Model\"",
+     "venue": ""
+    }
+   ],
+   "datacite": []
+  },
+  {
+   "query": "language model news judgments abnormal returns filings validity",
+   "crossref": [
+    {
+     "doi": "10.2139/ssrn.4852488",
+     "title": "U.S. Filings: No News is Good News - Textual Consistency in Corporate Filings Signals Outperformance",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6172339",
+     "title": "Abnormal Returns following Business Model Extensions -The Role of Demand Relatedness",
+     "venue": ""
+    },
+    {
+     "doi": "10.52295/dcc.6650",
+     "title": "The Impact of Form 144 Filings on Abnormal Stock Performance: Insights into Insider Trading Dynamics",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6626064",
+     "title": "Media Pressure and Abnormal Returns in Cryptocurrency Markets Evidence from Global News Data (GDELT) and the Bitcoin Media Pressure Index (BMPI)",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5339719",
+     "title": "Abnormal Stock Market Returns to Business Model Extension Announcements — Value Drivers &amp; Moderators",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6542901",
+     "title": "Media Pressure and Abnormal Returns in Cryptocurrency Markets: Evidence from Global News Data (GDELT) and the Bitcoin Media Pressure Index (BMPI)",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.4536648",
+     "title": "The Timeliness of 10-K Filings, Financial Performance, and Stock Returns",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.6659042",
+     "title": "Extracting Risk Signals from Financial Filings with Applied Natural Language Processing",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5207418",
+     "title": "Auctions, Announcements, and Abnormal Returns",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.5027193",
+     "title": "The Curse of Attention – the Relation between Abnormal Returns, Volume, and Expected Option Returns",
+     "venue": ""
+    }
+   ],
+   "datacite": []
+  },
+  {
+   "query": "Jev typed decision model finance",
+   "crossref": [
+    {
+     "doi": "10.2139/ssrn.7495638",
+     "title": "Jev at the Agent Authorization Boundary: Evaluating TypeSafe's Decision Model and Its Reported RLCD Approach",
+     "venue": ""
+    },
+    {
+     "doi": "10.62017/finance.v2i3.66",
+     "title": "PURCHASING DECISION ON B2B BUSINESS MODEL PT P",
+     "venue": "Finance : International Journal of Management Finance"
+    },
+    {
+     "doi": "10.2139/ssrn.7500140",
+     "title": "Typed Decisions at the Edge: A Privacy-Preserving Hybrid Architecture for Everyday Decision Support, with an Early Product-Grounded Evaluation of System-One Decision Models",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.7511338",
+     "title": "Latency, Throughput, and Calibration of laya Typed-Decision Models on Apple Silicon: An Independent Local Benchmark",
+     "venue": ""
+    },
+    {
+     "doi": "10.2139/ssrn.7416904",
+     "title": "Modern Quantitative Finance: Models, Numerics, Trading, Risk and Validation A Model-to-Decision Reference",
+     "venue": ""
+    },
+    {
+     "doi": "10.21203/rs.3.rs-11162889/v1",
+     "title": "Typic: A Compact Open Model for Typed, Calibrated Decisions",
+     "venue": ""
+    },
+    {
+     "doi": "10.64898/2026.05.05.723102",
+     "title": "Cosine Similarity Conflates Clinically Distinct Cancer Variants: A Case for Typed-Graph Retrieval in Precision Oncology Decision Support",
+     "venue": ""
+    },
+    {
+     "doi": "10.1088/2631-8695/ae66a1/v1/decision1",
+     "title": "Decision letter for \"TRELLIS: A Reinforcement Learning-Enhanced Typed-Anchor-Graph Architecture for Reasoning-Oriented Multi-Hop Retrieval-Augmented Generation\"",
+     "venue": ""
+    },
+    {
+     "doi": "10.1088/2631-8695/ae66a1/v3/decision1",
+     "title": "Decision letter for \"TRELLIS: A Reinforcement Learning-Enhanced Typed-Anchor-Graph Architecture for Reasoning-Oriented Multi-Hop Retrieval-Augmented Generation\"",
+     "venue": ""
+    },
+    {
+     "doi": "10.1088/2631-8695/ae66a1/v2/decision1",
+     "title": "Decision letter for \"TRELLIS: A Reinforcement Learning-Enhanced Typed-Anchor-Graph Architecture for Reasoning-Oriented Multi-Hop Retrieval-Augmented Generation\"",
+     "venue": ""
+    }
+   ],
+   "datacite": []
+  }
+ ],
+ "arxiv_api": {
+  "status": "HTTP 200 for 2306.00176; 'Rate exceeded.' for 2303.15056 and 2609.19866; HTTP 503 for 2609.20554 (2026-09-29, retried with 20 s backoff)",
+  "r3_candidates": {
+   "arXiv 2609.20554": "not screened (arXiv 503)",
+   "arXiv 2609.19866": "not screened (arXiv rate limit)",
+   "SSRN 10.2139/ssrn.7302678": "not attempted (SSRN blocks scripted access)"
+  }
+ },
+ "acquired": [
+  "gilardi2023chatgpt",
+  "pangakis2023automated"
+ ],
+ "screening_note": "titles screened by the orchestrator; only the acquired keys may be cited, and only through their summaries",
+ "screening": {
+  "rule": "a hit matters for the paper's gap sentence if its title says it tests typed or LLM judgments of news items against market reactions or filings",
+  "result": "no Crossref or DataCite hit of the five queries meets the rule by title; typed-model hits (an authorization-boundary evaluation of Jev, an edge architecture, a local latency/calibration benchmark, a compact open typed model) evaluate other properties by title and were not acquired",
+  "annotation_validity": "two anchors acquired through the pipeline (gilardi2023chatgpt, pangakis2023automated); other annotation-validity titles in the hits were not acquired and are not cited"
+ }
+}

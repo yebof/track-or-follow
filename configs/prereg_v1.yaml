@@ -1,0 +1,87 @@
+# Pre-registration v1 commit record (docs/design/preregistration_v1.md §17 step 3; AN-3).
+# pipeline/lock.py hashes THIS file into the unlock key. It pins the SHA-256 of the Markdown pre-registration
+# and of every file the pre-registration quotes, so editing the Markdown or a listed file breaks the chain;
+# after the unlock any edit is logged in docs/design/prereg_deviations.md and the key re-issued.
+# Every value was computed from the files on disk at the commit (sha256 of the bytes; check with sha256sum).
+# No W_clean outcome was read and the lock was not opened.
+prereg_version: v1
+commit_date: '2026-09-28'
+commit_date_note: brought forward from the 2026-10-02 plan because all inputs were ready (prereg §17, §16)
+preregistration:
+  path: docs/design/preregistration_v1.md
+  sha256: b8bf8cf6e7135b963cd2069f83214019be4df6ba9bebabbfd81dd41470984b9a
+inputs_sha256:
+  results/prereg/completeness_audit.json: cafa7a52ceedaa5c91ee88bc7ed9f73c505c466bbffc1e614622a935f67c08fe
+  results/prereg/power_prereg.json: 1a2231a7395e3817a14eb69ab5c350936fc951922ccf0b2d7c9d280477867a5c
+  results/prereg/hashes.json: 9e721e7003b3c19595be6598c0cf345ca05bcdb040454f566505f0794252870f
+  results/analysis/CODE_HASHES.json: b3529179bb1cd231239dc43c321b114ba7fdc231380cab3bf1192365c36af8ad
+  results/analysis/GENERATION_HASHES.json: ed14f3b218700ccb8065d06c312c974f3ce47aead316c91aa0bba85f457994db
+  results/redteam/precommit_hashes.json: e5f74a6022355c016e1d80909583b7c0e48c5479ce723f8a3b91d583993918ee
+  results/analysis/budget_snapshot.json: a7d8c28af0b650080f87b3083f9cd2ffb3967248b3844a4bff0ac1aabe1d6346
+  results/analysis/simulations/null_rates.json: 00d02839fbc4e3fa6fdb4f385c42bfc74718f32e808bff634442b0b3dcbd39f5
+  results/analysis/h2_frame.json: 511261ab8dcf9460995d4b514daedcf36df4bcfa5cd938170b0d7d01b7e0eaec
+  results/prereg/prior_look_stock_weeks.csv: 9c4ebae001b98b80ac9860edb70bb8945db88573863dec8abab0dc7e59353a76
+  results/freeze/FREEZE.json: 494718487f3b2b221952b1811b24ff1e181ab7ecbb6a120e47710f8a6aa5c6d6
+specs:
+  question_bank_v1_canonical_sha256: d4f4e44cb7e03d4f1a6d1cb6e3e86cab2627eb302dd81ceee0e27bbe81012ccb
+  question_bank_v1_json_file_sha256: e925c5b0e276a34cdac0c29b7618a4552cc9ee884fd0385d607e69b75edb4306
+  attack_templates_sha256: 2e2a9d4cf9c75fe2097a402f64d54408232743b3dadbd56bf6fd6d7cf9c092c9
+  rta_ng_spec_sha256: e5a1d85998d3907a2b4885e85149f61dd8f520a841c38dbf0480dc91e36458b6
+  rta_ng_operator_pool_sha256: 067f2eeb69f18073edc273e9ffab3563c716d2209614db59cc53c9a1db2bd35e
+  rta_ng_pool_size:
+    payloads: 27
+    operators: 16
+    positions: 4
+  faith_sha256: 0b64b1ae6866fadd682cc4e7b5b67b69367899cb8dc1da381de31618d92a48fc
+  rb9_adaptive_spec_sha256_reference_only: bf7009f2aecf7989e4a4cf4bff24be491b684c96e4001127d566d4c62667739a
+  redteam_group_sha256: 59bde72e5c74f037515b6ea872e9b6ea17ac72e31be457479383dde03186c4fa
+code:
+  files: 120
+  registered_sha256: 3706f705f01a62c7ce665337e4270a60341c55c560dd845b14d5eb92b8fa8934
+  analysis_sha256: 1aee79aaaa95b0584914aaeef8da2c43d6055ce541cc969c53edf437131586e1
+  redteam_faith_sha256: 9448d4f79fb234e13adc8e3787d8bb3faa2e3851b52cc5419a7fef8ec27810cc
+  all_sha256: 6b5837cdfbb5e3610d41497a008b6ee7241ff6859b6c496c03900cc526f45e6f
+  configs_sha256: 2cccc776e71b6041ff0d875e854f6807101a9c926003346d54cf13b52f94eb70
+  lock_group_sha256: 601685954be906f03a44579736c132cf08643db4012e64685b10bfd019791985
+  lock_py_sha256: b8f17a38243ed79951ae50947c333e102b6dacac5c9eb8b98f9d7debf78236a3
+  prereg_tools_sha256: dee6b71f04eec38eb8f43816164e30cfebaf97ec971909cab89d4358668cd343
+generations:
+  all_sha256: 727ea674a7e2ea93a406fb1e75056cd29c8e13105356a563f216b3d2a8ce097c
+  group_sha256:
+    results/judgments/main_emu_wclean_u100: 62bf12387c0a3cca6831571ee95a3769c1d1fbb4414224ad002e022b0c1d3423
+    results/judgments/pre_blinded_emu_wpre_s30: 400e2ba5ffb1c7709000b0f2a83618329155fd71a8b3054b811a64299dc1aa90
+    results/judgments/pre_unblinded_emu_wpre_s30: e9b95ec9bd20580ad1e17f8b1c4b2887a46eefc186e555aa5d81ce2c199a6aa9
+    results/gens/tal_ta-lite_wclean-last60_s30: 8d99d32c1e7cf92c5fc9bbe0dd30e3e5666e4b82905f12c2ce522f7eaa8354eb
+    results/judgments/ng_typed-local_wclean_items500: fc3caa9d9f0fa97a83443d3a9ca51d873bddef885731f46d517bec7c7bfabd0d
+    results/judgments/mcot_mono-cot_wclean-last60_s30: c5da94acab78962f3b1dc8d09f75f8a82527218e1b4a46d2c0037ecda2797e1c
+    results/judgments/verb_llm-verbalized_wclean_items2000: 6149417842ecfa1bdcc583a456823b06355f4b94512c9087aac04bd42bd015c2
+    results/judgments/probe_emu_d1d2: 3cb95e4785a75770c68851dda13e9cc6aa4cdcbb3bbe05fa02fc7d296f30f638
+    results/judgments/probe_emu_d1_reask: 13c8c03471520e5860db28939e53774ffaa9bc2454c383f63f044ea08dd5f384
+    results/judgments/fid_emu_wclean_v1-150_v2-100x3: 764bf5994f98fb8a9be8139b759786a4f4cc9e43f4db96171e7291434bee638b
+    results/judgments/mem_emu_mepi-off_wclean_s30: 912210a37fcee6834efaa687791385b28eba9c6b76cdcb63f89ff1b6d248c787
+    results/judgments/mem_emu_mwork-off_wclean-last98_s30: 700433470334cb330f4af46bee117abe4170263288e82629b978ba10cf8bd818
+commit_checks:
+  code_hashes_check_clean: true
+  generations_equal_prereg_14_1: true
+  precommit_hashes_equal_prereg_1: true
+  code_hashes_equal_prereg_14_2: true
+  audit_overall: PASS
+  audit_generations:
+    MAIN: PASS
+    PRE/B: PASS
+    PRE/U: PASS
+    TAL: PASS
+    NG: PASS
+    PROBE: PASS
+    PROBE re-ask: PASS
+    MCOT: PASS
+    VERB: PASS
+    FID: PASS
+    MEM arm 1: PASS
+    MEM arm 2: PASS
+  ledger:
+    total_usd: 185.142412
+    rows: 601615
+    hard_cap_usd: 245.0
+    worst_case_usd: 241.22096
+  lock_key_present: false

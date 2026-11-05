@@ -1,0 +1,522 @@
+{
+ "table": "data/processed/news_table.parquet",
+ "table_sha256": "5185a7863d3a735256f8f342921b36e2256a12c8cdefba589a3c9f2349c316b4",
+ "computed_on": "2026-09-26",
+ "desk_bylines": [
+  "benzinga newsdesk",
+  "benzinga news-desk",
+  "benzinga insights",
+  "benzinga ev insights",
+  "benzinga neuro",
+  "benzinga staff",
+  "benzinga india staff"
+ ],
+ "classes": [
+  "desk",
+  "wire",
+  "named",
+  "other_email",
+  "other_org",
+  "other_empty"
+ ],
+ "w_clean_created": [
+  "2024-06-28 20:00:00+00:00",
+  "2026-09-11 20:00:00+00:00"
+ ],
+ "scopes": {
+  "all": {
+   "by_year": {
+    "2019": {
+     "n_items": 21107,
+     "byline_class_share": {
+      "desk": 0.5529445207750983,
+      "wire": 0.0025583929502060927,
+      "named": 0.4052683943715355,
+      "other_email": 4.737764722603875e-05,
+      "other_org": 0.039181314255934054,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "node": 0.9997631117638698,
+      "news": 0.00014213294167811626,
+      "analyst-ratings": 9.47552944520775e-05
+     },
+     "section_share_other": 0.0,
+     "outside_reachable_share": 0.00303216942246648,
+     "distinct_bylines": 89
+    },
+    "2020": {
+     "n_items": 47197,
+     "byline_class_share": {
+      "desk": 0.6602538296925652,
+      "wire": 0.00629277284573172,
+      "named": 0.31804987605144397,
+      "other_email": 0.00014831451151556244,
+      "other_org": 0.015255206898743564,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5367078416001017,
+      "node": 0.2817975718795686,
+      "markets": 0.03561667055109435,
+      "general": 0.03553191940165688,
+      "analyst-ratings": 0.03368858190139204,
+      "trading-ideas": 0.0163569718414306,
+      "m-a": 0.01226772888107295,
+      "media": 0.011229527300464013,
+      "pre-market-outlook": 0.007055533190668898,
+      "federal-reserve": 0.00629277284573172,
+      "government": 0.005953768247981863,
+      "tech": 0.005191007903044685
+     },
+     "section_share_other": 0.012310104455791681,
+     "outside_reachable_share": 0.02360319511833379,
+     "distinct_bylines": 120
+    },
+    "2021": {
+     "n_items": 55498,
+     "byline_class_share": {
+      "desk": 0.5774802695592633,
+      "wire": 0.004216368157411078,
+      "named": 0.4062308551659519,
+      "other_email": 0.00036037334678727163,
+      "other_org": 0.011712133770586327,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.6029406465097842,
+      "markets": 0.13090561822047642,
+      "analyst-ratings": 0.06704746116977188,
+      "trading-ideas": 0.06603841579876753,
+      "general": 0.06043461025622545,
+      "m-a": 0.018505171357526398,
+      "government": 0.011730152437925691,
+      "media": 0.010937331074993693,
+      "pre-market-outlook": 0.006036253558686799,
+      "tech": 0.005099282857039893,
+      "federal-reserve": 0.004432592165483441,
+      "fintech": 0.0035316587985152617
+     },
+     "section_share_other": 0.012360805794803417,
+     "outside_reachable_share": 0.07086741864571697,
+     "distinct_bylines": 169
+    },
+    "2022": {
+     "n_items": 63623,
+     "byline_class_share": {
+      "desk": 0.5674363044810838,
+      "wire": 0.0,
+      "named": 0.4306461499772095,
+      "other_email": 9.430551844458765e-05,
+      "other_org": 0.0018232400232620278,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.6015591845716172,
+      "markets": 0.14334438803577323,
+      "analyst-ratings": 0.07145214780818257,
+      "general": 0.0526696320513022,
+      "trading-ideas": 0.0504062996086321,
+      "short-sellers": 0.01846816402873175,
+      "m-a": 0.014161545353095578,
+      "government": 0.013705735347280071,
+      "media": 0.007465853543529855,
+      "22": 0.005013910063970577,
+      "pre-market-outlook": 0.003960831774672682,
+      "tech": 0.002970623831004511
+     },
+     "section_share_other": 0.014821683982207692,
+     "outside_reachable_share": 0.05072065133678073,
+     "distinct_bylines": 173
+    },
+    "2023": {
+     "n_items": 65631,
+     "byline_class_share": {
+      "desk": 0.5470433179442642,
+      "wire": 0.0,
+      "named": 0.44584114214319454,
+      "other_email": 4.5710106504548156e-05,
+      "other_org": 0.007069829806036781,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5744846185491612,
+      "markets": 0.14025384345812192,
+      "economics": 0.08329905075345492,
+      "analyst-ratings": 0.06595968368606299,
+      "general": 0.04222090170803431,
+      "trading-ideas": 0.02517103198183785,
+      "short-sellers": 0.020889518672578506,
+      "government": 0.014246316527250842,
+      "23": 0.011427526626137038,
+      "m-a": 0.010208590452682421,
+      "tech": 0.0021483750057137633,
+      "wiim": 0.00207219149487285
+     },
+     "section_share_other": 0.0076183510840913595,
+     "outside_reachable_share": 0.025308162301351494,
+     "distinct_bylines": 176
+    },
+    "2024": {
+     "n_items": 64401,
+     "byline_class_share": {
+      "desk": 0.6765578174251953,
+      "wire": 0.0,
+      "named": 0.31535224608313533,
+      "other_email": 0.00017080480116768372,
+      "other_org": 0.0079191316905017,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5044642163941554,
+      "insights": 0.18027670377789165,
+      "markets": 0.08094594804428502,
+      "economics": 0.06321330414124005,
+      "general": 0.04857067436841043,
+      "analyst-ratings": 0.04043415474914986,
+      "trading-ideas": 0.025201472026831883,
+      "24": 0.02180090371267527,
+      "government": 0.00993773388611978,
+      "m-a": 0.008726572568748932,
+      "wiim": 0.0038042887532802284,
+      "tech": 0.0033695128957624883
+     },
+     "section_share_other": 0.009254514681449047,
+     "outside_reachable_share": 0.02549649850157606,
+     "distinct_bylines": 131
+    },
+    "2025": {
+     "n_items": 63668,
+     "byline_class_share": {
+      "desk": 0.6493057737010743,
+      "wire": 0.0,
+      "named": 0.34789847333040147,
+      "other_email": 3.141295470251932e-05,
+      "other_org": 0.0027643400138217,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.41534208707671044,
+      "insights": 0.17179744926807816,
+      "markets": 0.12530627630834956,
+      "economics": 0.07480995162404976,
+      "25": 0.05291512219639379,
+      "trading-ideas": 0.04969529433938556,
+      "general": 0.027973236162593455,
+      "analyst-stock-ratings": 0.023449770685430672,
+      "analyst-ratings": 0.011434315511717032,
+      "etfs": 0.008874159703461707,
+      "m-a": 0.00870138845259785,
+      "crypto": 0.007115034240120626
+     },
+     "section_share_other": 0.02258591443111139,
+     "outside_reachable_share": 0.053480555381039144,
+     "distinct_bylines": 121
+    },
+    "2026": {
+     "n_items": 47581,
+     "byline_class_share": {
+      "desk": 0.6111683234904689,
+      "wire": 0.0,
+      "named": 0.38624661104222274,
+      "other_email": 2.1016792417141297e-05,
+      "other_org": 0.002564048674891238,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.45396271621025197,
+      "markets": 0.19564532061116832,
+      "trading-ideas": 0.08637901683445072,
+      "insights": 0.07458859628843446,
+      "economics": 0.04415628086841386,
+      "quote": 0.042138668796368295,
+      "analyst-stock-ratings": 0.03467770748828314,
+      "crypto": 0.015237174502427439,
+      "opinion": 0.01330362960005044,
+      "etfs": 0.011916521300519114,
+      "general": 0.00794434753367941,
+      "m-a": 0.007902313948845127
+     },
+     "section_share_other": 0.012147706017107669,
+     "outside_reachable_share": 0.09968264643450117,
+     "distinct_bylines": 118
+    }
+   },
+   "W_clean": {
+    "n_items": 141657,
+    "byline_class_share": {
+     "desk": 0.6463429269291316,
+     "wire": 0.0,
+     "named": 0.3500215308809307,
+     "other_email": 4.941513656225954e-05,
+     "other_org": 0.0035861270533754067,
+     "other_empty": 0.0
+    },
+    "section_share": {
+     "news": 0.44765878142273235,
+     "insights": 0.14530167940871258,
+     "markets": 0.1347480181000586,
+     "economics": 0.06119005767452367,
+     "trading-ideas": 0.05617089166084274,
+     "general": 0.026895952900315552,
+     "25": 0.0237827992968932,
+     "analyst-stock-ratings": 0.02180619383440282,
+     "analyst-ratings": 0.013130307715114678,
+     "quote": 0.013087951883775598,
+     "m-a": 0.008407632520807302,
+     "etfs": 0.008231149890227803
+    },
+    "section_share_other": 0.03958858369159307,
+    "outside_reachable_share": 0.06231248720500928,
+    "distinct_bylines": 197
+   }
+  },
+  "company_le3": {
+   "by_year": {
+    "2019": {
+     "n_items": 12904,
+     "byline_class_share": {
+      "desk": 0.5413050216986981,
+      "wire": 0.0006974581525108493,
+      "named": 0.4041382517048977,
+      "other_email": 0.0,
+      "other_org": 0.05385926844389337,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "node": 0.9997675139491631,
+      "analyst-ratings": 0.00015499070055796651,
+      "news": 7.749535027898326e-05
+     },
+     "section_share_other": 0.0,
+     "outside_reachable_share": 0.0008524488530688159,
+     "distinct_bylines": 74
+    },
+    "2020": {
+     "n_items": 27767,
+     "byline_class_share": {
+      "desk": 0.6625130550653654,
+      "wire": 0.0014765729102891921,
+      "named": 0.31519429538661,
+      "other_email": 7.202794684337522e-05,
+      "other_org": 0.020744048690892067,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5586127417437966,
+      "node": 0.2741743796593078,
+      "analyst-ratings": 0.036626210969856306,
+      "markets": 0.03324089746821767,
+      "general": 0.030539849461591096,
+      "m-a": 0.017286707242410056,
+      "trading-ideas": 0.015486008571325675,
+      "tech": 0.008103144019879714,
+      "media": 0.007815032232506212,
+      "government": 0.006266431375373645,
+      "intraday-update": 0.004321676810602514,
+      "fintech": 0.0021968523787229445
+     },
+     "section_share_other": 0.005330068066409767,
+     "outside_reachable_share": 0.017934958764000433,
+     "distinct_bylines": 98
+    },
+    "2021": {
+     "n_items": 38110,
+     "byline_class_share": {
+      "desk": 0.6258199947520335,
+      "wire": 0.0016006297559695618,
+      "named": 0.359302020467069,
+      "other_email": 0.0002623983206507478,
+      "other_org": 0.013014956704277093,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.6245080031487799,
+      "markets": 0.12647599055366046,
+      "analyst-ratings": 0.0757543951718709,
+      "trading-ideas": 0.06394647074258725,
+      "general": 0.05397533455785883,
+      "m-a": 0.02167410128575177,
+      "government": 0.00844922592495408,
+      "media": 0.00800314877984781,
+      "tech": 0.00669115717659407,
+      "fintech": 0.0030700603516137497,
+      "21": 0.0023615848858567303,
+      "short-sellers": 0.0022303857255313564
+     },
+     "section_share_other": 0.0028601416950931515,
+     "outside_reachable_share": 0.06594069797953293,
+     "distinct_bylines": 138
+    },
+    "2022": {
+     "n_items": 44290,
+     "byline_class_share": {
+      "desk": 0.6313163242266877,
+      "wire": 0.0,
+      "named": 0.3673741250846692,
+      "other_email": 2.2578460149017837e-05,
+      "other_org": 0.0012869722284940166,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.6056446150372544,
+      "markets": 0.13610295777827952,
+      "analyst-ratings": 0.08451117633777376,
+      "general": 0.05244976292616844,
+      "trading-ideas": 0.0444344095732671,
+      "short-sellers": 0.026394219914201853,
+      "m-a": 0.01763377737638293,
+      "government": 0.010634454730187402,
+      "media": 0.006999322646195529,
+      "22": 0.0039738089862271396,
+      "tech": 0.003951230526078121,
+      "fintech": 0.0018288552720704448
+     },
+     "section_share_other": 0.005441408895913298,
+     "outside_reachable_share": 0.04454730187401219,
+     "distinct_bylines": 148
+    },
+    "2023": {
+     "n_items": 48530,
+     "byline_class_share": {
+      "desk": 0.6204615701627859,
+      "wire": 0.0,
+      "named": 0.37762208942921904,
+      "other_email": 6.18174325159695e-05,
+      "other_org": 0.001854522975479085,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.6555326602101793,
+      "markets": 0.14290129816608282,
+      "analyst-ratings": 0.07319184009890789,
+      "general": 0.04382855965382238,
+      "short-sellers": 0.02816814341644344,
+      "trading-ideas": 0.013702864207706573,
+      "m-a": 0.012590150422419122,
+      "government": 0.011168349474551824,
+      "23": 0.00671749433340202,
+      "economics": 0.003420564599216979,
+      "tech": 0.0027405728415413146,
+      "wiim": 0.0022872450030908716
+     },
+     "section_share_other": 0.003750257572635483,
+     "outside_reachable_share": 0.013826499072738512,
+     "distinct_bylines": 147
+    },
+    "2024": {
+     "n_items": 47979,
+     "byline_class_share": {
+      "desk": 0.7442214302090497,
+      "wire": 0.0,
+      "named": 0.25190187373642636,
+      "other_email": 4.1684903812084455e-05,
+      "other_org": 0.0038350111507117696,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5759394735196649,
+      "insights": 0.21997123741636967,
+      "markets": 0.054899018320515226,
+      "general": 0.04493632630942704,
+      "analyst-ratings": 0.03753725588278205,
+      "trading-ideas": 0.016361324746243147,
+      "24": 0.015423414410471247,
+      "m-a": 0.010150274078242564,
+      "government": 0.006669584609933513,
+      "wiim": 0.004522812063611163,
+      "tech": 0.0035640592759332208,
+      "economics": 0.0035432168240271786
+     },
+     "section_share_other": 0.006482002542779132,
+     "outside_reachable_share": 0.016507221909585444,
+     "distinct_bylines": 117
+    },
+    "2025": {
+     "n_items": 45581,
+     "byline_class_share": {
+      "desk": 0.7172944867378952,
+      "wire": 0.0,
+      "named": 0.27952436322151775,
+      "other_email": 2.193896579715232e-05,
+      "other_org": 0.0031592110747899345,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5101028937495886,
+      "insights": 0.21368552686426362,
+      "markets": 0.09854983436080823,
+      "trading-ideas": 0.047453983019240475,
+      "25": 0.03913911498211974,
+      "general": 0.022246111318312455,
+      "analyst-stock-ratings": 0.020447116122945964,
+      "m-a": 0.01028937495886444,
+      "analyst-ratings": 0.010245497027270135,
+      "tech": 0.008249051139729274,
+      "economics": 0.004892389372764968,
+      "crypto": 0.003970952809284571
+     },
+     "section_share_other": 0.010728154274807486,
+     "outside_reachable_share": 0.049757574427941466,
+     "distinct_bylines": 105
+    },
+    "2026": {
+     "n_items": 32336,
+     "byline_class_share": {
+      "desk": 0.7008906481939634,
+      "wire": 0.0,
+      "named": 0.29598589807026227,
+      "other_email": 0.0,
+      "other_org": 0.003123453735774369,
+      "other_empty": 0.0
+     },
+     "section_share": {
+      "news": 0.5806531420089065,
+      "markets": 0.13829787234042554,
+      "insights": 0.09314695695200396,
+      "trading-ideas": 0.08396214745175655,
+      "analyst-stock-ratings": 0.030523255813953487,
+      "quote": 0.029595497278574964,
+      "opinion": 0.008566303809995053,
+      "m-a": 0.00822612568035626,
+      "crypto": 0.007916872835230085,
+      "m": 0.005411924789708066,
+      "general": 0.004391390400791687,
+      "government": 0.0028451261751608115
+     },
+     "section_share_other": 0.006463384463137061,
+     "outside_reachable_share": 0.0925284512617516,
+     "distinct_bylines": 97
+    }
+   },
+   "W_clean": {
+    "n_items": 100906,
+    "byline_class_share": {
+     "desk": 0.7214932709650566,
+     "wire": 0.0,
+     "named": 0.2751273462430381,
+     "other_email": 2.9730640397994174e-05,
+     "other_org": 0.0033496521515073434,
+     "other_empty": 0.0
+    },
+    "section_share": {
+     "news": 0.5465284522228608,
+     "insights": 0.18190196816839435,
+     "markets": 0.09787326819019682,
+     "trading-ideas": 0.05185023685410184,
+     "general": 0.021643906209739758,
+     "analyst-stock-ratings": 0.018779854518066318,
+     "25": 0.017679820823340534,
+     "analyst-ratings": 0.01194180722652766,
+     "m-a": 0.009523715140824134,
+     "quote": 0.008839910411670267,
+     "24": 0.005847025944938854,
+     "tech": 0.005034388440727013
+    },
+    "section_share_other": 0.02255564584861158,
+    "outside_reachable_share": 0.055655758825045094,
+    "distinct_bylines": 166
+   }
+  }
+ }
+}
