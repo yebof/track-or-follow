@@ -53,3 +53,8 @@ feed, daily bars and SEC filings (download scripts in `scripts/`, credentials in
 credentials; `configs/backends.yaml` holds the run budgets.
 
 Brokerage order execution for forward paper trading is not part of the paper and is not included.
+
+## License
+
+MIT (see `LICENSE`), except the archived third-party documentation under `docs/jev/`, `docs/ng/`, `docs/sec/` and
+`docs/pricing/`, which remains under its owners' terms.
